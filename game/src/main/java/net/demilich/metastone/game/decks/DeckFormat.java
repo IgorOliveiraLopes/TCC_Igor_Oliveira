@@ -39,6 +39,9 @@ public class DeckFormat {
 		}
 		return true;
 	}
+	public String print(){
+		return new String(name + " " + filename);
+	}
 
 	public List<CardSet> getCardSets() {
 		return new ArrayList<CardSet>(sets);

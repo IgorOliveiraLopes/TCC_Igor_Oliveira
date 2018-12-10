@@ -169,11 +169,14 @@ public class SimulationResultView extends BorderPane {
 		ObservableList<StatEntry> absoluteStatEntries = FXCollections.observableArrayList();
 		ObservableList<StatEntry> averageStatEntries = FXCollections.observableArrayList();
 		for (Statistic stat : Statistic.values()) {
+
+
 			StatEntry absoluteStatEntry = new StatEntry();
 			absoluteStatEntry.setStatName(getStatName(stat));
 			absoluteStatEntry.setPlayer1Value(getStatString(stat, result.getPlayer1Stats()));
 			absoluteStatEntry.setPlayer2Value(getStatString(stat, result.getPlayer2Stats()));
 			absoluteStatEntries.add(absoluteStatEntry);
+			System.out.println(absoluteStatEntry.getStatName());
 
 			StatEntry averageStatEntry = new StatEntry();
 			averageStatEntry.setStatName(getStatName(stat));

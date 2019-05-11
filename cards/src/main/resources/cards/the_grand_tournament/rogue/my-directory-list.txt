@@ -1,0 +1,313 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/rogue/weapon_poisoned_blade contains:
+{
+	"name": "Poisoned Blade",
+	"baseManaCost": 4,
+	"type": "WEAPON",
+	"damage": 1,
+	"durability": 3,
+	"heroClass": "ROGUE",
+	"rarity": "EPIC",
+	"description": "Your Hero Power gives this weapon +1 Attack instead of replacing it.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffWeaponSpell",
+			"target": "FRIENDLY_WEAPON",
+			"attackBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/rogue/spell_beneath_the_ground contains:
+{
+	"name": "Beneath the Grounds",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "ROGUE",
+	"rarity": "EPIC",
+	"description": "Shuffle 3 Ambushes into your opponent's deck. When drawn, you summon a 4/4 Nerubian.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "ShuffleToDeckSpell",
+		"targetPlayer": "OPPONENT",
+		"card": "spell_ambush",
+		"howMany": 3
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/rogue/weapon_poisoned_dagger contains:
+{
+	"name": "Poisoned Dagger",
+	"baseManaCost": 1,
+	"type": "WEAPON",
+	"damage": 2,
+	"durability": 2,
+	"heroClass": "ROGUE",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/rogue/spell_ambush contains:
+{
+	"name": "Ambush!",
+	"baseManaCost": 0,
+	"type": "SPELL",
+	"heroClass": "ROGUE",
+	"rarity": "FREE",
+	"description": "When you draw this, summon a 4/4 Nerubian for your opponent. Draw a card.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "NullSpell"
+	},
+	"passiveTrigger": {
+		"eventTrigger": {
+			"class": "CardDrawnTrigger",
+			"hostTargetType": "IGNORE_OTHER_TARGETS"
+		},
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "SummonSpell",
+					"targetPlayer": "OPPONENT",
+					"card": "token_nerubian"
+				},
+				{
+					"class": "RemoveCardSpell",
+					"target": "EVENT_TARGET"
+				},
+				{
+					"class": "DrawCardSpell"
+				}
+			]
+		}
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/rogue/spell_burgle contains:
+{
+	"name": "Burgle",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "ROGUE",
+	"rarity": "RARE",
+	"description": "Add 2 random class cards to your hand (from your opponent's class).",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "ReceiveCardSpell",
+		"value": 2,
+		"card": "spell_the_coin",
+		"cardFilter": {
+			"class": "CardFilter",
+			"heroClass": "OPPONENT"
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/rogue/minion_buccaneer contains:
+{
+	"name": "Buccaneer",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ROGUE",
+	"rarity": "COMMON",
+	"race": "PIRATE",
+	"description": "Whenever you equip a weapon, give it +1 Attack.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "WeaponEquippedTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffWeaponSpell",
+			"target": "FRIENDLY_WEAPON",
+			"attackBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/rogue/minion_undercity_valiant contains:
+{
+	"name": "Undercity Valiant",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ROGUE",
+	"rarity": "COMMON",
+	"description": "Combo: Deal 1 damage.",
+	"battlecry": {
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "DamageSpell",
+			"value": 1
+		},
+		"condition": {
+			"class": "ComboCondition"
+		}
+	},
+	"attributes": {
+		"COMBO": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/rogue/hero_power_poisoned_dagger contains:
+{
+	"name": "Poisoned Dagger",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "ROGUE",
+	"rarity": "FREE",
+	"description": "Equip a 2/2 Dagger.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "ConditionalSpell",
+		"spell": {
+			"class": "EquipWeaponSpell",
+			"card": "weapon_poisoned_dagger"
+		},
+		"condition": {
+			"class": "HasWeaponCondition",
+			"cardId": "weapon_poisoned_blade",
+			"invert": "true"
+		}
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/rogue/minion_shado-pan_rider contains:
+{
+	"name": "Shado-Pan Rider",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 7,
+	"heroClass": "ROGUE",
+	"rarity": "COMMON",
+	"description": "Combo: Gain +3 Attack.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 3
+		},
+		"condition": {
+			"class": "ComboCondition"
+		}
+	},
+	"attributes": {
+		"COMBO": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/rogue/minion_cutpurse contains:
+{
+	"name": "Cutpurse",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ROGUE",
+	"rarity": "RARE",
+	"description": "Whenever this minion attacks a hero, add the Coin to your hand.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "PhysicalAttackTrigger",
+			"targetEntityType": "HERO",
+			"hostTargetType": "IGNORE_OTHER_SOURCES"
+		},
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"card": "spell_the_coin"
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/rogue/minion_shady_dealer contains:
+{
+	"name": "Shady Dealer",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 3,
+	"heroClass": "ROGUE",
+	"rarity": "RARE",
+	"description": "Battlecry: If you have a Pirate, gain +1/+1.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 1,
+			"hpBonus": 1
+		},
+		"condition": {
+			"class": "MinionOnBoardCondition",
+			"cardFilter": {
+				"class": "RaceFilter",
+				"race": "PIRATE"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/rogue/minion_anubarak contains:
+{
+	"name": "Anub'arak",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 8,
+	"baseHp": 4,
+	"heroClass": "ROGUE",
+	"rarity": "LEGENDARY",
+	"description": "Deathrattle: Return this to your hand and summon a 4/4 Nerubian.",
+	"deathrattle": {
+		"class": "MetaSpell",
+		"target": "NONE",
+		"spells": [
+			{
+				"class": "ReturnMinionToHandSpell",
+				"target": "SELF"
+			},
+			{
+				"class": "SummonSpell",
+				"card": "token_nerubian"
+			}
+		]
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}

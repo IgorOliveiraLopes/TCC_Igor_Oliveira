@@ -1,0 +1,390 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/secret_repentance contains:
+{
+	"name": "Repentance",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "Secret: When your opponent plays a minion, reduce its Health to 1.",
+	"trigger": {
+		"class": "MinionPlayedTrigger",
+		"targetPlayer": "OPPONENT"
+	},
+	"spell": {
+		"class": "SetHpSpell",
+		"target": "EVENT_TARGET",
+		"value": 1
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/secret_redemption contains:
+{
+	"name": "Redemption",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "Secret: When one of your minions dies, return it to life with 1 Health.",
+	"trigger": {
+		"class": "MinionDeathTrigger",
+		"targetPlayer": "SELF"
+	},
+	"spell": {
+		"class": "ReviveMinionSpell",
+		"target": "EVENT_TARGET",
+		"hpBonus": 1
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/spell_holy_wrath contains:
+{
+	"name": "Holy Wrath",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "RARE",
+	"description": "Draw a card and deal damage equal to its cost.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "custom.HolyWrathSpell"
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/minion_aldor_peacekeeper contains:
+{
+	"name": "Aldor Peacekeeper",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "PALADIN",
+	"rarity": "RARE",
+	"description": "Battlecry: Change an enemy minion's Attack to 1.",
+	"battlecry": {
+		"targetSelection": "ENEMY_MINIONS",
+		"spell": {
+			"class": "SetAttackSpell",
+			"value": 1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/spell_lay_on_hands contains:
+{
+	"name": "Lay on Hands",
+	"baseManaCost": 8,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "EPIC",
+	"description": "Restore 8 Health. Draw 3 cards.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "HealSpell",
+				"value": 8
+			},
+			{
+				"class": "DrawCardSpell",
+				"value": 3
+			}
+		]
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/secret_eye_for_an_eye contains:
+{
+	"name": "Eye for an Eye",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "Secret: When your hero takes damage, deal that much damage to the enemy hero.",
+	"trigger": {
+		"class": "DamageReceivedTrigger",
+		"targetPlayer": "SELF",
+		"targetEntityType": "HERO"
+	},
+	"spell": {
+		"class": "DamageSpell",
+		"target": "ENEMY_HERO",
+		"value": {
+			"class": "AttributeValueProvider",
+			"target": "FRIENDLY_HERO",
+			"attribute": "LAST_HIT"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/minion_tirion_fordring contains:
+{
+	"name": "Tirion Fordring",
+	"baseManaCost": 8,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "PALADIN",
+	"rarity": "LEGENDARY",
+	"description": "Divine Shield. Taunt. Deathrattle: Equip a 5/3 Ashbringer.",
+	"deathrattle": {
+		"class": "EquipWeaponSpell",
+		"card": "weapon_ashbringer"
+	},
+	"attributes": {
+		"DEATHRATTLES": true,
+		"DIVINE_SHIELD": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/weapon_sword_of_justice contains:
+{
+	"name": "Sword of Justice",
+	"baseManaCost": 3,
+	"type": "WEAPON",
+	"damage": 1,
+	"durability": 5,
+	"heroClass": "PALADIN",
+	"rarity": "EPIC",
+	"description": "After you summon a minion, give it +1/+1 and this loses 1 Durability.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterMinionSummonedTrigger",
+			"targetPlayer": "SELF",
+			"fireCondition": {
+				"class": "HasWeaponCondition"
+			}
+		},
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "EVENT_TARGET",
+					"attackBonus": 1,
+					"hpBonus": 1
+				},
+				{
+					"class": "ModifyDurabilitySpell",
+					"targetPlayer": "SELF",
+					"value": -1
+				}
+			]
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/spell_equality contains:
+{
+	"name": "Equality",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "RARE",
+	"description": "Change the Health of ALL minions to 1.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SetHpSpell",
+		"target": "ALL_MINIONS",
+		"value": 1
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/token_defender contains:
+{
+	"name": "Defender",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/spell_blessing_of_wisdom contains:
+{
+	"name": "Blessing of Wisdom",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "Choose a minion. Whenever it attacks, draw a card.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "AddSpellTriggerSpell",
+		"trigger": {
+			"eventTrigger": {
+				"class": "PhysicalAttackTrigger",
+				"hostTargetType": "IGNORE_OTHER_SOURCES"
+			},
+			"spell": {
+				"class": "DrawCardSpell",
+				"value": 1
+			},
+			"persistentOwner": true
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/spell_avenging_wrath contains:
+{
+	"name": "Avenging Wrath",
+	"baseManaCost": 6,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "EPIC",
+	"description": "Deal 8 damage randomly split among all enemies.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MissilesSpell",
+		"target": "ENEMY_CHARACTERS",
+		"value": 1,
+		"howMany": 8
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/spell_blessed_champion contains:
+{
+	"name": "Blessed Champion",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "RARE",
+	"description": "Double a minion's Attack.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "DoubleAttackSpell"
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/weapon_ashbringer contains:
+{
+	"name": "Ashbringer",
+	"baseManaCost": 5,
+	"type": "WEAPON",
+	"damage": 5,
+	"durability": 3,
+	"heroClass": "PALADIN",
+	"rarity": "LEGENDARY",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/spell_divine_favor contains:
+{
+	"name": "Divine Favor",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "RARE",
+	"description": "Draw cards until you have as many in hand as your opponent.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DrawCardSpell",
+		"value": {
+			"class": "AlgebraicValueProvider",
+			"operation": "SUBTRACT",
+			"value1": {
+				"class": "PlayerAttributeValueProvider",
+				"targetPlayer": "OPPONENT",
+				"playerAttribute": "HAND_COUNT"
+			},
+			"value2": {
+				"class": "PlayerAttributeValueProvider",
+				"targetPlayer": "SELF",
+				"playerAttribute": "HAND_COUNT"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/secret_noble_sacrifice contains:
+{
+	"name": "Noble Sacrifice",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "Secret: When an enemy attacks, summon a 2/1 Defender as the new target.",
+	"trigger": {
+		"class": "TargetAcquisitionTrigger",
+		"actionType": "PHYSICAL_ATTACK",
+		"sourcePlayer": "OPPONENT",
+		"targetPlayer": "BOTH",
+		"queueCondition": {
+			"class": "MinionCountCondition",
+			"operation": "LESS",
+			"value": 7
+		},
+		"fireCondition": {
+			"class": "MinionCountCondition",
+			"operation": "LESS",
+			"value": 7
+		}
+	},
+	"spell": {
+		"class": "SummonNewAttackTargetSpell",
+		"card": "token_defender"
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/paladin/minion_argent_protector contains:
+{
+	"name": "Argent Protector",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "Battlecry: Give a friendly minion Divine Shield.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "AddAttributeSpell",
+			"attribute": "DIVINE_SHIELD"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}

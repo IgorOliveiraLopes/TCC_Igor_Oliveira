@@ -1,0 +1,221 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/paladin/weapon_coghammer contains:
+{
+	"name": "Coghammer",
+	"baseManaCost": 3,
+	"type": "WEAPON",
+	"damage": 2,
+	"durability": 3,
+	"heroClass": "PALADIN",
+	"rarity": "EPIC",
+	"description": "Battlecry: Give a random friendly minion Divine Shield and Taunt.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "MetaSpell",
+			"target": "FRIENDLY_MINIONS",
+			"spells": [
+				{
+					"class": "AddAttributeSpell",
+					"attribute": "DIVINE_SHIELD"
+				},
+				{
+					"class": "AddAttributeSpell",
+					"attribute": "TAUNT"
+				}
+			],
+			"randomTarget": true
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/paladin/spell_seal_of_light contains:
+{
+	"name": "Seal of Light",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "Restore 4 Health to your hero and gain +2 Attack this turn.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"target": "FRIENDLY_HERO",
+		"spells": [
+			{
+				"class": "HealSpell",
+				"value": 4
+			},
+			{
+				"class": "BuffHeroSpell",
+				"attackBonus": 2
+			}
+		]
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/paladin/minion_scarlet_purifier contains:
+{
+	"name": "Scarlet Purifier",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 3,
+	"heroClass": "PALADIN",
+	"rarity": "RARE",
+	"description": "Battlecry: Deal 2 damage to all minions with Deathrattle.",
+	"battlecry": {
+		"spell": {
+			"class": "DamageSpell",
+			"target": "ALL_MINIONS",
+			"value": 2,
+			"filter": {
+				"class": "AttributeFilter",
+				"attribute": "DEATHRATTLES",
+				"operation": "HAS"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/paladin/minion_bolvar_fordragon contains:
+{
+	"name": "Bolvar Fordragon",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 7,
+	"heroClass": "PALADIN",
+	"rarity": "LEGENDARY",
+	"description": "Whenever a friendly minion dies while this in your hand, gain +1 Attack.",
+	"passiveTrigger": {
+		"eventTrigger": {
+			"class": "MinionDeathTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "ModifyAttributeSpell",
+			"target": "SELF",
+			"attribute": "ATTACK_BONUS",
+			"value": 1
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/paladin/minion_cobalt_guardian contains:
+{
+	"name": "Cobalt Guardian",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 3,
+	"heroClass": "PALADIN",
+	"rarity": "RARE",
+	"race": "MECH",
+	"description": "Whenever you summon a Mech, gain Divine Shield.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "MinionSummonedTrigger",
+			"targetPlayer": "SELF",
+			"race": "MECH"
+		},
+		"spell": {
+			"class": "AddAttributeSpell",
+			"target": "SELF",
+			"attribute": "DIVINE_SHIELD"
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/paladin/minion_quartermaster contains:
+{
+	"name": "Quartermaster",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 5,
+	"heroClass": "PALADIN",
+	"rarity": "EPIC",
+	"description": "Battlecry: Give your Silver Hand Recruits +2/+2.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "FRIENDLY_MINIONS",
+			"attackBonus": 2,
+			"hpBonus": 2,
+			"filter": {
+				"class": "SpecificCardFilter",
+				"cardId": "token_silver_hand_recruit"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/paladin/minion_shielded_minibot contains:
+{
+	"name": "Shielded Minibot",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Divine Shield",
+	"attributes": {
+		"DIVINE_SHIELD": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/paladin/spell_muster_for_battle contains:
+{
+	"name": "Muster for Battle",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "RARE",
+	"description": "Summon three 1/1 Silver Hand Recruits. Equip a 1/4 Weapon.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "SummonSpell",
+				"cards": [
+					"token_silver_hand_recruit",
+					"token_silver_hand_recruit",
+					"token_silver_hand_recruit"
+				]
+			},
+			{
+				"class": "EquipWeaponSpell",
+				"card": "weapon_lights_justice"
+			}
+		]
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}

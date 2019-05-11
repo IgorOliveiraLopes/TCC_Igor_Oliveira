@@ -1,0 +1,459 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/druid/minion_mire_keeper contains:
+{
+	"name": "Mire Keeper",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Choose One - Summon a 2/2 Slime; or Gain an empty Mana Crystal.",
+	"options": [
+		{
+			"description": "Summon 2/2 Slime",
+			"spell": {
+				"class": "SummonSpell",
+				"targetPlayer": "SELF",
+				"card": "token_tauren_slime",
+				"boardPositionRelative": "RIGHT"
+			}
+		},
+		{
+			"description": "Mana Crystal",
+			"spell": {
+				"class": "ModifyMaxManaSpell",
+				"targetPlayer": "SELF",
+				"value": 1
+			}
+		}
+	],
+	"bothOptions": {
+		"description": "Summon 2/2 Slime and Mana Crystal.",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "SummonSpell",
+					"targetPlayer": "SELF",
+					"card": "token_tauren_slime",
+					"boardPositionRelative": "RIGHT"
+				},
+				{
+					"class": "ModifyMaxManaSpell",
+					"targetPlayer": "SELF",
+					"value": 1
+				}
+			]
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/druid/spell_wisps_of_the_old_gods_2 contains:
+{
+	"name": "Give your minions +2/2",
+	"baseManaCost": 7,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "Your minions get +2/2",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffSpell",
+		"target": "FRIENDLY_MINIONS",
+		"attackBonus": 2,
+		"hpBonus": 2
+	},
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/druid/minion_fandral_staghelm contains:
+{
+	"name": "Fandral Staghelm",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "DRUID",
+	"rarity": "LEGENDARY",
+	"description": "Your Choose One cards have both effects combined.",
+	"attributes": {
+		"BOTH_CHOOSE_ONE_OPTIONS": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/druid/spell_mark_of_yshaarj contains:
+{
+	"name": "Mark of Y'Shaarj",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Give a minion +2/+2. If it's a Beast, draw a card.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "ConditionalEffectSpell",
+		"spell1": {
+			"class": "BuffSpell",
+			"target": "TARGET",
+			"attackBonus": 2,
+			"hpBonus": 2
+		},
+		"spell2": {
+			"class": "DrawCardSpell",
+			"target": "SELF",
+			"value": 1
+		},
+		"condition": {
+			"class": "RaceCondition",
+			"race": "BEAST"
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/druid/spell_feral_rage contains:
+{
+	"name": "Feral Rage",
+	"baseManaCost": 3,
+	"type": "CHOOSE_ONE",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Choose One - Gain +4 Attack this turn; or Gain 8 Armor.",
+	"targetSelection": "NONE",
+	"options": [
+		"spell_feral_rage_1",
+		"spell_feral_rage_2"
+	],
+	"bothOptions": "spell_feral_rage_3",
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/druid/minion_forbidden_ancient contains:
+{
+	"name": "Forbidden Ancient",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "Battlecry: Spend all your Mana. Gain +1/+1 for each Mana spent.",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "SELF",
+					"value": {
+						"class": "PlayerAttributeValueProvider",
+						"playerAttribute": "MANA"
+					}
+				},
+				{
+					"class": "GainManaSpell",
+					"value": {
+						"class": "PlayerAttributeValueProvider",
+						"playerAttribute": "MANA",
+						"multiplier": -1
+					}
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/druid/spell_wisps_of_the_old_gods_1 contains:
+{
+	"name": "Summon 7 Wisps",
+	"baseManaCost": 7,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "Summon 7 Wisps",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"cards": [
+			"minion_wisp",
+			"minion_wisp",
+			"minion_wisp",
+			"minion_wisp",
+			"minion_wisp",
+			"minion_wisp",
+			"minion_wisp"
+		]
+	},
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/druid/spell_feral_rage_3 contains:
+{
+	"name": "Evolve Spines and Scales",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Gain 4 Attack and 8 Armor.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffHeroSpell",
+		"target": "FRIENDLY_HERO",
+		"attackBonus": 4,
+		"armorBonus": 8
+	},
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/druid/spell_feral_rage_1 contains:
+{
+	"name": "Evolve Spines",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Gain +4 Attack this turn.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffHeroSpell",
+		"target": "FRIENDLY_HERO",
+		"attackBonus": 4
+	},
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/druid/spell_feral_rage_2 contains:
+{
+	"name": "Evolve Scales",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Gain 8 Armor.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffHeroSpell",
+		"target": "FRIENDLY_HERO",
+		"armorBonus": 8
+	},
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/druid/minion_klaxxi_amber-weaver contains:
+{
+	"name": "Klaxxi Amber-Weaver",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Battlecry: If your C'Thun has 10 or more Attack, gain +5 Health.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"hpBonus": 5
+		},
+		"condition": {
+			"class": "OrCondition",
+			"conditions": [
+				{
+					"class": "ComparisonCondition",
+					"operation": "GREATER_OR_EQUAL",
+					"value1": {
+						"class": "HighestAttributeValueProvider",
+						"target": "FRIENDLY_MINIONS",
+						"attribute": "ATTACK",
+						"filter": {
+							"class": "SpecificCardFilter",
+							"cardId": "minion_cthun"
+						}
+					},
+					"value2": 10
+				},
+				{
+					"class": "ComparisonCondition",
+					"operation": "GREATER_OR_EQUAL",
+					"value1": {
+						"class": "HighestAttributeValueProvider",
+						"target": "FRIENDLY_HAND",
+						"attribute": "ATTACK",
+						"filter": {
+							"class": "SpecificCardFilter",
+							"cardId": "minion_cthun"
+						}
+					},
+					"value2": 10
+				},
+				{
+					"class": "ComparisonCondition",
+					"operation": "GREATER_OR_EQUAL",
+					"value1": {
+						"class": "AttributeValueProvider",
+						"target": "FRIENDLY_PLAYER",
+						"attribute": "CTHUN_ATTACK_BUFF"
+					},
+					"value2": 4
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/druid/spell_wisps_of_the_old_gods_3 contains:
+{
+	"name": "Summon 7 Wisps and give your minions +2/+2",
+	"baseManaCost": 7,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "Summon 7 Wisps. Give your minions +2/+2.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "SummonSpell",
+				"cards": [
+					"minion_wisp",
+					"minion_wisp",
+					"minion_wisp",
+					"minion_wisp",
+					"minion_wisp",
+					"minion_wisp",
+					"minion_wisp"
+				]
+			},
+			{
+				"class": "BuffSpell",
+				"target": "FRIENDLY_MINIONS",
+				"attackBonus": 2,
+				"hpBonus": 2
+			}
+		]
+	},
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/druid/minion_addled_grizzly contains:
+{
+	"name": "Addled Grizzly",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"race": "BEAST",
+	"description": "Whenever you summon a minion, give it +1/+1.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "MinionSummonedTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "EVENT_TARGET",
+			"value": 1
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/druid/minion_dark_arakkoa contains:
+{
+	"name": "Dark Arakkoa",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 7,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Battlecry: Give your C'Thun +3/+3 (wherever it is).",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_MINIONS",
+					"value": 3,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_HAND",
+					"value": 3,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_ATTACK_BUFF",
+					"value": 3
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_HEALTH_BUFF",
+					"value": 3
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/druid/spell_wisps_of_the_old_gods contains:
+{
+	"name": "Wisps of the Old Gods",
+	"baseManaCost": 7,
+	"type": "CHOOSE_ONE",
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "Choose One - Summon 7 Wisps; or Give your minions +2/+2.",
+	"targetSelection": "NONE",
+	"options": [
+		"spell_wisps_of_the_old_gods_1",
+		"spell_wisps_of_the_old_gods_2"
+	],
+	"bothOptions": "spell_wisps_of_the_old_gods_3",
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}

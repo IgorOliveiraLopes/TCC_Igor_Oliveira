@@ -1,0 +1,121 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/spare_parts/spell_emergency_coolant contains:
+{
+	"name": "Emergency Coolant",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Freeze a minion.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "AddAttributeSpell",
+		"attribute": "FROZEN"
+	},
+	"collectible": false,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/spare_parts/spell_whirling_blades contains:
+{
+	"name": "Whirling Blades",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Give a minion +1 Attack.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "BuffSpell",
+		"attackBonus": 1
+	},
+	"collectible": false,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/spare_parts/spell_rusty_horn contains:
+{
+	"name": "Rusty Horn",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Give a minion Taunt.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "AddAttributeSpell",
+		"attribute": "TAUNT"
+	},
+	"collectible": false,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/spare_parts/spell_armor_plating contains:
+{
+	"name": "Armor Plating",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Give a minion +1 Health.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "BuffSpell",
+		"hpBonus": 1
+	},
+	"collectible": false,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/spare_parts/spell_finicky_cloakfield contains:
+{
+	"name": "Finicky Cloakfield",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Give a friendly minion Stealth until your next turn.",
+	"targetSelection": "FRIENDLY_MINIONS",
+	"spell": {
+		"class": "AddAttributeSpell",
+		"attribute": "STEALTH",
+		"revertTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		}
+	},
+	"collectible": false,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/spare_parts/spell_reversing_switch contains:
+{
+	"name": "Reversing Switch",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Swap a minion's Attack and Health",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "SwapAttackAndHpSpell"
+	},
+	"collectible": false,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/spare_parts/spell_time_rewinder contains:
+{
+	"name": "Time Rewinder",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Return a friendly minion to your hand.",
+	"targetSelection": "FRIENDLY_MINIONS",
+	"spell": {
+		"class": "ReturnMinionToHandSpell"
+	},
+	"collectible": false,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}

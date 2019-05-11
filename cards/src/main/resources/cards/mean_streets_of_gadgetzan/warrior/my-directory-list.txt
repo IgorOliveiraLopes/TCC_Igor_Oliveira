@@ -1,0 +1,269 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/warrior/minion_grimy_gadgeteer contains:
+{
+	"name": "Grimy Gadgeteer",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 3,
+	"heroClass": "WARRIOR",
+	"rarity": "COMMON",
+	"description": "At the end of your turn, give a random minion in your hand +2/+2.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "FRIENDLY_HAND",
+			"attackBonus": 2,
+			"hpBonus": 2,
+			"filter": {
+				"class": "CardFilter",
+				"cardType": "MINION"
+			},
+			"randomTarget": true
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/warrior/spell_sleep_with_the_fishes contains:
+{
+	"name": "Sleep with the Fishes",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "WARRIOR",
+	"rarity": "EPIC",
+	"description": "Deal 3 damage to all damaged minions.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DamageSpell",
+		"target": "ALL_MINIONS",
+		"value": 3,
+		"filter": {
+			"class": "DamagedFilter"
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/warrior/minion_grimestreet_pawnbroker contains:
+{
+	"name": "Grimestreet Pawnbroker",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "WARRIOR",
+	"rarity": "RARE",
+	"description": "Battlecry: Give a random weapon in your hand +1/+1.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "FRIENDLY_HAND",
+			"attackBonus": 1,
+			"hpBonus": 1,
+			"filter": {
+				"class": "CardFilter",
+				"cardType": "WEAPON"
+			},
+			"randomTarget": true
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/warrior/minion_public_defender contains:
+{
+	"name": "Public Defender",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 7,
+	"heroClass": "WARRIOR",
+	"rarity": "COMMON",
+	"description": "Taunt.",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/warrior/weapon_brass_knuckles contains:
+{
+	"name": "Brass Knuckles",
+	"baseManaCost": 4,
+	"type": "WEAPON",
+	"damage": 2,
+	"durability": 3,
+	"heroClass": "WARRIOR",
+	"rarity": "EPIC",
+	"description": "After your Hero attacks, give a random minion in your hand +1/+1.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterPhysicalAttackTrigger",
+			"sourcePlayer": "SELF",
+			"targetPlayer": "BOTH",
+			"sourceEntityType": "HERO"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "FRIENDLY_HAND",
+			"attackBonus": 1,
+			"hpBonus": 1,
+			"filter": {
+				"class": "CardFilter",
+				"cardType": "MINION"
+			},
+			"randomTarget": true
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/warrior/spell_stolen_goods contains:
+{
+	"name": "Stolen Goods",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "WARRIOR",
+	"rarity": "RARE",
+	"description": "Give a random Taunt minion in your hand +3/+3.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffSpell",
+		"target": "FRIENDLY_HAND",
+		"attackBonus": 3,
+		"hpBonus": 3,
+		"filter": {
+			"class": "CardFilter",
+			"cardType": "MINION",
+			"attribute": "TAUNT",
+			"operation": "HAS"
+		},
+		"randomTarget": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/warrior/minion_hobart_grapplehammer contains:
+{
+	"name": "Hobart Grapplehammer",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "WARRIOR",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Give all weapons in your hand and deck +1 Attack.",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_HAND",
+					"attackBonus": 1,
+					"filter": {
+						"class": "CardFilter",
+						"cardType": "WEAPON"
+					}
+				},
+				{
+					"class": "AddSpellTriggerSpell",
+					"target": "FRIENDLY_PLAYER",
+					"trigger": {
+						"eventTrigger": {
+							"class": "CardDrawnTrigger",
+							"targetPlayer": "SELF",
+							"queueCondition": {
+								"class": "CardPropertyCondition",
+								"target": "EVENT_TARGET",
+								"cardType": "WEAPON"
+							}
+						},
+						"spell": {
+							"class": "BuffSpell",
+							"target": "EVENT_TARGET",
+							"attackBonus": 1
+						}
+					}
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/warrior/spell_i_know_a_guy contains:
+{
+	"name": "I Know a Guy",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "WARRIOR",
+	"rarity": "COMMON",
+	"description": "Discover a Taunt minion.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DiscoverRandomCardSpell",
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"targetPlayer": "SELF"
+		},
+		"cardFilter": {
+			"class": "CardFilter",
+			"cardType": "MINION",
+			"attribute": "TAUNT",
+			"operation": "HAS"
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/warrior/minion_alley_armorsmith contains:
+{
+	"name": "Alley Armorsmith",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 7,
+	"heroClass": "WARRIOR",
+	"rarity": "RARE",
+	"description": "Taunt. Whenever this minion deals damage, gain that much Armor.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageCausedTrigger",
+			"hostTargetType": "IGNORE_OTHER_SOURCES"
+		},
+		"spell": {
+			"class": "BuffHeroSpell",
+			"target": "FRIENDLY_HERO",
+			"armorBonus": {
+				"class": "AttributeValueProvider",
+				"target": "EVENT_TARGET",
+				"attribute": "LAST_HIT"
+			}
+		}
+	},
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}

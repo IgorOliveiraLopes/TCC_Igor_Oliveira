@@ -1,0 +1,390 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/rogue/minion_bladed_cultist contains:
+{
+	"name": "Bladed Cultist",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ROGUE",
+	"rarity": "COMMON",
+	"description": "Combo: Gain +1/+1.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 1,
+			"hpBonus": 1
+		},
+		"condition": {
+			"class": "ComboCondition"
+		}
+	},
+	"attributes": {
+		"COMBO": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/rogue/spell_kingsblood_toxin contains:
+{
+	"name": "Kingsblood Toxin",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "ROGUE",
+	"rarity": "FREE",
+	"description": "Draw a card.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DrawCardSpell",
+		"value": 1
+	},
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/rogue/minion_shadowcaster contains:
+{
+	"name": "Shadowcaster",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ROGUE",
+	"rarity": "EPIC",
+	"description": "Battlecry: Choose a friendly minion. Add a 1/1 copy to your hand that costs (1).",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "custom.PutMiniCopyInHandSpell"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/rogue/spell_firebloom_toxin contains:
+{
+	"name": "Firebloom Toxin",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "ROGUE",
+	"rarity": "FREE",
+	"description": "Deal 2 damage.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 2
+	},
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/rogue/spell_briarthorn_toxin contains:
+{
+	"name": "Briarthorn Toxin",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "ROGUE",
+	"rarity": "FREE",
+	"description": "Give a minion +3 Attack.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "BuffSpell",
+		"attackBonus": 3
+	},
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/rogue/spell_thistle_tea contains:
+{
+	"name": "Thistle Tea",
+	"baseManaCost": 6,
+	"type": "SPELL",
+	"heroClass": "ROGUE",
+	"rarity": "RARE",
+	"description": "Draw a card. Add two extra copies of it to your hand.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DrawCardAndDoSomethingSpell",
+		"value": 1,
+		"spell": {
+			"class": "CopyCardSpell",
+			"value": 2
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/rogue/minion_southsea_squidface contains:
+{
+	"name": "Southsea Squidface",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ROGUE",
+	"rarity": "COMMON",
+	"race": "PIRATE",
+	"description": "Deathrattle: Give your weapon +2 Attack.",
+	"deathrattle": {
+		"class": "BuffWeaponSpell",
+		"target": "FRIENDLY_WEAPON",
+		"attackBonus": 2
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/rogue/spell_fadeleaf_toxin contains:
+{
+	"name": "Fadeleaf Toxin",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "ROGUE",
+	"rarity": "FREE",
+	"description": "Give a friendly minion Stealth until your next turn.",
+	"targetSelection": "FRIENDLY_MINIONS",
+	"spell": {
+		"class": "AddAttributeSpell",
+		"attribute": "STEALTH",
+		"revertTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		}
+	},
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/rogue/spell_shadow_strike contains:
+{
+	"name": "Shadow Strike",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "ROGUE",
+	"rarity": "COMMON",
+	"description": "Deal 5 damage to an undamaged character.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 5,
+		"filter": {
+			"class": "DamagedFilter",
+			"invert": true
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/rogue/spell_journey_below contains:
+{
+	"name": "Journey Below",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "ROGUE",
+	"rarity": "RARE",
+	"description": "Discover a Deathrattle card.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DiscoverRandomCardSpell",
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"targetPlayer": "SELF"
+		},
+		"cardFilter": {
+			"class": "CardFilter",
+			"attribute": "DEATHRATTLES",
+			"operation": "HAS"
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/rogue/minion_xaril_poisoned_mind contains:
+{
+	"name": "Xaril, Poisoned Mind",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ROGUE",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry and Deathrattle: Add a random Toxin to your hand.",
+	"battlecry": {
+		"spell": {
+			"class": "ReceiveRandomCardSpell",
+			"cards": [
+				"spell_bloodthistle_toxin",
+				"spell_briarthorn_toxin",
+				"spell_fadeleaf_toxin",
+				"spell_firebloom_toxin",
+				"spell_kingsblood_toxin"
+			]
+		}
+	},
+	"deathrattle": {
+		"class": "ReceiveRandomCardSpell",
+		"cards": [
+			"spell_bloodthistle_toxin",
+			"spell_briarthorn_toxin",
+			"spell_fadeleaf_toxin",
+			"spell_firebloom_toxin",
+			"spell_kingsblood_toxin"
+		]
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/rogue/minion_blade_of_cthun contains:
+{
+	"name": "Blade of C'Thun",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ROGUE",
+	"rarity": "EPIC",
+	"description": "Battlecry: Destroy a minion. Add its Attack and Health to C'Thun's (wherever it is).",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "DestroySpell"
+				},
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_MINIONS",
+					"attackBonus": {
+						"class": "AttributeValueProvider",
+						"target": "TARGET",
+						"attribute": "ATTACK"
+					},
+					"hpBonus": {
+						"class": "AttributeValueProvider",
+						"target": "TARGET",
+						"attribute": "HP"
+					},
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_HAND",
+					"attackBonus": {
+						"class": "AttributeValueProvider",
+						"target": "TARGET",
+						"attribute": "ATTACK"
+					},
+					"hpBonus": {
+						"class": "AttributeValueProvider",
+						"target": "TARGET",
+						"attribute": "HP"
+					},
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_ATTACK_BUFF",
+					"value": {
+						"class": "AttributeValueProvider",
+						"target": "TARGET",
+						"attribute": "ATTACK"
+					}
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_HEALTH_BUFF",
+					"value": {
+						"class": "AttributeValueProvider",
+						"target": "TARGET",
+						"attribute": "HP"
+					}
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/rogue/spell_bloodthistle_toxin contains:
+{
+	"name": "Bloodthistle Toxin",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "ROGUE",
+	"rarity": "FREE",
+	"description": "Return a friendly minion to your hand. It costs (2) less.",
+	"targetSelection": "FRIENDLY_MINIONS",
+	"spell": {
+		"class": "ReturnMinionToHandSpell",
+		"spell": {
+			"class": "CardCostModifierSpell",
+			"target": "FRIENDLY_PLAYER",
+			"cardCostModifier": {
+				"class": "CardCostModifier",
+				"target": "EVENT_CARD",
+				"operation": "SUBTRACT",
+				"value": 2
+			}
+		}
+	},
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/rogue/minion_undercity_huckster contains:
+{
+	"name": "Undercity Huckster",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ROGUE",
+	"rarity": "RARE",
+	"description": "Deathrattle: Add a random class card to your hand (from your opponent's class).",
+	"deathrattle": {
+		"class": "ReceiveCardSpell",
+		"value": 1,
+		"card": "spell_the_coin",
+		"cardFilter": {
+			"class": "CardFilter",
+			"heroClass": "OPPONENT"
+		}
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}

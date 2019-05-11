@@ -1,0 +1,246 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/paladin/minion_grimestreet_outfitter contains:
+{
+	"name": "Grimestreet Outfitter",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "Battlecry: Give all minions in your hand +1/+1.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "FRIENDLY_HAND",
+			"attackBonus": 1,
+			"hpBonus": 1,
+			"filter": {
+				"class": "CardFilter",
+				"cardType": "MINION"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/paladin/spell_small-time_recruits contains:
+{
+	"name": "Small-Time Recruits",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "EPIC",
+	"description": "Draw three 1-Cost minions from your deck.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "FromDeckToHandSpell",
+		"value": 3,
+		"cardFilter": {
+			"class": "CardFilter",
+			"cardType": "MINION",
+			"manaCost": 1
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/paladin/minion_wickerflame_burnbirstle contains:
+{
+	"name": "Wickerflame Burnbristle",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "PALADIN",
+	"rarity": "LEGENDARY",
+	"description": "Divine Shield. Taunt. Damage dealt by this minion also heals your hero.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageCausedTrigger",
+			"hostTargetType": "IGNORE_OTHER_SOURCES"
+		},
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_HERO",
+			"value": {
+				"class": "AttributeValueProvider",
+				"target": "EVENT_TARGET",
+				"attribute": "LAST_HIT"
+			}
+		}
+	},
+	"attributes": {
+		"DIVINE_SHIELD": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/paladin/minion_grimscale_chum contains:
+{
+	"name": "Grimscale Chum",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"race": "MURLOC",
+	"description": "Battlecry: Give a random Murloc in your hand +1/+1.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "FRIENDLY_HAND",
+			"attackBonus": 1,
+			"hpBonus": 1,
+			"filter": {
+				"class": "CardFilter",
+				"cardType": "MINION",
+				"race": "MURLOC"
+			},
+			"randomTarget": true
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/paladin/spell_smugglers_run contains:
+{
+	"name": "Smuggler's Run",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "All minions in your hand gain +1/+1.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffSpell",
+		"target": "FRIENDLY_HAND",
+		"attackBonus": 1,
+		"hpBonus": 1,
+		"filter": {
+			"class": "CardFilter",
+			"cardType": "MINION"
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/paladin/minion_grimestreet_enforcer contains:
+{
+	"name": "Grimestreet Enforcer",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "PALADIN",
+	"rarity": "RARE",
+	"description": "At the end of your turn, give all minions in your hand +1/+1.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "FRIENDLY_HAND",
+			"attackBonus": 1,
+			"hpBonus": 1,
+			"filter": {
+				"class": "CardFilter",
+				"cardType": "MINION"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/paladin/minion_grimestreet_protector contains:
+{
+	"name": "Grimestreet Protector",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "PALADIN",
+	"rarity": "RARE",
+	"description": "Taunt. Battlecry: Give adjacent minions Divine Shield.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "AddAttributeSpell",
+			"target": "ADJACENT_MINIONS",
+			"attribute": "DIVINE_SHIELD"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/paladin/secret_getaway_kodo contains:
+{
+	"name": "Getaway Kodo",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "RARE",
+	"description": "Secret: When a friendly minion dies, return it to your hand.",
+	"trigger": {
+		"class": "MinionDeathTrigger",
+		"targetPlayer": "SELF"
+	},
+	"spell": {
+		"class": "ReturnMinionToHandSpell",
+		"target": "EVENT_TARGET"
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/paladin/minion_meanstreet_marshal contains:
+{
+	"name": "Meanstreet Marshal",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "PALADIN",
+	"rarity": "EPIC",
+	"description": "Deathrattle: If this minion has 2 or more Attack, draw a card.",
+	"deathrattle": {
+		"class": "ConditionalSpell",
+		"spell": {
+			"class": "DrawCardSpell",
+			"value": 1
+		},
+		"condition": {
+			"class": "AttributeCondition",
+			"target": "SELF",
+			"attribute": "ATTACK",
+			"operation": "GREATER_OR_EQUAL",
+			"value": 2
+		}
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}

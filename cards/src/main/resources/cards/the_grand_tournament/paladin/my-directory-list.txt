@@ -1,0 +1,269 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/paladin/minion_mysterious_challenger contains:
+{
+	"name": "Mysterious Challenger",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "PALADIN",
+	"rarity": "EPIC",
+	"description": "Battlecry: Put one of each Secret from your deck into the battlefield.",
+	"battlecry": {
+		"spell": {
+			"class": "PutRandomSecretIntoPlaySpell",
+			"howMany": 99
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/paladin/hero_power_the_silver_hand contains:
+{
+	"name": "The Silver Hand",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "PALADIN",
+	"rarity": "FREE",
+	"description": "Summon two 1/1 Silver Hand Recruits.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"cards": [
+			"token_silver_hand_recruit",
+			"token_silver_hand_recruit"
+		]
+	},
+	"condition": {
+		"class": "MinionCountCondition",
+		"operation": "LESS",
+		"value": 7
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/paladin/minion_warhorse_trainer contains:
+{
+	"name": "Warhorse Trainer",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "Your Silver Hand Recruits have +1 Attack.",
+	"aura": {
+		"class": "BuffAura",
+		"target": "FRIENDLY_MINIONS",
+		"attackBonus": 1,
+		"filter": {
+			"class": "SpecificCardFilter",
+			"cardId": "token_silver_hand_recruit"
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/paladin/minion_murloc_knight contains:
+{
+	"name": "Murloc Knight",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"race": "MURLOC",
+	"description": "Inspire: Summon a random Murloc.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "SummonRandomMinionFilteredSpell",
+			"boardPositionRelative": "RIGHT",
+			"cardFilter": {
+				"class": "CardFilter",
+				"race": "MURLOC"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/paladin/secret_competitive_spirit contains:
+{
+	"name": "Competitive Spirit",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "RARE",
+	"description": "Secret: When your turn starts, give your minions +1/+1.",
+	"targetSelection": "NONE",
+	"trigger": {
+		"class": "TurnEndTrigger",
+		"targetPlayer": "OPPONENT",
+		"fireCondition": {
+			"class": "MinionCountCondition",
+			"operation": "GREATER",
+			"value": 0
+		}
+	},
+	"spell": {
+		"class": "BuffSpell",
+		"target": "FRIENDLY_MINIONS",
+		"attackBonus": 1,
+		"hpBonus": 1
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/paladin/weapon_argent_lance contains:
+{
+	"name": "Argent Lance",
+	"baseManaCost": 2,
+	"type": "WEAPON",
+	"damage": 2,
+	"durability": 2,
+	"heroClass": "PALADIN",
+	"rarity": "RARE",
+	"description": "Battlecry : Reveal a minion in each deck. If yours costs more, gain +1 durability.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "JoustSpell",
+			"spell": {
+				"class": "ModifyDurabilitySpell",
+				"targetPlayer": "SELF",
+				"value": 1
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/paladin/spell_enter_the_coliseum contains:
+{
+	"name": "Enter the Coliseum",
+	"baseManaCost": 6,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "EPIC",
+	"description": "Destroy all minions except each player's highest Attack minion.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DestroyAllExceptOneSpell",
+				"target": "ENEMY_MINIONS",
+				"filter": {
+					"class": "HighestAttributeFilter",
+					"target": "ENEMY_MINIONS",
+					"attribute": "ATTACK"
+				}
+			},
+			{
+				"class": "DestroyAllExceptOneSpell",
+				"target": "FRIENDLY_MINIONS",
+				"filter": {
+					"class": "HighestAttributeFilter",
+					"target": "FRIENDLY_MINIONS",
+					"attribute": "ATTACK"
+				}
+			}
+		]
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/paladin/spell_seal_of_champions contains:
+{
+	"name": "Seal of Champions",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "Give a minion +3 Attack and Divine Shield.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "BuffSpell",
+				"attackBonus": 3
+			},
+			{
+				"class": "AddAttributeSpell",
+				"attribute": "DIVINE_SHIELD"
+			}
+		]
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/paladin/minion_eadric_the_pure contains:
+{
+	"name": "Eadric the Pure",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 7,
+	"heroClass": "PALADIN",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Change all enemy minions' Attack to 1.",
+	"battlecry": {
+		"spell": {
+			"class": "SetAttackSpell",
+			"target": "ENEMY_MINIONS",
+			"value": 1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/paladin/minion_tuskarr_jouster contains:
+{
+	"name": "Tuskarr Jouster",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "PALADIN",
+	"rarity": "RARE",
+	"description": "Battlecry: Reveal a minion in each deck. If yours costs more, restore 7 Health to your hero.",
+	"battlecry": {
+		"spell": {
+			"class": "JoustSpell",
+			"spell": {
+				"class": "HealSpell",
+				"target": "FRIENDLY_HERO",
+				"value": 7
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}

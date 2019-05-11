@@ -1,0 +1,51 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/formats/standard contains:
+{
+	"name": "Standard",
+	"sets": [
+		"BASIC",
+		"CLASSIC",
+		"THE_OLD_GODS",
+		"ONE_NIGHT_IN_KARAZHAN",
+		"MEAN_STREETS_OF_GADGETZAN"
+	]
+}
+
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/formats/wild contains:
+{
+	"name": "Wild",
+	"sets": [
+		"BASIC",
+		"CLASSIC",
+		"REWARD",
+		"PROMO",
+		"HALL_OF_FAME",
+		"NAXXRAMAS",
+		"GOBLINS_VS_GNOMES",
+		"BLACKROCK_MOUNTAIN",
+		"THE_GRAND_TOURNAMENT",
+		"LEAGUE_OF_EXPLORERS",
+		"THE_OLD_GODS",
+		"ONE_NIGHT_IN_KARAZHAN",
+		"MEAN_STREETS_OF_GADGETZAN"
+	]
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/formats/all contains:
+{
+	"name": "All",
+	"sets": [
+		"BASIC",
+		"CLASSIC",
+		"REWARD",
+		"PROMO",
+		"HALL_OF_FAME",
+		"NAXXRAMAS",
+		"GOBLINS_VS_GNOMES",
+		"BLACKROCK_MOUNTAIN",
+		"THE_GRAND_TOURNAMENT",
+		"LEAGUE_OF_EXPLORERS",
+		"THE_OLD_GODS",
+		"ONE_NIGHT_IN_KARAZHAN",
+		"MEAN_STREETS_OF_GADGETZAN",
+		"CUSTOM"
+	]
+}

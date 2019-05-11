@@ -1,0 +1,391 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/spell_ancestral_healing contains:
+{
+	"name": "Ancestral Healing",
+	"baseManaCost": 0,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Restore a minion to full Health and give it Taunt.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "HealSpell",
+				"value": {
+					"class": "AttributeValueProvider",
+					"attribute": "MAX_HP"
+				}
+			},
+			{
+				"class": "AddAttributeSpell",
+				"attribute": "TAUNT"
+			}
+		]
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/token_searing_totem contains:
+{
+	"name": "Searing Totem",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"race": "TOTEM",
+	"description": "",
+	"collectible": false,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/hero_power_totemic_call contains:
+{
+	"name": "Totemic Call",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Summon a random Totem.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonRandomNotOnBoardSpell",
+		"cards": [
+			"token_searing_totem",
+			"token_healing_totem",
+			"token_wrath_of_air_totem",
+			"token_stoneclaw_totem"
+		]
+	},
+	"condition": {
+		"class": "AndCondition",
+		"conditions": [
+			{
+				"class": "AndCondition",
+				"conditions": [
+					{
+						"class": "MinionOnBoardCondition",
+						"cardFilter": {
+							"class": "SpecificCardFilter",
+							"cardId": "token_searing_totem"
+						}
+					},
+					{
+						"class": "MinionOnBoardCondition",
+						"cardFilter": {
+							"class": "SpecificCardFilter",
+							"cardId": "token_healing_totem"
+						}
+					},
+					{
+						"class": "MinionOnBoardCondition",
+						"cardFilter": {
+							"class": "SpecificCardFilter",
+							"cardId": "token_wrath_of_air_totem"
+						}
+					},
+					{
+						"class": "MinionOnBoardCondition",
+						"cardFilter": {
+							"class": "SpecificCardFilter",
+							"cardId": "token_stoneclaw_totem"
+						}
+					}
+				],
+				"invert": true
+			},
+			{
+				"class": "MinionCountCondition",
+				"operation": "LESS",
+				"value": 7
+			}
+		]
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/spell_hex contains:
+{
+	"name": "Hex",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Transform a minion into a 0/1 Frog with Taunt.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "TransformMinionSpell",
+		"card": "token_frog"
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/token_stoneclaw_totem contains:
+{
+	"name": "Stoneclaw Totem",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 2,
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"race": "TOTEM",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": false,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/token_wrath_of_air_totem contains:
+{
+	"name": "Wrath of Air Totem",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 2,
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"race": "TOTEM",
+	"description": "Spell Damage +1",
+	"attributes": {
+		"SPELL_DAMAGE": 1
+	},
+	"collectible": false,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/hero_thrall contains:
+{
+	"name": "Thrall",
+	"baseManaCost": 0,
+	"heroPower": "hero_power_totemic_call",
+	"type": "HERO",
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"attributes": {
+		"HP": 30,
+		"MAX_HP": 30
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/spell_frost_shock contains:
+{
+	"name": "Frost Shock",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Deal 1 damage to an enemy character and Freeze it.",
+	"targetSelection": "ENEMY_CHARACTERS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"value": 1
+			},
+			{
+				"class": "AddAttributeSpell",
+				"attribute": "FROZEN"
+			}
+		]
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/spell_rockbiter_weapon contains:
+{
+	"name": "Rockbiter Weapon",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Give a friendly character +3 Attack this turn.",
+	"targetSelection": "FRIENDLY_CHARACTERS",
+	"spell": {
+		"class": "TemporaryAttackSpell",
+		"value": 3
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/spell_windfury contains:
+{
+	"name": "Windfury",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Give a minion Windfury.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "AddAttributeSpell",
+		"attribute": "WINDFURY"
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/token_healing_totem contains:
+{
+	"name": "Healing Totem",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 2,
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"race": "TOTEM",
+	"description": "At the end of your turn, restore 1 Health to all friendly minions.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_MINIONS",
+			"value": 1
+		}
+	},
+	"collectible": false,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/minion_flametongue_totem contains:
+{
+	"name": "Flametongue Totem",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 3,
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"race": "TOTEM",
+	"description": "Adjacent minions have +2 Attack.",
+	"aura": {
+		"class": "BuffAura",
+		"target": "ADJACENT_MINIONS",
+		"attackBonus": 2
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/minion_windspeaker contains:
+{
+	"name": "Windspeaker",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Battlecry: Give a friendly minion Windfury.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "AddAttributeSpell",
+			"attribute": "WINDFURY"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/token_frog contains:
+{
+	"name": "Frog",
+	"baseManaCost": 0,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": false,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/spell_totemic_might contains:
+{
+	"name": "Totemic Might",
+	"baseManaCost": 0,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Give your Totems +2 Health.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffSpell",
+		"target": "FRIENDLY_MINIONS",
+		"hpBonus": 2,
+		"filter": {
+			"class": "RaceFilter",
+			"race": "TOTEM"
+		}
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/minion_fire_elemental contains:
+{
+	"name": "Fire Elemental",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 5,
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Battlecry: Deal 3 damage.",
+	"battlecry": {
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "DamageSpell",
+			"value": 3
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/shaman/spell_bloodlust contains:
+{
+	"name": "Bloodlust",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Give your minions +3 Attack this turn.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "TemporaryAttackSpell",
+		"target": "FRIENDLY_MINIONS",
+		"value": 3
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}

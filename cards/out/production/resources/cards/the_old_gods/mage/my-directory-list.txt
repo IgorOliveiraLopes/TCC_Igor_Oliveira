@@ -1,0 +1,270 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/mage/minion_anomalus contains:
+{
+	"name": "Anomalus",
+	"baseManaCost": 8,
+	"type": "MINION",
+	"baseAttack": 8,
+	"baseHp": 6,
+	"heroClass": "MAGE",
+	"rarity": "LEGENDARY",
+	"description": "Deathrattle: Deal 8 damage to all minions.",
+	"deathrattle": {
+		"class": "DamageSpell",
+		"target": "ALL_MINIONS",
+		"value": 8
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/mage/minion_twilight_flamecaller contains:
+{
+	"name": "Twilight Flamecaller",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "MAGE",
+	"rarity": "COMMON",
+	"description": "Battlecry: Deal 1 damage to all enemy minions.",
+	"battlecry": {
+		"spell": {
+			"class": "DamageSpell",
+			"target": "ENEMY_MINIONS",
+			"value": 1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/mage/minion_cult_sorcerer contains:
+{
+	"name": "Cult Sorcerer",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "MAGE",
+	"rarity": "RARE",
+	"description": "Spell Damage +1. After you cast a spell, give your C'Thun +1/+1 (wherever it is).",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterSpellCastedTrigger",
+			"sourcePlayer": "SELF"
+		},
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_MINIONS",
+					"value": 1,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_HAND",
+					"value": 1,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_ATTACK_BUFF",
+					"value": 1
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_HEALTH_BUFF",
+					"value": 1
+				}
+			]
+		}
+	},
+	"attributes": {
+		"SPELL_DAMAGE": 1
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/mage/spell_cabalists_tome contains:
+{
+	"name": "Cabalist's Tome",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "EPIC",
+	"description": "Add 3 random Mage spells to your hand.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "ReceiveCardSpell",
+		"value": 3,
+		"cardFilter": {
+			"class": "CardFilter",
+			"cardType": "SPELL",
+			"heroClass": "MAGE"
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/mage/spell_shatter contains:
+{
+	"name": "Shatter",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "COMMON",
+	"description": "Destroy a Frozen minion.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "DestroySpell",
+		"filter": {
+			"class": "AttributeFilter",
+			"attribute": "FROZEN",
+			"operation": "HAS"
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/mage/spell_forbidden_flame contains:
+{
+	"name": "Forbidden Flame",
+	"baseManaCost": 0,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "EPIC",
+	"description": "Spend all your mana. Deal that much damage to a minion.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"value": {
+					"class": "PlayerAttributeValueProvider",
+					"playerAttribute": "MANA"
+				}
+			},
+			{
+				"class": "GainManaSpell",
+				"value": {
+					"class": "AlgebraicValueProvider",
+					"operation": "NEGATE",
+					"value1": {
+						"class": "PlayerAttributeValueProvider",
+						"playerAttribute": "MANA"
+					}
+				}
+			}
+		]
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/mage/minion_servant_of_yogg_saron contains:
+{
+	"name": "Servant of Yogg-Saron",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "MAGE",
+	"rarity": "RARE",
+	"description": "Battlecry: Cast a random spell that costs (5) or less (targets chosen randomly).",
+	"battlecry": {
+		"spell": {
+			"class": "CastRandomSpellSpell",
+			"cardFilter": {
+				"class": "CardFilter",
+				"attribute": "BASE_MANA_COST",
+				"operation": "LESS_OR_EQUAL",
+				"value": 5
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/mage/minion_demented_frostcaller contains:
+{
+	"name": "Demented Frostcaller",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "MAGE",
+	"rarity": "RARE",
+	"description": "After you cast a spell, Freeze a random enemy.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterSpellCastedTrigger",
+			"sourcePlayer": "SELF"
+		},
+		"spell": {
+			"class": "AddAttributeSpell",
+			"target": "ENEMY_CHARACTERS",
+			"attribute": "FROZEN",
+			"randomTarget": true,
+			"filter": {
+				"class": "AttributeFilter",
+				"attribute": "FROZEN",
+				"operation": "HAS",
+				"invert": true
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/mage/minion_faceless_summoner contains:
+{
+	"name": "Faceless Summoner",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "MAGE",
+	"rarity": "COMMON",
+	"description": "Battlecry: Summon a random 3-Cost minion.",
+	"battlecry": {
+		"spell": {
+			"class": "SummonRandomMinionFilteredSpell",
+			"boardPositionRelative": "RIGHT",
+			"cardFilter": {
+				"class": "CardFilter",
+				"manaCost": 3
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}

@@ -1,0 +1,248 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/paladin/hero_power_reinforce contains:
+{
+	"name": "Reinforce",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "PALADIN",
+	"rarity": "FREE",
+	"description": "Summon a 1/1 Silver Hand Recruit.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"card": "token_silver_hand_recruit"
+	},
+	"condition": {
+		"class": "MinionCountCondition",
+		"operation": "LESS",
+		"value": 7
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/paladin/spell_hammer_of_wrath contains:
+{
+	"name": "Hammer of Wrath",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "FREE",
+	"description": "Deal 3 damage. Draw a card.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"value": 3
+			},
+			{
+				"class": "DrawCardSpell",
+				"value": 1
+			}
+		]
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/paladin/hero_uther contains:
+{
+	"name": "Uther Lightbringer",
+	"baseManaCost": 0,
+	"heroPower": "hero_power_reinforce",
+	"type": "HERO",
+	"heroClass": "PALADIN",
+	"rarity": "FREE",
+	"attributes": {
+		"HP": 30,
+		"MAX_HP": 30
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/paladin/minion_guardian_of_kings contains:
+{
+	"name": "Guardian of Kings",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 6,
+	"heroClass": "PALADIN",
+	"rarity": "FREE",
+	"description": "Battlecry: Restore 6 Health to your hero.",
+	"battlecry": {
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_HERO",
+			"value": 6
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/paladin/spell_hand_of_protection contains:
+{
+	"name": "Hand of Protection",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "FREE",
+	"description": "Give a minion Divine Shield.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "AddAttributeSpell",
+		"attribute": "DIVINE_SHIELD"
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/paladin/spell_consecration contains:
+{
+	"name": "Consecration",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "FREE",
+	"description": "Deal 2 damage to all enemies.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DamageSpell",
+		"target": "ENEMY_CHARACTERS",
+		"value": 2
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/paladin/spell_blessing_of_kings contains:
+{
+	"name": "Blessing of Kings",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "FREE",
+	"description": "Give a minion +4/+4. (+4 Attack/+4 Health)",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "BuffSpell",
+		"attackBonus": 4,
+		"hpBonus": 4
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/paladin/spell_humility contains:
+{
+	"name": "Humility",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "FREE",
+	"description": "Change a minion's Attack to 1.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "SetAttackSpell",
+		"value": 1
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/paladin/spell_blessing_of_might contains:
+{
+	"name": "Blessing of Might",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "FREE",
+	"description": "Give a minion +3 Attack.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "BuffSpell",
+		"attackBonus": 3
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/paladin/token_silver_hand_recruit contains:
+{
+	"name": "Silver Hand Recruit",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "PALADIN",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": false,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/paladin/weapon_lights_justice contains:
+{
+	"name": "Light's Justice",
+	"baseManaCost": 1,
+	"type": "WEAPON",
+	"damage": 1,
+	"durability": 4,
+	"heroClass": "PALADIN",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/paladin/weapon_truesilver_champion contains:
+{
+	"name": "Truesilver Champion",
+	"baseManaCost": 4,
+	"type": "WEAPON",
+	"damage": 4,
+	"durability": 2,
+	"heroClass": "PALADIN",
+	"rarity": "FREE",
+	"description": "Whenever your hero attacks, restore 2 Health to it.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TargetAcquisitionTrigger",
+			"actionType": "PHYSICAL_ATTACK",
+			"sourcePlayer": "SELF",
+			"targetPlayer": "BOTH",
+			"sourceEntityType": "HERO"
+		},
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_HERO",
+			"value": 2
+		}
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/paladin/spell_holy_light contains:
+{
+	"name": "Holy Light",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "FREE",
+	"description": "Restore 6 Health.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "HealSpell",
+		"value": 6
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}

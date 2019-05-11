@@ -1,10 +1,6 @@
 package net.demilich.metastone.gui.deckbuilder;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.Reader;
+import java.io.*;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
@@ -16,10 +12,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import net.demilich.metastone.MetaStoneUtils;
 import net.demilich.metastone.utils.MetastoneProperties;
 import net.demilich.metastone.utils.ResourceInputStream;
 import net.demilich.metastone.utils.ResourceLoader;
-import net.demilich.metastone.utils.UserHomeMetastone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,16 +38,70 @@ import net.demilich.nittygrittymvc.Proxy;
 
 public class DeckProxy extends Proxy<GameNotification> {
 
+	private static final int DECK_LENGTH = 30;
 	private static Logger logger = LoggerFactory.getLogger(DeckProxy.class);
 
 	public static final String NAME = "DeckProxy";
 	private static final String DECKS_FOLDER = "decks";
-	private static final String DECKS_FOLDER_PATH = UserHomeMetastone.getPath() + File.separator + DECKS_FOLDER;
+	private static final String DECKS_FOLDER_PATH = "/home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/decks";///*"/home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/decks";*/UserHomeMetastone.getPath() + File.separator + DECKS_FOLDER;
 	private static final String DECKS_COPIED_PROPERTY = "decks.copied";
 
 	private final List<Deck> decks = new ArrayList<Deck>();
 	private IDeckValidator activeDeckValidator = new DefaultDeckValidator();
 	private Deck activeDeck;
+	CardCatalogue cardCatalogue = new CardCatalogue();
+
+
+
+
+	public static MetaStoneUtils create_decks_from_file(String file){
+
+		String[] deck_one = new String[DECK_LENGTH];
+		String[] deck_two = new String[DECK_LENGTH];
+
+
+		BufferedReader in = null;
+		try {
+			in = new BufferedReader(new FileReader(DECKS_FOLDER_PATH+File.separator+file));
+			String read = null;
+			String aux;
+			int deck_one_length = 0,deck_two_length = 0;
+			while ((read = in.readLine()) != null) {
+				String[] splited = read.split("((?<=[;|#])|(?=[;|#]))");
+
+				for(int i = 0; i < splited.length; i++){
+					aux = splited[i];
+					if (!aux.matches("[;|#]") && deck_one_length < DECK_LENGTH) {
+						deck_one[deck_one_length] = aux;
+						deck_one_length++;
+					}else if(!aux.matches("[;|#]") && deck_one_length == DECK_LENGTH && deck_two_length < DECK_LENGTH){
+						deck_two[deck_two_length] = aux;
+						deck_two_length++;
+
+					}
+				}
+			}
+		} catch (IOException e) {
+			System.out.println("There was a problem: " + e);
+			e.printStackTrace();
+		} finally {
+			try {
+				in.close();
+			} catch (Exception e) {
+			}
+		}
+		return new MetaStoneUtils(deck_one,deck_two);
+	}
+
+
+	public Deck Create_deck(String[] cards){
+		for(String card : cards){
+			addCardToDeck(cardCatalogue.getCardById(card));
+
+		}
+		return activeDeck;
+
+	}
 
 	public DeckProxy() {
 		super(NAME);
@@ -86,7 +136,7 @@ public class DeckProxy extends Proxy<GameNotification> {
 			deckFormat.addSet(cardSet);
 		}
 		CardCollection cardCollection;
-		if (activeDeck.isArbitrary()) {
+		if (this.activeDeck.isArbitrary()) {
 			cardCollection = CardCatalogue.query(deckFormat);
 		} else {
 			cardCollection = CardCatalogue.query(deckFormat, heroClass);
@@ -294,5 +344,6 @@ public class DeckProxy extends Proxy<GameNotification> {
 	public void setActiveDeckValidator(IDeckValidator deckValidator) {
 		this.activeDeckValidator = deckValidator;
 	}
+	public void clearActiveDeck(){this.activeDeck = null;}
 
 }

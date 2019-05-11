@@ -1,0 +1,260 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/mage/spell_frostbolt contains:
+{
+	"name": "Frostbolt",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"description": "Deal 3 damage to a character and Freeze it.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"value": 3
+			},
+			{
+				"class": "AddAttributeSpell",
+				"attribute": "FROZEN"
+			}
+		]
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/mage/spell_mirror_image contains:
+{
+	"name": "Mirror Image",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"description": "Summon two 0/2 minions with Taunt.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"cards": [
+			"token_mirror_image",
+			"token_mirror_image"
+		]
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/mage/spell_frost_nova contains:
+{
+	"name": "Frost Nova",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"description": "Freeze all enemy minions.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "AddAttributeSpell",
+		"target": "ENEMY_MINIONS",
+		"attribute": "FROZEN"
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/mage/minion_water_elemental contains:
+{
+	"name": "Water Elemental",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 6,
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"description": "Freeze any character damaged by this minion.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageCausedTrigger",
+			"hostTargetType": "IGNORE_OTHER_SOURCES"
+		},
+		"spell": {
+			"class": "AddAttributeSpell",
+			"target": "EVENT_TARGET",
+			"attribute": "FROZEN"
+		}
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/mage/spell_fireball contains:
+{
+	"name": "Fireball",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"description": "Deal 6 damage.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 6
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/mage/spell_arcane_missiles contains:
+{
+	"name": "Arcane Missiles",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"description": "Deal 3 damage randomly split among all enemies.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MissilesSpell",
+		"target": "ENEMY_CHARACTERS",
+		"value": 1,
+		"howMany": 3
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/mage/spell_polymorph contains:
+{
+	"name": "Polymorph",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"description": "Transform a minion into a 1/1 Sheep.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "TransformMinionSpell",
+		"card": "token_sheep"
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/mage/token_mirror_image contains:
+{
+	"name": "Mirror Image",
+	"baseManaCost": 0,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 2,
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": false,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/mage/spell_arcane_intellect contains:
+{
+	"name": "Arcane Intellect",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"description": "Draw 2 cards.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DrawCardSpell",
+		"value": 2
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/mage/token_sheep contains:
+{
+	"name": "Sheep",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "",
+	"collectible": false,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/mage/hero_jaina contains:
+{
+	"name": "Jaina Proudmoore",
+	"baseManaCost": 0,
+	"heroPower": "hero_power_fireblast",
+	"type": "HERO",
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"attributes": {
+		"HP": 30,
+		"MAX_HP": 30
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/mage/spell_arcane_explosion contains:
+{
+	"name": "Arcane Explosion",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"description": "Deal 1 damage to all enemy minions.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DamageSpell",
+		"target": "ENEMY_MINIONS",
+		"value": 1
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/mage/hero_power_fireblast contains:
+{
+	"name": "Fireblast",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"description": "Deal 1 damage.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 1
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/mage/spell_flamestrike contains:
+{
+	"name": "Flamestrike",
+	"baseManaCost": 7,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"description": "Deal 4 damage to all enemy minions.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DamageSpell",
+		"target": "ENEMY_MINIONS",
+		"value": 4
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}

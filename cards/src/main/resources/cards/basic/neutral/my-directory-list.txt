@@ -1,0 +1,896 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_magma_rager contains:
+{
+	"name": "Magma Rager",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_murloc_raider contains:
+{
+	"name": "Murloc Raider",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "MURLOC",
+	"description": "",
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/token_boar contains:
+{
+	"name": "Boar",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "",
+	"collectible": false,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_frostwolf_warlord contains:
+{
+	"name": "Frostwolf Warlord",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Battlecry: Gain +1/+1 for each other friendly minion on the battlefield.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"value": {
+				"class": "EntityCounter",
+				"target": "OTHER_FRIENDLY_MINIONS"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_stonetusk_boar contains:
+{
+	"name": "Stonetusk Boar",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "Charge",
+	"attributes": {
+		"CHARGE": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_war_golem contains:
+{
+	"name": "War Golem",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_stormwind_champion contains:
+{
+	"name": "Stormwind Champion",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Your other minions have +1/+1.",
+	"aura": {
+		"class": "BuffAura",
+		"target": "OTHER_FRIENDLY_MINIONS",
+		"attackBonus": 1,
+		"hpBonus": 1
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_boulderfist_ogre contains:
+{
+	"name": "Boulderfist Ogre",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_reckless_rocketeer contains:
+{
+	"name": "Reckless Rocketeer",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Charge",
+	"attributes": {
+		"CHARGE": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_archmage contains:
+{
+	"name": "Archmage",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Spell Damage +1",
+	"attributes": {
+		"SPELL_DAMAGE": 1
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_silverback_patriarch contains:
+{
+	"name": "Silverback Patriarch",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/spell_the_coin contains:
+{
+	"name": "The Coin",
+	"baseManaCost": 0,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Gain 1 Mana Crystals this turn only.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "GainManaSpell",
+		"value": 1
+	},
+	"collectible": false,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_elven_archer contains:
+{
+	"name": "Elven Archer",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Battlecry: Deal 1 damage.",
+	"battlecry": {
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "DamageSpell",
+			"value": 1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_kobold_geomancer contains:
+{
+	"name": "Kobold Geomancer",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Spell Damage +1",
+	"attributes": {
+		"SPELL_DAMAGE": 1
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_novice_engineer contains:
+{
+	"name": "Novice Engineer",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Battlecry: Draw a card.",
+	"battlecry": {
+		"spell": {
+			"class": "DrawCardSpell"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_nightblade contains:
+{
+	"name": "Nightblade",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Battlecry: Deal 3 damage to the enemy hero.",
+	"battlecry": {
+		"spell": {
+			"class": "DamageSpell",
+			"target": "ENEMY_HERO",
+			"value": 3
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_booty_bay_bodyguard contains:
+{
+	"name": "Booty Bay Bodyguard",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_acidic_swamp_ooze contains:
+{
+	"name": "Acidic Swamp Ooze",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Battlecry: Destroy your opponent's weapon.",
+	"battlecry": {
+		"spell": {
+			"class": "DestroySpell",
+			"target": "ENEMY_WEAPON"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/token_mechanical_dragonling contains:
+{
+	"name": "Mechanical Dragonling",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "MECH",
+	"description": "",
+	"collectible": false,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_ogre_magi contains:
+{
+	"name": "Ogre Magi",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Spell Damage +1",
+	"attributes": {
+		"SPELL_DAMAGE": 1
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_wolfrider contains:
+{
+	"name": "Wolfrider",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Charge",
+	"attributes": {
+		"CHARGE": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_oasis_snapjaw contains:
+{
+	"name": "Oasis Snapjaw",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "",
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_grimscale_oracle contains:
+{
+	"name": "Grimscale Oracle",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "MURLOC",
+	"description": "Your other Murlocs have +1 Attack.",
+	"aura": {
+		"class": "BuffAura",
+		"target": "OTHER_FRIENDLY_MINIONS",
+		"attackBonus": 1,
+		"filter": {
+			"class": "RaceFilter",
+			"race": "MURLOC"
+		}
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_darkscale_healer contains:
+{
+	"name": "Darkscale Healer",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Battlecry: Restore 2 Health to all friendly characters.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_CHARACTERS",
+			"value": 2
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_gnomish_inventor contains:
+{
+	"name": "Gnomish Inventor",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Battlecry: Draw a card.",
+	"battlecry": {
+		"spell": {
+			"class": "DrawCardSpell",
+			"value": 1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_goldshire_footman contains:
+{
+	"name": "Goldshire Footman",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_bluegill_warrior contains:
+{
+	"name": "Bluegill Warrior",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "MURLOC",
+	"description": "Charge",
+	"attributes": {
+		"CHARGE": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/token_murloc_scout contains:
+{
+	"name": "Murloc Scout",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "MURLOC",
+	"description": "",
+	"collectible": false,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_dragonling_mechanic contains:
+{
+	"name": "Dragonling Mechanic",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Battlecry: Summon a 2/1 Mechanical Dragonling.",
+	"battlecry": {
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_mechanical_dragonling",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_stormwind_knight contains:
+{
+	"name": "Stormwind Knight",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Charge",
+	"attributes": {
+		"CHARGE": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_shattered_sun_cleric contains:
+{
+	"name": "Shattered Sun Cleric",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Battlecry: Give a friendly minion +1/+1",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "BuffSpell",
+			"attackBonus": 1,
+			"hpBonus": 1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_bloodfen_raptor contains:
+{
+	"name": "Bloodfen Raptor",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "",
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_frostwolf_grunt contains:
+{
+	"name": "Frostwolf Grunt",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_lord_of_the_arena contains:
+{
+	"name": "Lord of the Arena",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_raid_leader contains:
+{
+	"name": "Raid Leader",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Your other minions have +1 Attack.",
+	"aura": {
+		"class": "BuffAura",
+		"target": "OTHER_FRIENDLY_MINIONS",
+		"attackBonus": 1
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_ironfur_grizzly contains:
+{
+	"name": "Ironfur Grizzly",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_gurubashi_berserker contains:
+{
+	"name": "Gurubashi Berserker",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Whenever this minion takes damage, gain +3 Attack.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageReceivedTrigger",
+			"hostTargetType": "IGNORE_OTHER_TARGETS"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 3
+		}
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_voodoo_doctor contains:
+{
+	"name": "Voodoo Doctor",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Battlecry: Restore 2 Health.",
+	"battlecry": {
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "HealSpell",
+			"value": 2
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_core_hound contains:
+{
+	"name": "Core Hound",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 9,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "",
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_river_crocolisk contains:
+{
+	"name": "River Crocolisk",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "",
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_chillwind_yeti contains:
+{
+	"name": "Chillwind Yeti",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_dalaran_mage contains:
+{
+	"name": "Dalaran Mage",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Spell Damage +1",
+	"attributes": {
+		"SPELL_DAMAGE": 1
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_razorfen_hunter contains:
+{
+	"name": "Razorfen Hunter",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Battlecry: Summon a 1/1 Boar.",
+	"battlecry": {
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_boar",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_murloc_tidehunter contains:
+{
+	"name": "Murloc Tidehunter",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "MURLOC",
+	"description": "Battlecry: Summon a 1/1 Murloc Scout.",
+	"battlecry": {
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_murloc_scout",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_ironforge_rifleman contains:
+{
+	"name": "Ironforge Rifleman",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Battlecry: Deal 1 damage.",
+	"battlecry": {
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "DamageSpell",
+			"value": 1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_stormpike_commando contains:
+{
+	"name": "Stormpike Commando",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Battlecry: Deal 2 damage.",
+	"battlecry": {
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "DamageSpell",
+			"value": 2
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/neutral/minion_senjin_shieldmasta contains:
+{
+	"name": "Sen'jin Shieldmasta",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}

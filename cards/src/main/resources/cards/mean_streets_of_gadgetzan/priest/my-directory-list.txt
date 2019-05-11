@@ -1,0 +1,237 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/priest/minion_mana_geode contains:
+{
+	"name": "Mana Geode",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "PRIEST",
+	"rarity": "EPIC",
+	"description": "Whenever this minion is healed, summon a 2/2 Crystal.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "HealingTrigger",
+			"hostTargetType": "IGNORE_OTHER_TARGETS"
+		},
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_crystal"
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/priest/minion_kabal_talonpriest contains:
+{
+	"name": "Kabal Talonpriest",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "PRIEST",
+	"rarity": "COMMON",
+	"description": "Battlecry: Give a friendly minion +3 Health.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "BuffSpell",
+			"hpBonus": 3
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/priest/spell_dragonfire_potion contains:
+{
+	"name": "Dragonfire Potion",
+	"baseManaCost": 6,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "EPIC",
+	"description": "Deal 5 damage to all minions except Dragons.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DamageSpell",
+		"target": "ALL_MINIONS",
+		"value": 5,
+		"filter": {
+			"class": "RaceFilter",
+			"race": "DRAGON",
+			"invert": true
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/priest/minion_kabal_songstealer contains:
+{
+	"name": "Kabal Songstealer",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "PRIEST",
+	"rarity": "COMMON",
+	"description": "Battlecry: Silence a minion.",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "SilenceSpell"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/priest/spell_potion_of_madness contains:
+{
+	"name": "Potion of Madness",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "COMMON",
+	"description": "Gain control of an enemy minion with 2 or less Attack until end of turn.",
+	"targetSelection": "ENEMY_MINIONS",
+	"spell": {
+		"class": "custom.ShadowMadnessSpell",
+		"filter": {
+			"class": "AttributeFilter",
+			"attribute": "ATTACK",
+			"operation": "LESS_OR_EQUAL",
+			"value": 2
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/priest/minion_raza_the_chained contains:
+{
+	"name": "Raza the Chained",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "PRIEST",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: If your deck has no duplicates, your Hero Power costs (0) this game.",
+	"battlecry": {
+		"spell": {
+			"class": "CardCostModifierSpell",
+			"target": "FRIENDLY_PLAYER",
+			"cardCostModifier": {
+				"class": "CardCostModifier",
+				"cardType": "HERO_POWER",
+				"targetPlayer": "SELF",
+				"operation": "SET",
+				"value": 0
+			}
+		},
+		"condition": {
+			"class": "HighlanderDeckCondition"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/priest/token_crystal contains:
+{
+	"name": "Crystal",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "PRIEST",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": false,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/priest/spell_pint-size_potion contains:
+{
+	"name": "Pint-Size Potion",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "RARE",
+	"description": "Give all enemy minions -3 Attack this turn only.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "TemporaryAttackSpell",
+		"target": "ENEMY_MINIONS",
+		"value": -3
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/priest/minion_drakonid_operative contains:
+{
+	"name": "Drakonid Operative",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 6,
+	"heroClass": "PRIEST",
+	"rarity": "RARE",
+	"race": "DRAGON",
+	"description": "Battlecry: If you're holding a Dragon, Discover a card from your opponent's deck.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "DiscoverFilteredCardSpell",
+			"cardSource": {
+				"class": "DeckSource",
+				"targetPlayer": "OPPONENT"
+			},
+			"spell": {
+				"class": "ReceiveCardSpell",
+				"targetPlayer": "SELF"
+			}
+		},
+		"condition": {
+			"class": "HoldsCardCondition",
+			"cardFilter": {
+				"class": "CardFilter",
+				"race": "DRAGON"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/priest/spell_greater_healing_potion contains:
+{
+	"name": "Greater Healing Potion",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "RARE",
+	"description": "Restore 12 Health to a friendly character.",
+	"targetSelection": "FRIENDLY_CHARACTERS",
+	"spell": {
+		"class": "HealSpell",
+		"value": 12
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}

@@ -1,0 +1,207 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/hunter/minion_metaltooth_leaper contains:
+{
+	"name": "Metaltooth Leaper",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "HUNTER",
+	"rarity": "RARE",
+	"race": "MECH",
+	"description": "Battlecry: Give your other Mechs +2 Attack.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "OTHER_FRIENDLY_MINIONS",
+			"attackBonus": 2,
+			"filter": {
+				"class": "RaceFilter",
+				"race": "MECH"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/hunter/spell_call_pet contains:
+{
+	"name": "Call Pet",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "RARE",
+	"description": "Draw a card, if it's a Beast it costs (4) less.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DrawCardAndDoSomethingSpell",
+		"spell": {
+			"class": "ConditionalSpell",
+			"spell": {
+				"class": "CardCostModifierSpell",
+				"target": "FRIENDLY_PLAYER",
+				"cardCostModifier": {
+					"class": "CardCostModifier",
+					"target": "EVENT_CARD",
+					"operation": "SUBTRACT",
+					"value": 4
+				}
+			},
+			"condition": {
+				"class": "RaceCondition",
+				"race": "BEAST"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/hunter/minion_steamwheedle_sniper contains:
+{
+	"name": "Steamwheedle Sniper",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "HUNTER",
+	"rarity": "EPIC",
+	"description": "Your Hero Power can target minions.",
+	"attributes": {
+		"HERO_POWER_CAN_TARGET_MINIONS": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/hunter/minion_king_of_beasts contains:
+{
+	"name": "King of Beasts",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 6,
+	"heroClass": "HUNTER",
+	"rarity": "RARE",
+	"race": "BEAST",
+	"description": "Taunt. Battlecry: Gain +1 Attack for each other Beast you have.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": {
+				"class": "EntityCounter",
+				"target": "OTHER_FRIENDLY_MINIONS",
+				"filter": {
+					"class": "RaceFilter",
+					"race": "BEAST"
+				}
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/hunter/weapon_glaivezooka contains:
+{
+	"name": "Glaivezooka",
+	"baseManaCost": 2,
+	"type": "WEAPON",
+	"damage": 2,
+	"durability": 2,
+	"heroClass": "HUNTER",
+	"rarity": "COMMON",
+	"description": "Battlecry: Give a random friendly minion +1 Attack.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "BuffSpell",
+			"target": "FRIENDLY_MINIONS",
+			"attackBonus": 1,
+			"randomTarget": "true"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/hunter/spell_feign_death contains:
+{
+	"name": "Feign Death",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "EPIC",
+	"description": "Trigger all Deathrattles on your minions.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "TriggerDeathrattleSpell",
+		"target": "FRIENDLY_MINIONS"
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/hunter/spell_cobra_shot contains:
+{
+	"name": "Cobra Shot",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "COMMON",
+	"description": "Deal 3 damage to a minion and the enemy hero.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"value": 3
+			},
+			{
+				"class": "DamageSpell",
+				"target": "ENEMY_HERO",
+				"value": 3
+			}
+		]
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/hunter/minion_gahzrilla contains:
+{
+	"name": "Gahz'rilla",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 9,
+	"heroClass": "HUNTER",
+	"rarity": "LEGENDARY",
+	"race": "BEAST",
+	"description": "Whenever this minion takes damage, double its Attack.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageReceivedTrigger",
+			"hostTargetType": "IGNORE_OTHER_TARGETS"
+		},
+		"spell": {
+			"class": "DoubleAttackSpell",
+			"target": "SELF"
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}

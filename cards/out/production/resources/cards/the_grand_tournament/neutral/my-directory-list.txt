@@ -1,0 +1,1376 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_north_sea_kraken contains:
+{
+	"name": "North Sea Kraken",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 9,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Deal 4 damage.",
+	"battlecry": {
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "DamageSpell",
+			"value": 4
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_icehowl contains:
+{
+	"name": "Icehowl",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 10,
+	"baseHp": 10,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Charge. Can't attack heroes.",
+	"attributes": {
+		"CANNOT_ATTACK_HEROES": true,
+		"CHARGE": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_tournament_attendee contains:
+{
+	"name": "Tournament Attendee",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_pit_fighter contains:
+{
+	"name": "Pit Fighter",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_fjola_lightbane contains:
+{
+	"name": "Fjola Lightbane",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Whenever you target this minion with a spell, gain Divine Shield.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TargetAcquisitionTrigger",
+			"actionType": "SPELL",
+			"sourcePlayer": "SELF",
+			"hostTargetType": "IGNORE_OTHER_TARGETS"
+		},
+		"spell": {
+			"class": "AddAttributeSpell",
+			"target": "SELF",
+			"attribute": "DIVINE_SHIELD"
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_boneguard_lieutenant contains:
+{
+	"name": "Boneguard Lieutenant",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Inspire: Gain +1 Health.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"hpBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_captured_jormungar contains:
+{
+	"name": "Captured Jormungar",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 9,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "",
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_garrison_commander contains:
+{
+	"name": "Garrison Commander",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "You can use your Hero Power twice a turn.",
+	"attributes": {
+		"HERO_POWER_USAGES": 2
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_tournament_medic contains:
+{
+	"name": "Tournament Medic",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Inspire: Restore 2 Health to your Hero.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_HERO",
+			"value": 2
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_gormok_the_impaler contains:
+{
+	"name": "Gormok the Impaler",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: If you have at least 4 other minions, deal 4 damage.",
+	"battlecry": {
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "DamageSpell",
+			"value": 4
+		},
+		"condition": {
+			"class": "MinionCountCondition",
+			"targetPlayer": "SELF",
+			"operation": "GREATER",
+			"value": 4
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_kvaldir_raider contains:
+{
+	"name": "Kvaldir Raider",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Inspire: Gain +2/+2.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 2,
+			"hpBonus": 2
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_silver_hand_regent contains:
+{
+	"name": "Silver Hand Regent",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Inspire: Summon a 1/1 Silver Hand Recruit.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_silver_hand_recruit",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_maiden_of_the_lake contains:
+{
+	"name": "Maiden of the Lake",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Your Hero Power costs (1).",
+	"cardCostModifier": {
+		"class": "CardCostModifier",
+		"cardType": "HERO_POWER",
+		"operation": "SET",
+		"value": 1
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_muklas_champion contains:
+{
+	"name": "Mukla's Champion",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Inspire: Give your other minions +1/+1.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "OTHER_FRIENDLY_MINIONS",
+			"attackBonus": 1,
+			"hpBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_master_of_ceremonies contains:
+{
+	"name": "Master of Ceremonies",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Battlecry: If you have a minion with Spell Damage, gain +2/+2.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 2,
+			"hpBonus": 2
+		},
+		"condition": {
+			"class": "HasEntityCondition",
+			"target": "FRIENDLY_MINIONS",
+			"filter": {
+				"class": "AttributeFilter",
+				"attribute": "SPELL_DAMAGE",
+				"operation": "HAS"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_the_skeleton_knight contains:
+{
+	"name": "The Skeleton Knight",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Deathrattle: Reveal a minion in each deck. If yours costs more, return this to your hand.",
+	"deathrattle": {
+		"class": "JoustSpell",
+		"target": "NONE",
+		"spell": {
+			"class": "ReturnMinionToHandSpell",
+			"target": "SELF",
+			"condition": {
+				"class": "CardCountCondition",
+				"targetPlayer": "SELF",
+				"operation": "LESS",
+				"value": 10
+			}
+		}
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_eydis_darkbane contains:
+{
+	"name": "Eydis Darkbane",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Whenever you target this minion with a spell, deal 3 damage to a random enemy.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TargetAcquisitionTrigger",
+			"actionType": "SPELL",
+			"sourcePlayer": "SELF",
+			"hostTargetType": "IGNORE_OTHER_TARGETS"
+		},
+		"spell": {
+			"class": "MissilesSpell",
+			"target": "ENEMY_CHARACTERS",
+			"value": 3,
+			"howMany": 1
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_justicar_trueheart contains:
+{
+	"name": "Justicar Trueheart",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Replace your starting Hero Power with a better one.",
+	"battlecry": {
+		"spell": {
+			"class": "ConditionalSpell",
+			"targetPlayer": "SELF",
+			"spells": [
+				{
+					"class": "ChangeHeroPowerSpell",
+					"card": "hero_power_dire_shapeshift"
+				},
+				{
+					"class": "ChangeHeroPowerSpell",
+					"card": "hero_power_ballista_shot"
+				},
+				{
+					"class": "ChangeHeroPowerSpell",
+					"card": "hero_power_fireblast_rank_2"
+				},
+				{
+					"class": "ChangeHeroPowerSpell",
+					"card": "hero_power_the_silver_hand"
+				},
+				{
+					"class": "ChangeHeroPowerSpell",
+					"card": "hero_power_heal"
+				},
+				{
+					"class": "ChangeHeroPowerSpell",
+					"card": "hero_power_poisoned_dagger"
+				},
+				{
+					"class": "ChangeHeroPowerSpell",
+					"card": "hero_power_totemic_slam"
+				},
+				{
+					"class": "ChangeHeroPowerSpell",
+					"card": "hero_power_soul_tap"
+				},
+				{
+					"class": "ChangeHeroPowerSpell",
+					"card": "hero_power_tank_up"
+				}
+			],
+			"conditions": [
+				{
+					"class": "HasHeroPowerCondition",
+					"cardId": "hero_power_shapeshift"
+				},
+				{
+					"class": "HasHeroPowerCondition",
+					"cardId": "hero_power_steady_shot"
+				},
+				{
+					"class": "HasHeroPowerCondition",
+					"cardId": "hero_power_fireblast"
+				},
+				{
+					"class": "HasHeroPowerCondition",
+					"cardId": "hero_power_reinforce"
+				},
+				{
+					"class": "HasHeroPowerCondition",
+					"cardId": "hero_power_lesser_heal"
+				},
+				{
+					"class": "HasHeroPowerCondition",
+					"cardId": "hero_power_dagger_mastery"
+				},
+				{
+					"class": "HasHeroPowerCondition",
+					"cardId": "hero_power_totemic_call"
+				},
+				{
+					"class": "HasHeroPowerCondition",
+					"cardId": "hero_power_life_tap"
+				},
+				{
+					"class": "HasHeroPowerCondition",
+					"cardId": "hero_power_armor_up"
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_evil_heckler contains:
+{
+	"name": "Evil Heckler",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_grand_crusader contains:
+{
+	"name": "Grand Crusader",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Battlecry: Add a random Paladin card to your hand.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"cardFilter": {
+				"class": "CardFilter",
+				"heroClass": "PALADIN"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_dragonhawk_rider contains:
+{
+	"name": "Dragonhawk Rider",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Inspire: Gain Windfury this turn.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "AddAttributeSpell",
+			"target": "SELF",
+			"attribute": "WINDFURY",
+			"revertTrigger": {
+				"class": "TurnEndTrigger"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_flame_juggler contains:
+{
+	"name": "Flame Juggler",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Deal 1 damage to a random enemy.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "MissilesSpell",
+			"target": "ENEMY_CHARACTERS",
+			"value": 1,
+			"howMany": 1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/token_war_kodo contains:
+{
+	"name": "War Kodo",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_sideshow_spelleater contains:
+{
+	"name": "Sideshow Spelleater",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Battlecry: Copy your opponent's Hero Power.",
+	"battlecry": {
+		"spell": {
+			"class": "CopyHeroPower",
+			"target": "FRIENDLY_HERO"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_mogors_champion contains:
+{
+	"name": "Mogor's Champion",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 8,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "50% chance to attack the wrong enemy.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TargetAcquisitionTrigger",
+			"actionType": "PHYSICAL_ATTACK",
+			"hostTargetType": "IGNORE_OTHER_SOURCES",
+			"queueCondition": {
+				"class": "RandomCondition"
+			}
+		},
+		"spell": {
+			"class": "FumbleSpell",
+			"target": "EVENT_TARGET"
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_nexus-champion_saraad contains:
+{
+	"name": "Nexus-Champion Saraad",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Inspire: Add a random spell to your hand.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"cardFilter": {
+				"class": "CardFilter",
+				"cardType": "SPELL"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_frigid_snobold contains:
+{
+	"name": "Frigid Snobold",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Spell Damage +1",
+	"attributes": {
+		"SPELL_DAMAGE": 1
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_crowd_favorite contains:
+{
+	"name": "Crowd Favorite",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Whenever you play a card with Battlecry, gain +1/+1.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "CardPlayedTrigger",
+			"targetPlayer": "SELF",
+			"queueCondition": {
+				"class": "AttributeCondition",
+				"attribute": "BATTLECRY",
+				"operation": "HAS"
+			}
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 1,
+			"hpBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_lance_carrier contains:
+{
+	"name": "Lance Carrier",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Give a friendly minion +2 Attack.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "BuffSpell",
+			"attackBonus": 2
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_lowly_squire contains:
+{
+	"name": "Lowly Squire",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Inspire: Gain +1 Attack.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_skycapn_kragg contains:
+{
+	"name": "Skycap'n Kragg",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "PIRATE",
+	"description": "Charrrrrge. Costs (1) less for each friendly Pirate.",
+	"manaCostModifier": {
+		"class": "EntityCounter",
+		"target": "FRIENDLY_MINIONS",
+		"filter": {
+			"class": "RaceFilter",
+			"race": "PIRATE"
+		}
+	},
+	"attributes": {
+		"CHARGE": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_saboteur contains:
+{
+	"name": "Saboteur",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Your opponent's Hero Power costs (5) more next turn.",
+	"battlecry": {
+		"spell": {
+			"class": "CardCostModifierSpell",
+			"target": "FRIENDLY_PLAYER",
+			"cardCostModifier": {
+				"class": "CardCostModifier",
+				"cardType": "HERO_POWER",
+				"targetPlayer": "OPPONENT",
+				"operation": "ADD",
+				"value": 5,
+				"expirationTrigger": {
+					"class": "TurnEndTrigger",
+					"targetPlayer": "OPPONENT"
+				}
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_silent_knight contains:
+{
+	"name": "Silent Knight",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Stealth. Divine Shield.",
+	"attributes": {
+		"DIVINE_SHIELD": true,
+		"STEALTH": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_kodorider contains:
+{
+	"name": "Kodorider",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Inspire: Summon a 3/5 War Kodo.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_war_kodo",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_argent_horserider contains:
+{
+	"name": "Argent Horserider",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Divine Shield. Charge.",
+	"attributes": {
+		"CHARGE": true,
+		"DIVINE_SHIELD": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_gadgetzan_jouster contains:
+{
+	"name": "Gadgetzan Jouster",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Reveal a minion in each deck. If yours costs more, gain +1/+1",
+	"battlecry": {
+		"spell": {
+			"class": "JoustSpell",
+			"target": "NONE",
+			"spell": {
+				"class": "BuffSpell",
+				"target": "SELF",
+				"attackBonus": 1,
+				"hpBonus": 1
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_ice_rager contains:
+{
+	"name": "Ice Rager",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_master_jouster contains:
+{
+	"name": "Master Jouster",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry : Reveal a minion in each deck. If yours costs more, gain Taunt and Divine Shield.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "JoustSpell",
+			"target": "NONE",
+			"spell": {
+				"class": "MetaSpell",
+				"target": "SELF",
+				"spells": [
+					{
+						"class": "AddAttributeSpell",
+						"attribute": "TAUNT"
+					},
+					{
+						"class": "AddAttributeSpell",
+						"attribute": "DIVINE_SHIELD"
+					}
+				]
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_injured_kvaldir contains:
+{
+	"name": "Injured Kvaldir",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Deal 3 damage to this minion",
+	"battlecry": {
+		"spell": {
+			"class": "DamageSpell",
+			"target": "SELF",
+			"value": 3
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_lights_champion contains:
+{
+	"name": "Light's Champion",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Silence a Demon.",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "SilenceSpell",
+			"filter": {
+				"class": "RaceFilter",
+				"race": "DEMON"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_fencing_coach contains:
+{
+	"name": "Fencing Coach",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: The next time you use your Hero Power, it costs (2) less.",
+	"battlecry": {
+		"spell": {
+			"class": "CardCostModifierSpell",
+			"target": "FRIENDLY_PLAYER",
+			"cardCostModifier": {
+				"class": "CardCostModifier",
+				"cardType": "HERO_POWER",
+				"operation": "SUBTRACT",
+				"value": "2",
+				"expirationTrigger": {
+					"class": "InspireTrigger",
+					"targetPlayer": "SELF"
+				}
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_argent_watchman contains:
+{
+	"name": "Argent Watchman",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Can't attack. Inspire: Can attack as normal this turn.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "RemoveAttributeSpell",
+			"target": "SELF",
+			"attribute": "CANNOT_ATTACK",
+			"revertTrigger": {
+				"class": "TurnEndTrigger"
+			}
+		}
+	},
+	"attributes": {
+		"CANNOT_ATTACK": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_chillmaw contains:
+{
+	"name": "Chillmaw",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "DRAGON",
+	"description": "Taunt. Deathrattle: If you're holding a Dragon, deal 3 damage to all minions.",
+	"deathrattle": {
+		"class": "ConditionalSpell",
+		"spell": {
+			"class": "DamageSpell",
+			"target": "ALL_MINIONS",
+			"value": 3
+		},
+		"condition": {
+			"class": "HoldsCardCondition",
+			"cardFilter": {
+				"class": "CardFilter",
+				"race": "DRAGON"
+			}
+		}
+	},
+	"attributes": {
+		"DEATHRATTLES": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_frost_giant contains:
+{
+	"name": "Frost Giant",
+	"baseManaCost": 10,
+	"type": "MINION",
+	"baseAttack": 8,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Costs (1) less for each time you used your Hero Power this game.",
+	"manaCostModifier": {
+		"class": "PlayerAttributeValueProvider",
+		"playerAttribute": "HERO_POWER_USED"
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_armored_warhorse contains:
+{
+	"name": "Armored Warhorse",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "BEAST",
+	"description": "Battlecry: Reveal a minion in each deck.If yours costs more, gain Charge.",
+	"battlecry": {
+		"spell": {
+			"class": "JoustSpell",
+			"target": "NONE",
+			"spell": {
+				"class": "AddAttributeSpell",
+				"target": "SELF",
+				"attribute": "CHARGE"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_clockwork_knight contains:
+{
+	"name": "Clockwork Knight",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Battlecry: Give a friendly Mech +1/+1.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "BuffSpell",
+			"attackBonus": 1,
+			"hpBonus": 1,
+			"filter": {
+				"class": "RaceFilter",
+				"race": "MECH"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_bolf_ramshield contains:
+{
+	"name": "Bolf Ramshield",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 9,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Whenever your hero takes damage, this minion takes it instead.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "PreDamageTrigger",
+			"sourcePlayer": "BOTH",
+			"targetPlayer": "SELF",
+			"targetEntityType": "HERO"
+		},
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "DamageSpell",
+					"target": "SELF"
+				},
+				{
+					"class": "ModifyDamageSpell",
+					"operation": "SET",
+					"value": 0
+				}
+			]
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_coliseum_manager contains:
+{
+	"name": "Coliseum Manager",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Inspire: Return this minion to your hand.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "ReturnMinionToHandSpell",
+			"target": "SELF"
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_refreshment_vendor contains:
+{
+	"name": "Refreshment Vendor",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Restore 4 Health to each hero.",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "HealSpell",
+					"target": "FRIENDLY_HERO",
+					"value": 4
+				},
+				{
+					"class": "HealSpell",
+					"target": "ENEMY_HERO",
+					"value": 4
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_twilight_guardian contains:
+{
+	"name": "Twilight Guardian",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"race": "DRAGON",
+	"description": "Battlecry: If you're holding a Dragon, gain +1 Attack and Taunt.",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"target": "SELF",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"attackBonus": 1
+				},
+				{
+					"class": "AddAttributeSpell",
+					"attribute": "TAUNT"
+				}
+			]
+		},
+		"condition": {
+			"class": "HoldsCardCondition",
+			"cardFilter": {
+				"class": "CardFilter",
+				"race": "DRAGON"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/neutral/minion_recruiter contains:
+{
+	"name": "Recruiter",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Inspire: Add a 2/2 Squire to your hand.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"card": "token_squire"
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}

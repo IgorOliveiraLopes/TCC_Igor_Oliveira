@@ -1,0 +1,1732 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_silithid_swarmer contains:
+{
+	"name": "Silithid Swarmer",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "BEAST",
+	"description": "Can only attack if your Hero attacked this turn.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "BoardChangedTrigger"
+		},
+		"spell": {
+			"class": "EitherOrSpell",
+			"target": "SELF",
+			"spell1": {
+				"class": "RemoveAttributeSpell",
+				"attribute": "CANNOT_ATTACK"
+			},
+			"spell2": {
+				"class": "AddAttributeSpell",
+				"attribute": "CANNOT_ATTACK"
+			},
+			"condition": {
+				"class": "HasAttackedCondition",
+				"target": "FRIENDLY_HERO"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_twisted_worgen contains:
+{
+	"name": "Twisted Worgen",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Stealth",
+	"attributes": {
+		"STEALTH": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_darkspeaker contains:
+{
+	"name": "Darkspeaker",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Battlecry: Swap stats with a friendly minion.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "SwapAttackSpell"
+				},
+				{
+					"class": "SwapHpSpell"
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_scaled_nightmare contains:
+{
+	"name": "Scaled Nightmare",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"race": "DRAGON",
+	"description": "At the start of your turn, double this minion's Attack.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "DoubleAttackSpell",
+			"target": "SELF"
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_twilight_geomancer contains:
+{
+	"name": "Twilight Geomancer",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt. Battlecry: Give your C'Thun Taunt (wherever it is).",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "AddAttributeSpell",
+					"target": "FRIENDLY_MINIONS",
+					"attribute": "TAUNT",
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "AddAttributeSpell",
+					"target": "FRIENDLY_HAND",
+					"attribute": "TAUNT",
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "AddAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_TAUNT"
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/token_twin_emperor_veknilash contains:
+{
+	"name": "Twin Emperor Vek'nilash",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Taunt.",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_bog_creeper contains:
+{
+	"name": "Bog Creeper",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_eldritch_horror contains:
+{
+	"name": "Eldritch Horror",
+	"baseManaCost": 8,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 10,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_corrupted_seer contains:
+{
+	"name": "Corrupted Seer",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "MURLOC",
+	"description": "Battlecry: Deal 2 damage to all non-Murloc minions.",
+	"battlecry": {
+		"spell": {
+			"class": "DamageSpell",
+			"target": "ALL_MINIONS",
+			"value": 2,
+			"filter": {
+				"class": "RaceFilter",
+				"race": "MURLOC",
+				"invert": true
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_cthun contains:
+{
+	"name": "C'Thun",
+	"baseManaCost": 10,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Deal damage equal to this minion's Attack randomly split among all enemies.",
+	"battlecry": {
+		"spell": {
+			"class": "MissilesSpell",
+			"target": "ENEMY_CHARACTERS",
+			"howMany": {
+				"class": "AttributeValueProvider",
+				"target": "SELF",
+				"attribute": "ATTACK"
+			}
+		}
+	},
+	"passiveTrigger": {
+		"eventTrigger": {
+			"class": "CardReceivedTrigger",
+			"hostTargetType": "IGNORE_OTHER_TARGETS"
+		},
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "SELF",
+					"attackBonus": {
+						"class": "AttributeValueProvider",
+						"target": "FRIENDLY_PLAYER",
+						"attribute": "CTHUN_ATTACK_BUFF"
+					},
+					"hpBonus": {
+						"class": "AttributeValueProvider",
+						"target": "FRIENDLY_PLAYER",
+						"attribute": "CTHUN_HEALTH_BUFF"
+					}
+				},
+				{
+					"class": "ConditionalSpell",
+					"spell": {
+						"class": "AddAttributeSpell",
+						"target": "SELF",
+						"attribute": "TAUNT"
+					},
+					"condition": {
+						"class": "AttributeCondition",
+						"target": "FRIENDLY_PLAYER",
+						"attribute": "CTHUN_TAUNT"
+					}
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_deathwing_dragonlord contains:
+{
+	"name": "Deathwing, Dragonlord",
+	"baseManaCost": 10,
+	"type": "MINION",
+	"baseAttack": 12,
+	"baseHp": 12,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "DRAGON",
+	"description": "Deathrattle: Put all Dragons in your hand into the battlefield.",
+	"deathrattle": {
+		"class": "PutRandomMinionOnBoardSpell",
+		"targetPlayer": "SELF",
+		"value": 7,
+		"cardLocation": "HAND",
+		"cardFilter": {
+			"class": "CardFilter",
+			"cardType": "MINION",
+			"race": "DRAGON"
+		}
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/token_ooze contains:
+{
+	"name": "Ooze",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt.",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_aberrant_berserker contains:
+{
+	"name": "Aberrant Berserker",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Enrage: +2 Attack",
+	"trigger": {
+		"eventTrigger": {
+			"class": "EnrageChangedTrigger"
+		},
+		"spell": {
+			"class": "EnrageSpell",
+			"target": "SELF",
+			"attackBonus": 2
+		}
+	},
+	"attributes": {
+		"ENRAGABLE": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/token_faceless_destroyer contains:
+{
+	"name": "Faceless Destroyer",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_polluted_hoarder contains:
+{
+	"name": "Polluted Hoarder",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Draw a card.",
+	"deathrattle": {
+		"class": "DrawCardSpell",
+		"value": 1
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_yogg_saron_hopes_end contains:
+{
+	"name": "Yogg-Saron, Hope's End",
+	"baseManaCost": 10,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Cast a random spell for each spell you've cast this game (targets chosen randomly).",
+	"battlecry": {
+		"spell": {
+			"class": "CastRandomSpellSpell",
+			"value": {
+				"class": "PlayerAttributeValueProvider",
+				"playerAttribute": "SPELLS_CAST"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/token_tauren_slime contains:
+{
+	"name": "Slime",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_beckoner_of_evil contains:
+{
+	"name": "Beckoner of Evil",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Give your C'Thun +2/+2 (wherever it is).",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_MINIONS",
+					"value": 2,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_HAND",
+					"value": 2,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_ATTACK_BUFF",
+					"value": 2
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_HEALTH_BUFF",
+					"value": 2
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_duskboar contains:
+{
+	"name": "Duskboar",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "",
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_twilight_elder contains:
+{
+	"name": "Twilight Elder",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "At the end of your turn, give your C'Thun +1/+1 (wherever it is).",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_MINIONS",
+					"value": 1,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_HAND",
+					"value": 1,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_ATTACK_BUFF",
+					"value": 1
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_HEALTH_BUFF",
+					"value": 1
+				}
+			]
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/token_the_ancient_one contains:
+{
+	"name": "The Ancient One",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 30,
+	"baseHp": 30,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "",
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_nzoth_the_corruptor contains:
+{
+	"name": "N'Zoth, the Corruptor",
+	"baseManaCost": 10,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Summon your friendly Deathrattle minions that died this game.",
+	"battlecry": {
+		"spell": {
+			"class": "ResurrectSpell",
+			"value": 7,
+			"cardFilter": {
+				"class": "CardFilter",
+				"attribute": "DEATHRATTLES",
+				"operation": "HAS"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_cthuns_chosen contains:
+{
+	"name": "C'Thun's Chosen",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Divine Shield. Battlecry: Give your C'Thun +2/+2 (wherever it is).",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_MINIONS",
+					"value": 2,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_HAND",
+					"value": 2,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_ATTACK_BUFF",
+					"value": 2
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_HEALTH_BUFF",
+					"value": 2
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"DIVINE_SHIELD": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_nerubian_prophet contains:
+{
+	"name": "Nerubian Prophet",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "At the start of your turn, reduce this card's Cost by (1).",
+	"passiveTrigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "CardCostModifierSpell",
+			"target": "FRIENDLY_PLAYER",
+			"cardCostModifier": {
+				"class": "CardCostModifier",
+				"target": "SELF",
+				"operation": "SUBTRACT",
+				"value": 1
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_amgam_rager contains:
+{
+	"name": "Am'gam Rager",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_skeram_cultist contains:
+{
+	"name": "Skeram Cultist",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Give your C'Thun +2/+2 (wherever it is).",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_MINIONS",
+					"value": 2,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_HAND",
+					"value": 2,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_ATTACK_BUFF",
+					"value": 2
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_HEALTH_BUFF",
+					"value": 2
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_faceless_behemoth contains:
+{
+	"name": "Faceless Behemoth",
+	"baseManaCost": 10,
+	"type": "MINION",
+	"baseAttack": 10,
+	"baseHp": 10,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_shifter_zerus contains:
+{
+	"name": "Shifter Zerus",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Each turn this is in your hand, transform it into a random minion.",
+	"passiveTrigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "custom.ShifterZerusSpell",
+			"target": "SELF",
+			"cardFilter": {
+				"class": "CardFilter",
+				"cardType": "MINION"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_twin_emperor_veklor contains:
+{
+	"name": "Twin Emperor Vek'lor",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Taunt. Battlecry: If your C'Thun has 10 or more Attack, summon another Emperor.",
+	"battlecry": {
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_twin_emperor_veknilash"
+		},
+		"condition": {
+			"class": "OrCondition",
+			"conditions": [
+				{
+					"class": "ComparisonCondition",
+					"operation": "GREATER_OR_EQUAL",
+					"value1": {
+						"class": "HighestAttributeValueProvider",
+						"target": "FRIENDLY_MINIONS",
+						"attribute": "ATTACK",
+						"filter": {
+							"class": "SpecificCardFilter",
+							"cardId": "minion_cthun"
+						}
+					},
+					"value2": 10
+				},
+				{
+					"class": "ComparisonCondition",
+					"operation": "GREATER_OR_EQUAL",
+					"value1": {
+						"class": "HighestAttributeValueProvider",
+						"target": "FRIENDLY_HAND",
+						"attribute": "ATTACK",
+						"filter": {
+							"class": "SpecificCardFilter",
+							"cardId": "minion_cthun"
+						}
+					},
+					"value2": 10
+				},
+				{
+					"class": "ComparisonCondition",
+					"operation": "GREATER_OR_EQUAL",
+					"value1": {
+						"class": "AttributeValueProvider",
+						"target": "FRIENDLY_PLAYER",
+						"attribute": "CTHUN_ATTACK_BUFF"
+					},
+					"value2": 4
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_faceless_shambler contains:
+{
+	"name": "Faceless Shambler",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Taunt. Battlecry: Copy a friendly minion's Attack and Health.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "SetAttackSpell",
+					"target": "SELF",
+					"value": {
+						"class": "AttributeValueProvider",
+						"target": "TARGET",
+						"attribute": "ATTACK"
+					}
+				},
+				{
+					"class": "SetHpSpell",
+					"target": "SELF",
+					"value": {
+						"class": "AttributeValueProvider",
+						"target": "TARGET",
+						"attribute": "HP"
+					}
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_eater_of_secrets contains:
+{
+	"name": "Eater of Secrets",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Destroy all enemy Secrets. Gain +1/+1 for each.",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "SELF",
+					"value": {
+						"class": "PlayerAttributeValueProvider",
+						"targetPlayer": "OPPONENT",
+						"playerAttribute": "SECRET_COUNT"
+					}
+				},
+				{
+					"class": "DestroySecretsSpell",
+					"targetPlayer": "OPPONENT"
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_crazed_worshipper contains:
+{
+	"name": "Crazed Worshipper",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Taunt. Whenever this minion takes damage, give your C'Thun +1/+1 (wherever it is).",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageReceivedTrigger",
+			"hostTargetType": "IGNORE_OTHER_TARGETS"
+		},
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_MINIONS",
+					"value": 1,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_HAND",
+					"value": 1,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_ATTACK_BUFF",
+					"value": 1
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_HEALTH_BUFF",
+					"value": 1
+				}
+			]
+		}
+	},
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_midnight_drake contains:
+{
+	"name": "Midnight Drake",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "DRAGON",
+	"description": "Battlecry: Gain +1 Attack for each other card in your hand.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": {
+				"class": "PlayerAttributeValueProvider",
+				"targetPlayer": "SELF",
+				"playerAttribute": "HAND_COUNT"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_psych-o-tron contains:
+{
+	"name": "Psych-o-Tron",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Taunt. Divine Shield",
+	"attributes": {
+		"DIVINE_SHIELD": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_corrupted_healbot contains:
+{
+	"name": "Corrupted Healbot",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "MECH",
+	"description": "Deathrattle: Restore 8 Health to the enemy hero.",
+	"deathrattle": {
+		"class": "HealSpell",
+		"target": "ENEMY_HERO",
+		"value": 8
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_bilefin_tidehunter contains:
+{
+	"name": "Bilefin Tidehunter",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MURLOC",
+	"description": "Battlecry: Summon a 1/1 Ooze with Taunt.",
+	"battlecry": {
+		"spell": {
+			"class": "SummonSpell",
+			"targetPlayer": "SELF",
+			"card": "token_ooze",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_spawn_of_nzoth contains:
+{
+	"name": "Spawn of N'Zoth",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Give your minions +1/+1.",
+	"deathrattle": {
+		"class": "BuffSpell",
+		"target": "OTHER_FRIENDLY_MINIONS",
+		"attackBonus": 1,
+		"hpBonus": 1
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_validated_doomsayer contains:
+{
+	"name": "Validated Doomsayer",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "At the start of your turn, set this minion's Attack to 7.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "SetAttackSpell",
+			"target": "SELF",
+			"value": 7
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_squirming_tentacle contains:
+{
+	"name": "Squirming Tentacle",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt.",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_cult_apothecary contains:
+{
+	"name": "Cult Apothecary",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: For each enemy minion, restore 2 Health to your Hero.",
+	"battlecry": {
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_HERO",
+			"value": {
+				"class": "EntityCounter",
+				"target": "ENEMY_MINIONS",
+				"multiplier": 2
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_yshaarj_rage_unbound contains:
+{
+	"name": "Y'Shaarj, Rage Unbound",
+	"baseManaCost": 10,
+	"type": "MINION",
+	"baseAttack": 10,
+	"baseHp": 10,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "At the end of your turn, put a minion from your deck into the battlefield.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "PutRandomMinionOnBoardSpell",
+			"targetPlayer": "SELF",
+			"cardLocation": "DECK"
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_doomcaller contains:
+{
+	"name": "Doomcaller",
+	"baseManaCost": 8,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 9,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Give your C'Thun +2/+2 (wherever it is). If it's dead, shuffle it into your deck.",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_MINIONS",
+					"value": 2,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_HAND",
+					"value": 2,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_ATTACK_BUFF",
+					"value": 2
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_HEALTH_BUFF",
+					"value": 2
+				},
+				{
+					"class": "ConditionalSpell",
+					"spell": {
+						"class": "ShuffleToDeckSpell",
+						"card": "minion_cthun"
+					},
+					"condition": {
+						"class": "GraveyardContainsCondition",
+						"cardId": "minion_cthun"
+					}
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_infested_tauren contains:
+{
+	"name": "Infested Tauren",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt. Deathrattle: Summon a 2/2 Slime.",
+	"deathrattle": {
+		"class": "SummonSpell",
+		"card": "token_tauren_slime"
+	},
+	"attributes": {
+		"DEATHRATTLES": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_cyclopian_horror contains:
+{
+	"name": "Cyclopian Horror",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Taunt. Battlecry: Gain +1 Health for each enemy minion.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"hpBonus": {
+				"class": "EntityCounter",
+				"target": "ENEMY_MINIONS"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_mukla_tyrant_of_the_vale contains:
+{
+	"name": "Mukla, Tyrant of the Vale",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "BEAST",
+	"description": "Battlecry: Add 2 Bananas to your hand.",
+	"battlecry": {
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"targetPlayer": "SELF",
+			"cards": [
+				"spell_bananas",
+				"spell_bananas"
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_soggoth_the_slitherer contains:
+{
+	"name": "Soggoth the Slitherer",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 9,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Taunt. Can't be targeted by Spells or Hero Powers.",
+	"attributes": {
+		"TAUNT": true,
+		"UNTARGETABLE_BY_SPELLS": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_nat_the_darkfisher contains:
+{
+	"name": "Nat, the Darkfisher",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "At the start of your opponent's turn, they have a 50% chance to draw an extra card.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "OPPONENT"
+		},
+		"spell": {
+			"class": "DrawCardSpell",
+			"targetPlayer": "OPPONENT",
+			"value": {
+				"class": "ConditionalValueProvider",
+				"ifTrue": 1,
+				"ifFalse": 0,
+				"condition": {
+					"class": "RandomCondition"
+				}
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_blood_of_the_ancient_one contains:
+{
+	"name": "Blood of The Ancient One",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 9,
+	"baseHp": 9,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "If you control two of these at the end of your turn, merge them into 'The Ancient One'.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF",
+			"fireCondition": {
+				"class": "HasEntitiesOnBoardCondition",
+				"cardIds": [
+					"minion_blood_of_the_ancient_one",
+					"minion_blood_of_the_ancient_one"
+				]
+			}
+		},
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "custom.MergeSpell",
+					"target": "SELF",
+					"card": "minion_blood_of_the_ancient_one"
+				},
+				{
+					"class": "SummonSpell",
+					"card": "token_the_ancient_one"
+				}
+			]
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_twilight_summoner contains:
+{
+	"name": "Twilight Summoner",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Deathrattle: Summon a 5/5 Faceless Destroyer.",
+	"deathrattle": {
+		"class": "SummonSpell",
+		"card": "token_faceless_destroyer"
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_tentacle_of_nzoth contains:
+{
+	"name": "Tentacle of N'Zoth",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Deal 1 damage to all minions.",
+	"deathrattle": {
+		"class": "DamageSpell",
+		"target": "ALL_MINIONS",
+		"value": 1
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_grotesque_dragonhawk contains:
+{
+	"name": "Grotesque Dragonhawk",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Windfury",
+	"attributes": {
+		"WINDFURY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_hogger_doom_of_elwynn contains:
+{
+	"name": "Hogger, Doom of Elwynn",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Whenever this minion takes damage, summon a 2/2 Gnoll with Taunt.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageReceivedTrigger",
+			"hostTargetType": "IGNORE_OTHER_TARGETS"
+		},
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_gnoll",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_zealous_initiate contains:
+{
+	"name": "Zealous Initiate",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Give a random friendly minion +1/+1.",
+	"deathrattle": {
+		"class": "BuffSpell",
+		"attackBonus": 1,
+		"hpBonus": 1,
+		"target": "FRIENDLY_MINIONS",
+		"randomTarget": true
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_blackwater_pirate contains:
+{
+	"name": "Blackwater Pirate",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "PIRATE",
+	"description": "Your Weapons cost (2) less.",
+	"cardCostModifier": {
+		"class": "CardCostModifier",
+		"cardType": "WEAPON",
+		"targetPlayer": "SELF",
+		"value": -2
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_evolved_kobold contains:
+{
+	"name": "Evolved Kobold",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Spell Damage +2",
+	"attributes": {
+		"SPELL_DAMAGE": 2
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_disciple_of_cthun contains:
+{
+	"name": "Disciple of C'Thun",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Deal 2 damage. Give your C'Thun +2/+2 (wherever it is).",
+	"battlecry": {
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "DamageSpell",
+					"value": 2
+				},
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_MINIONS",
+					"value": 2,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_HAND",
+					"value": 2,
+					"filter": {
+						"class": "SpecificCardFilter",
+						"cardId": "minion_cthun"
+					}
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_ATTACK_BUFF",
+					"value": 2
+				},
+				{
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "CTHUN_HEALTH_BUFF",
+					"value": 2
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_ancient_harbinger contains:
+{
+	"name": "Ancient Harbinger",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "At the start of your turn, put a 10-Cost minion from your deck into your hand.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "FromDeckToHandSpell",
+			"targetPlayer": "SELF",
+			"value": 1,
+			"cardFilter": {
+				"class": "CardFilter",
+				"cardType": "MINION",
+				"manaCost": 10
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/neutral/minion_the_boogeymonster contains:
+{
+	"name": "The Boogeymonster",
+	"baseManaCost": 8,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "When this attacks and kills a minion, give it +2/+2.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterPhysicalAttackTrigger",
+			"targetEntityType": "MINION",
+			"hostTargetType": "IGNORE_OTHER_SOURCES",
+			"fireCondition": {
+				"class": "IsDeadCondition"
+			}
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 2,
+			"hpBonus": 2
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}

@@ -1,0 +1,192 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/mage/minion_flame_leviathan contains:
+{
+	"name": "Flame Leviathan",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 7,
+	"heroClass": "MAGE",
+	"rarity": "LEGENDARY",
+	"race": "MECH",
+	"description": "When you draw this, deal 2 damage to all characters.",
+	"passiveTrigger": {
+		"eventTrigger": {
+			"class": "CardDrawnTrigger",
+			"hostTargetType": "IGNORE_OTHER_TARGETS"
+		},
+		"spell": {
+			"class": "DamageSpell",
+			"target": "ALL_CHARACTERS",
+			"value": 2
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/mage/spell_unstable_portal contains:
+{
+	"name": "Unstable Portal",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "RARE",
+	"description": "Add a random minion to your hand. It costs (3) less.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "ReceiveCardAndDoSomethingSpell",
+		"cardFilter": {
+			"class": "CardFilter",
+			"cardType": "MINION"
+		},
+		"spell": {
+			"class": "CardCostModifierSpell",
+			"target": "FRIENDLY_PLAYER",
+			"cardCostModifier": {
+				"class": "CardCostModifier",
+				"target": "EVENT_CARD",
+				"operation": "SUBTRACT",
+				"value": 3
+			}
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/mage/minion_snowchugger contains:
+{
+	"name": "Snowchugger",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "MAGE",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Freeze any character damaged by this minion.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageCausedTrigger",
+			"hostTargetType": "IGNORE_OTHER_SOURCES"
+		},
+		"spell": {
+			"class": "AddAttributeSpell",
+			"target": "EVENT_TARGET",
+			"attribute": "FROZEN"
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/mage/minion_goblin_blastmage contains:
+{
+	"name": "Goblin Blastmage",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "MAGE",
+	"rarity": "RARE",
+	"description": "Battlecry: If you control a Mech, deal 4 damage randomly split among enemy characters.",
+	"battlecry": {
+		"spell": {
+			"class": "MissilesSpell",
+			"target": "ENEMY_CHARACTERS",
+			"howMany": 4
+		},
+		"condition": {
+			"class": "MinionOnBoardCondition",
+			"cardFilter": {
+				"class": "RaceFilter",
+				"race": "MECH"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/mage/spell_echo_of_medivh contains:
+{
+	"name": "Echo of Medivh",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "EPIC",
+	"description": "Put a copy of each friendly minion into your hand.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "PutCopyInHandSpell",
+		"target": "FRIENDLY_MINIONS"
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/mage/minion_soot_spewer contains:
+{
+	"name": "Soot Spewer",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "MAGE",
+	"rarity": "RARE",
+	"race": "MECH",
+	"description": "Spell Damage +1",
+	"attributes": {
+		"SPELL_DAMAGE": 1
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/mage/minion_wee_spellstopper contains:
+{
+	"name": "Wee Spellstopper",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 5,
+	"heroClass": "MAGE",
+	"rarity": "EPIC",
+	"description": "Adjacent minions can't be targeted by spells or Hero Powers.",
+	"aura": {
+		"class": "AttributeAura",
+		"target": "ADJACENT_MINIONS",
+		"attribute": "AURA_UNTARGETABLE_BY_SPELLS"
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/mage/spell_flamecannon contains:
+{
+	"name": "Flamecannon",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "COMMON",
+	"description": "Deal 4 damage to a random enemy minion.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DamageSpell",
+		"target": "ENEMY_MINIONS",
+		"value": 4,
+		"randomTarget": true
+	},
+	"condition": {
+		"class": "MinionCountCondition",
+		"targetPlayer": "OPPONENT",
+		"operation": "GREATER",
+		"value": 0
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}

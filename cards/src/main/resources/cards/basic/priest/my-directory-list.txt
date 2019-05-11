@@ -1,0 +1,243 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/priest/spell_mind_blast contains:
+{
+	"name": "Mind Blast",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "FREE",
+	"description": "Deal 5 damage to the enemy hero.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DamageSpell",
+		"target": "ENEMY_HERO",
+		"value": 5
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/priest/minion_northshire_cleric contains:
+{
+	"name": "Northshire Cleric",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 3,
+	"heroClass": "PRIEST",
+	"rarity": "FREE",
+	"description": "Whenever a minion is healed, draw a card.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "HealingTrigger",
+			"targetEntityType": "MINION"
+		},
+		"spell": {
+			"class": "DrawCardSpell",
+			"value": 1
+		}
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/priest/hero_power_lesser_heal contains:
+{
+	"name": "Lesser Heal",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "PRIEST",
+	"rarity": "FREE",
+	"description": "Restore 2 Health.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "HealSpell",
+		"value": 2
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/priest/spell_holy_smite contains:
+{
+	"name": "Holy Smite",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "FREE",
+	"description": "Deal 2 damage.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 2
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/priest/spell_power_word_shield contains:
+{
+	"name": "Power Word: Shield",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "COMMON",
+	"description": "Give a minion +2 Health. Draw a card.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "BuffSpell",
+				"hpBonus": 2
+			},
+			{
+				"class": "DrawCardSpell"
+			}
+		]
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/priest/spell_holy_nova contains:
+{
+	"name": "Holy Nova",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "FREE",
+	"description": "Deal 2 damage to all enemies. Restore 2 Health to all friendly characters.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"target": "ENEMY_CHARACTERS",
+				"value": 2
+			},
+			{
+				"class": "HealSpell",
+				"target": "FRIENDLY_CHARACTERS",
+				"value": 2
+			}
+		]
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/priest/spell_mind_control contains:
+{
+	"name": "Mind Control",
+	"baseManaCost": 10,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "FREE",
+	"description": "Take control of an enemy minion.",
+	"targetSelection": "ENEMY_MINIONS",
+	"spell": {
+		"class": "MindControlSpell"
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/priest/spell_divine_spirit contains:
+{
+	"name": "Divine Spirit",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "FREE",
+	"description": "Double a minion's Health.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "BuffSpell",
+		"hpBonus": {
+			"class": "AttributeValueProvider",
+			"attribute": "HP"
+		}
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/priest/spell_shadow_word_death contains:
+{
+	"name": "Shadow Word: Death",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "FREE",
+	"description": "Destroy a minion with an Attack of 5 or more.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "DestroySpell",
+		"filter": {
+			"class": "AttributeFilter",
+			"attribute": "ATTACK",
+			"operation": "GREATER_OR_EQUAL",
+			"value": 5
+		}
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/priest/spell_shadow_word_pain contains:
+{
+	"name": "Shadow Word: Pain",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "FREE",
+	"description": "Destroy a minion with 3 or less Attack.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "DestroySpell",
+		"filter": {
+			"class": "AttributeFilter",
+			"attribute": "ATTACK",
+			"operation": "LESS_OR_EQUAL",
+			"value": 3
+		}
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/priest/spell_mind_vision contains:
+{
+	"name": "Mind Vision",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "FREE",
+	"description": "Put a copy of a random card in your opponent's hand into your hand.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "CopyCardSpell",
+		"value": 1,
+		"cardLocation": "HAND"
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/priest/hero_anduin contains:
+{
+	"name": "Anduin Wrynn",
+	"baseManaCost": 0,
+	"heroPower": "hero_power_lesser_heal",
+	"type": "HERO",
+	"heroClass": "PRIEST",
+	"rarity": "FREE",
+	"attributes": {
+		"HP": 30,
+		"MAX_HP": 30
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}

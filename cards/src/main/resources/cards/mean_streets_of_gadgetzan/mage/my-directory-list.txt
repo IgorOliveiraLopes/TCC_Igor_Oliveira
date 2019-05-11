@@ -1,0 +1,251 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/mage/spell_freezing_potion contains:
+{
+	"name": "Freezing Potion",
+	"baseManaCost": 0,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "COMMON",
+	"description": "Freeze a character.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "AddAttributeSpell",
+		"attribute": "FROZEN"
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/mage/minion_kabal_crystal_runner contains:
+{
+	"name": "Kabal Crystal Runner",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "MAGE",
+	"rarity": "RARE",
+	"description": "Costs (2) less for each Secret you've played this game.",
+	"manaCostModifier": {
+		"class": "CardsPlayedValueProvider",
+		"filter": {
+			"class": "CardFilter",
+			"operation": "HAS",
+			"attribute": "SECRET"
+		},
+		"multiplier": 2
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/mage/spell_greater_arcane_missiles contains:
+{
+	"name": "Greater Arcane Missiles",
+	"baseManaCost": 7,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "EPIC",
+	"description": "Shoot three missiles at random enemies that deal 3 damage each.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MissilesSpell",
+		"target": "ENEMY_CHARACTERS",
+		"howMany": 3,
+		"value": 3
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/mage/minion_cryomancer contains:
+{
+	"name": "Cryomancer",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "MAGE",
+	"rarity": "COMMON",
+	"description": "Battlecry: Gain +2/+2 if an enemy is Frozen.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "BuffSpell",
+			"value": 2,
+			"target": "SELF"
+		},
+		"condition": {
+			"class": "HasEntityCondition",
+			"target": "ENEMY_CHARACTERS",
+			"filter": {
+				"class": "AttributeFilter",
+				"operation": "HAS",
+				"attribute": "FROZEN"
+			} 
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/mage/minion_inkmaster_solia contains:
+{
+	"name": "Inkmaster Solia",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "MAGE",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: If your deck has no duplicates, the next Spell you cast this turn costs (0).",
+	"battlecry": {
+		"spell": {
+			"class": "CardCostModifierSpell",
+			"target": "FRIENDLY_PLAYER",
+			"cardCostModifier": {
+				"class": "OneTurnCostModifier",
+				"cardType": "SPELL",
+				"operation": "SET",
+				"value": 0,
+				"expirationTrigger": {
+					"class": "CardPlayedTrigger",
+					"cardType": "SPELL",
+					"targetPlayer": "SELF"
+				}
+			}
+		},
+		"condition": {
+			"class": "HighlanderDeckCondition"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/mage/minion_manic_soulcaster contains:
+{
+	"name": "Manic Soulcaster",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "MAGE",
+	"rarity": "EPIC",
+	"description": "Battlecry: Choose a friendly minion. Shuffle a copy into your deck.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "ShuffleToDeckSpell",
+			"howMany": 1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/mage/minion_kabal_lackey contains:
+{
+	"name": "Kabal Lackey",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "MAGE",
+	"rarity": "COMMON",
+	"description": "Battlecry: The next Secret you play this turn costs (0).",
+	"battlecry": {
+		"spell": {
+			"class": "CardCostModifierSpell",
+			"target": "FRIENDLY_PLAYER",
+			"cardCostModifier": {
+				"class": "OneTurnCostModifier",
+				"cardType": "SPELL",
+				"operation": "SET",
+				"value": 0,
+				"expirationTrigger": {
+					"class": "SecretPlayedTrigger"
+				},
+				"requiredAttribute": "SECRET"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/mage/secret_potion_of_polymorph contains:
+{
+	"name": "Potion of Polymorph",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "RARE",
+	"description": "Secret: When your opponent plays a minion, transform it into a 1/1 Sheep.",
+	"trigger": {
+		"class": "MinionPlayedTrigger",
+		"targetPlayer": "OPPONENT",
+		"queueCondition": {
+			"class": "IsDeadCondition",
+			"invert": true
+		},
+		"fireCondition": {
+			"class": "CardPropertyCondition",
+			"cardType": "HERO",
+			"invert": true
+		}
+	},
+	"spell": {
+		"class": "TransformMinionSpell",
+		"target": "EVENT_TARGET",
+		"card": "token_kabal_sheep"
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/mage/spell_volcanic_potion contains:
+{
+	"name": "Volcanic Potion",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "RARE",
+	"description": "Deal 2 damage to all minions.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DamageSpell",
+		"target": "ALL_MINIONS",
+		"value": 2
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/mage/hero_baaraxxus contains:
+{
+	"name": "Baaraxxus",
+	"baseManaCost": 1,
+	"heroPower": "hero_power_inferno",
+	"type": "HERO",
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"attributes": {
+		"HP": 1,
+		"MAX_HP": 1
+	},
+	"collectible": false,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}

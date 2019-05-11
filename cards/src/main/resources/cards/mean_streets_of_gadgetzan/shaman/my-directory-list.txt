@@ -1,0 +1,346 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/shaman/spell_devolve contains:
+{
+	"name": "Devolve",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "RARE",
+	"description": "Transform all enemy minions into random ones that cost (1) less.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "TransformToRandomMinionSpell",
+		"target": "ENEMY_MINIONS",
+		"cardFilter": {
+			"class": "CardFilter",
+			"manaCost": {
+				"class": "AttributeValueProvider",
+				"target": "SPELL_TARGET",
+				"attribute": "BASE_MANA_COST",
+				"offset": -1
+			}
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/shaman/spell_finders_keepers contains:
+{
+	"name": "Finders Keepers",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "EPIC",
+	"description": "Discover a card with Overload. Overload: (1)",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DiscoverRandomCardSpell",
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"targetPlayer": "SELF"
+		},
+		"cardFilter": {
+			"class": "CardFilter",
+			"attribute": "OVERLOAD",
+			"operation": "HAS"
+		}
+	},
+	"attributes": {
+		"OVERLOAD": 1
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/shaman/token_murloc_razorgill contains:
+{
+	"name": "Murloc Razorgill",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"race": "MURLOC",
+	"description": "",
+	"collectible": false,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/shaman/minion_white_eyes contains:
+{
+	"name": "White Eyes",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "SHAMAN",
+	"rarity": "LEGENDARY",
+	"description": "Taunt. Deathrattle: Shuffle 'The Storm Guardian' into your deck.",
+	"deathrattle": {
+		"class": "ShuffleToDeckSpell",
+		"card": "token_the_storm_guardian"
+	},
+	"attributes": {
+		"DEATHRATTLES": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/shaman/minion_jinyu_waterspeaker contains:
+{
+	"name": "Jinyu Waterspeaker",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 6,
+	"heroClass": "SHAMAN",
+	"rarity": "RARE",
+	"description": "Battlecry: Restore 6 Health. Overload: (1)",
+	"battlecry": {
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "HealSpell",
+			"value": 6
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"OVERLOAD": 1
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/shaman/weapon_jade_claws contains:
+{
+	"name": "Jade Claws",
+	"baseManaCost": 2,
+	"type": "WEAPON",
+	"damage": 2,
+	"durability": 2,
+	"heroClass": "SHAMAN",
+	"rarity": "RARE",
+	"description": "Battlecry: Summon a Jade Golem. Overload: (1)",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "CreateSummonSpell",
+			"name": "Jade Golem",
+			"attackBonus": {
+				"class": "AttributeValueProvider",
+				"target": "FRIENDLY_PLAYER",
+				"attribute": "JADE_BUFF",
+				"offset": 1
+			},
+			"hpBonus": {
+				"class": "AttributeValueProvider",
+				"target": "FRIENDLY_PLAYER",
+				"attribute": "JADE_BUFF",
+				"offset": 1
+			},
+			"mana": {
+				"class": "AlgebraicValueProvider",
+				"operation": "MAXIMUM",
+				"value1": {
+					"class": "AttributeValueProvider",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "JADE_BUFF",
+					"offset": 1
+				},
+				"value2": 10
+			},
+			"spell": {
+				"class": "ModifyAttributeSpell",
+				"target": "FRIENDLY_PLAYER",
+				"attribute": "JADE_BUFF",
+				"value": 1
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"OVERLOAD": 1
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/shaman/minion_jade_chieftain contains:
+{
+	"name": "Jade Chieftain",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"description": "Battlecry: Summon a Jade Golem. Give it Taunt.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "CreateSummonSpell",
+			"name": "Jade Golem",
+			"attackBonus": {
+				"class": "AttributeValueProvider",
+				"target": "FRIENDLY_PLAYER",
+				"attribute": "JADE_BUFF",
+				"offset": 1
+			},
+			"hpBonus": {
+				"class": "AttributeValueProvider",
+				"target": "FRIENDLY_PLAYER",
+				"attribute": "JADE_BUFF",
+				"offset": 1
+			},
+			"mana": {
+				"class": "AlgebraicValueProvider",
+				"operation": "MAXIMUM",
+				"value1": {
+					"class": "AttributeValueProvider",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "JADE_BUFF",
+					"offset": 1
+				},
+				"value2": 10
+			},
+			"spell": {
+				"class": "ModifyAttributeSpell",
+				"target": "FRIENDLY_PLAYER",
+				"attribute": "JADE_BUFF",
+				"value": 1
+			},
+			"spell1": {
+				"class": "AddAttributeSpell",
+				"attribute": "TAUNT"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/shaman/spell_call_in_the_finishers contains:
+{
+	"name": "Call in the Finishers",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"description": "Summon 4 1/1 Murlocs.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"value": 4,
+		"card": "token_murloc_razorgill"
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/shaman/spell_jade_lightning contains:
+{
+	"name": "Jade Lightning",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"description": "Deal 4 damage. Summon a Jade Golem.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"value": 4
+			},
+			{
+				"class": "CreateSummonSpell",
+				"name": "Jade Golem",
+				"attackBonus": {
+					"class": "AttributeValueProvider",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "JADE_BUFF",
+					"offset": 1
+				},
+				"hpBonus": {
+					"class": "AttributeValueProvider",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "JADE_BUFF",
+					"offset": 1
+				},
+				"mana": {
+					"class": "AlgebraicValueProvider",
+					"operation": "MAXIMUM",
+					"value1": {
+						"class": "AttributeValueProvider",
+						"target": "FRIENDLY_PLAYER",
+						"attribute": "JADE_BUFF",
+						"offset": 1
+					},
+					"value2": 10
+				},
+				"spell": {
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "JADE_BUFF",
+					"value": 1
+				}
+			}
+		]
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/shaman/minion_lotus_illusionist contains:
+{
+	"name": "Lotus Illusionist",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "SHAMAN",
+	"rarity": "EPIC",
+	"description": "After this minion attacks a hero, transform it into a random 6-Cost minion.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterPhysicalAttackTrigger",
+			"targetEntityType": "HERO",
+			"hostTargetType": "IGNORE_OTHER_SOURCES"
+		},
+		"spell": {
+			"class": "TransformToRandomMinionSpell",
+			"target": "SELF",
+			"cardFilter": {
+				"class": "CardFilter",
+				"manaCost": 6
+			}
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/shaman/token_the_storm_guardian contains:
+{
+	"name": "The Storm Guardian",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 10,
+	"baseHp": 10,
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Taunt.",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": false,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}

@@ -1,13 +1,19 @@
 package net.demilich.metastone.game.cards;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 import org.jsoup.Jsoup;
 import org.jsoup.Connection.Response;
@@ -24,17 +30,60 @@ import net.demilich.metastone.utils.MetastoneProperties;
 import net.demilich.metastone.utils.ResourceInputStream;
 import net.demilich.metastone.utils.ResourceLoader;
 import net.demilich.metastone.utils.UserHomeMetastone;
+import org.w3c.dom.ranges.Range;
+
+import static net.demilich.metastone.game.logic.GameLogic.DECK_SIZE;
 
 public class CardCatalogue {
 
 	public static final String CARDS_FOLDER = "cards";
-	public static final String LOCAL_CARDS_FOLDER = "../cards/src/main/resources/cards/";
-	public static final String CARDS_FOLDER_PATH = UserHomeMetastone.getPath() + File.separator + CARDS_FOLDER;
+	public static final String LOCAL_CARDS_FOLDER = "/home/igor/Dropbox/Teste";//"/home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources";//"../cards/src/main/resources/cards/";
+	public static final String CARDS_FOLDER_PATH =  "/home/igor/Dropbox/Teste/Cartas";// "/home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards";//UserHomeMetastone.getPath() + File.separator + CARDS_FOLDER;
 	public static final String CARDS_COPIED_PROPERTY = "cardRevision";
 
 	private static Logger logger = LoggerFactory.getLogger(CardCatalogue.class);
 
 	private final static CardCollection cards = new CardCollection();
+
+
+
+//	public static void create_decks_from_file(String file){
+//
+//
+//		BufferedReader in = null;
+//		try {
+//			in = new BufferedReader(new FileReader(CARDS_FOLDER_PATH+File.separator+file));
+//			String read = null;
+//			String aux;
+//			int deck_one_length = 0,deck_two_length = 0;
+//			while ((read = in.readLine()) != null) {
+//				String[] splited = read.split("((?<=[;|#])|(?=[;|#]))");
+//
+//
+//				for(int i = 0; i < splited.length; i++){
+//					aux = splited[i];
+//					if (!aux.matches("[;|#]") && deck_one_length < 5) {
+//						System.out.println(aux);
+//						deck_one_length++;
+//					}else if(!aux.matches("[;|#]") && deck_one_length == 5 && deck_two_length < 5){
+//						System.out.println(aux);
+//						deck_two_length++;
+//
+//					}
+//				}
+//			}
+//		} catch (IOException e) {
+//			System.out.println("There was a problem: " + e);
+//			e.printStackTrace();
+//		} finally {
+//			try {
+//				in.close();
+//			} catch (Exception e) {
+//			}
+//		}
+//	}
+
+
 
 	public static void add(Card card) {
 		cards.add(card);
@@ -65,6 +114,29 @@ public class CardCatalogue {
 			}
 		}
 
+		return null;
+	}
+	public static void listFilesForFolder(final File folder) {
+		for (final File fileEntry : folder.listFiles()) {
+			if (fileEntry.isDirectory()) {
+				listFilesForFolder(fileEntry);
+			} else {
+				System.out.println(fileEntry.getName());
+			}
+		}
+	}
+
+
+	public static Card getCardByFileName(String name) {
+		final File folder = new File(CARDS_FOLDER_PATH);
+		listFilesForFolder(folder);
+
+
+		for (Card card : cards) {
+			if (card.isCollectible() && card.getName().equals(name)) {
+				return card.clone();
+			}
+		}
 		return null;
 	}
 	

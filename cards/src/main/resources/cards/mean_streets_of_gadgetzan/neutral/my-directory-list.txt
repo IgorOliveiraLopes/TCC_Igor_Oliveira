@@ -1,0 +1,1141 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_burgly_bully contains:
+{
+	"name": "Burgly Bully",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Whenever your opponent casts a spell, add a Coin to your hand.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "SpellCastedTrigger",
+			"sourcePlayer": "OPPONENT"
+		},
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"card": "spell_the_coin"
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_ancient_of_blossoms contains:
+{
+	"name": "Ancient of Blossoms",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_mayor_noggenfogger contains:
+{
+	"name": "Mayor Noggenfogger",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "All targets are chosen randomly.",
+	"triggers": [
+		{
+			"eventTrigger": {
+				"class": "TargetAcquisitionTrigger",
+				"actionType": "PHYSICAL_ATTACK",
+				"sourcePlayer": "BOTH",
+				"targetPlayer": "BOTH",
+				"sourceEntityType": "MINION"
+			},
+			"spell": {
+				"class": "RandomAttackTargetSpell"
+			}
+		},
+		{
+			"eventTrigger": {
+				"class": "TargetAcquisitionTrigger",
+				"actionType": "SPELL",
+				"sourcePlayer": "BOTH",
+				"targetPlayer": "BOTH"
+			},
+			"spell": {
+				"class": "RandomSpellTargetSpell",
+				"target": "PENDING_CARD"
+			}
+		}
+	],
+	"attributes": {
+		"ALL_RANDOM_FINAL_DESTINATION": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_red_mana_wyrm contains:
+{
+	"name": "Red Mana Wyrm",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Whenever you cast a spell, gain +2 Attack.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "SpellCastedTrigger",
+			"sourcePlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 2
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_big-time_racketeer contains:
+{
+	"name": "Big-Time Racketeer",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Summon a 6/6 Ogre.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_ogre"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_friendly_bartender contains:
+{
+	"name": "Friendly Bartender",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "At the end of your turn, restore 1 Health to your hero.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_HERO",
+			"value": 1
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_hozen_healer contains:
+{
+	"name": "Hozen Healer",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Restore a minion to full Health.",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "HealSpell",
+			"value": {
+				"class": "AttributeValueProvider",
+				"target": "TARGET",
+				"attribute": "MAX_HP"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_street_trickster contains:
+{
+	"name": "Street Trickster",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "DEMON",
+	"description": "Spell Damage +1",
+	"attributes": {
+		"SPELL_DAMAGE": 1
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_mistress_of_mixtures contains:
+{
+	"name": "Mistress of Mixtures",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Restore 4 Health to both players.",
+	"deathrattle": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "HealSpell",
+				"target": "FRIENDLY_HERO",
+				"value": 4
+			},
+			{
+				"class": "HealSpell",
+				"target": "ENEMY_HERO",
+				"value": 4
+			}
+		]
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_second-rate_bruiser contains:
+{
+	"name": "Second-Rate Bruiser",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Taunt. Costs (2) less if your opponent has at least three minions.",
+	"manaCostModifier": {
+		"class": "ConditionalValueProvider",
+		"ifTrue": 2,
+		"ifFalse": 0,
+		"condition": {
+			"class": "MinionCountCondition",
+			"targetPlayer": "OPPONENT",
+			"operation": "GREATER_OR_EQUAL",
+			"value": 3
+		}
+	},
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_daring_reporter contains:
+{
+	"name": "Daring Reporter",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Whenever your opponent draws a card, gain +1/+1.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "CardDrawnTrigger",
+			"targetPlayer": "OPPONENT"
+		},
+		"spell": {
+			"class": "ConditionalSpell",
+			"spell": {
+				"class": "BuffSpell",
+				"target": "SELF",
+				"attackBonus": 1,
+				"hpBonus": 1
+			},
+			"condition": {
+				"class": "IsDeadCondition",
+				"target": "SELF",
+				"invert": true
+			}
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_small-time_buccaneer contains:
+{
+	"name": "Small-Time Buccaneer",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "PIRATE",
+	"description": "Has +2 Attack while you have a weapon equipped.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "BoardChangedTrigger"
+		},
+		"spell": {
+			"class": "ConditionalAttackBonusSpell",
+			"target": "SELF",
+			"value": {
+				"class": "ConditionalValueProvider",
+				"ifTrue": 2,
+				"ifFalse": 0,
+				"condition": {
+					"class": "HasWeaponCondition"
+				}
+			}
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_backstreet_leper contains:
+{
+	"name": "Backstreet Leper",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Deal 2 damage to the enemy hero.",
+	"deathrattle": {
+		"class": "DamageSpell",
+		"target": "ENEMY_HERO",
+		"value": 2
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_leatherclad_hogleader contains:
+{
+	"name": "Leatherclad Hogleader",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Battlecry: If your opponent has 6 or more cards in hand, gain Charge.",
+	"battlecry": {
+		"spell": {
+			"class": "AddAttributeSpell",
+			"target": "SELF",
+			"attribute": "CHARGE"
+		},
+		"condition": {
+			"class": "CardCountCondition",
+			"targetPlayer": "OPPONENT",
+			"operation": "GREATER_OR_EQUAL",
+			"value": 6
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_wind-up_burglebot contains:
+{
+	"name": "Wind-up Burglebot",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Whenever this attacks a minion and survives, draw a card.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterPhysicalAttackTrigger",
+			"targetEntityType": "MINION",
+			"hostTargetType": "IGNORE_OTHER_SOURCES"
+		},
+		"spell": {
+			"class": "DrawCardSpell",
+			"targetPlayer": "SELF",
+			"value": 1
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_fel_orc_soulfiend contains:
+{
+	"name": "Fel Orc Soulfiend",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "At the start of your turn, deal 2 damage to this minion.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "DamageSpell",
+			"target": "SELF",
+			"value": 2
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_kooky_chemist contains:
+{
+	"name": "Kooky Chemist",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Swap the Attack and Health of a minion.",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "SwapAttackAndHpSpell"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_grook_fu_master contains:
+{
+	"name": "Grook Fu Master",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Windfury",
+	"attributes": {
+		"WINDFURY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_backroom_bouncer contains:
+{
+	"name": "Backroom Bouncer",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Whenever a friendly minion dies, gain +1 Attack.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "MinionDeathTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_spiked_hogrider contains:
+{
+	"name": "Spiked Hogrider",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: If an enemy minion has Taunt, gain Charge.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "AddAttributeSpell",
+			"target": "SELF",
+			"attribute": "CHARGE"
+		},
+		"condition": {
+			"class": "HasEntityCondition",
+			"target": "ENEMY_MINIONS",
+			"filter": {
+				"class": "AttributeFilter",
+				"attribute": "TAUNT",
+				"operation": "HAS"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_auctionmaster_beardo contains:
+{
+	"name": "Auctionmaster Beardo",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "After you cast a spell, refresh your Hero Power.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterSpellCastedTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "RefreshHeroPowerSpell",
+			"targetPlayer": "SELF"
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_tanaris_hogchopper contains:
+{
+	"name": "Tanaris Hogchopper",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: If your opponent's hand is empty, gain Charge.",
+	"battlecry": {
+		"spell": {
+			"class": "AddAttributeSpell",
+			"target": "SELF",
+			"attribute": "CHARGE"
+		},
+		"condition": {
+			"class": "CardCountCondition",
+			"targetPlayer": "OPPONENT",
+			"operation": "EQUAL",
+			"value": 0
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_blowgill_sniper contains:
+{
+	"name": "Blowgill Sniper",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MURLOC",
+	"description": "Battlecry: Deal 1 damage.",
+	"battlecry": {
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "DamageSpell",
+			"value": 1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_gadgetzan_socialite contains:
+{
+	"name": "Gadgetzan Socialite",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Restore 2 Health.",
+	"battlecry": {
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "HealSpell",
+			"value": 2
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_worgen_greaser contains:
+{
+	"name": "Worgen Greaser",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_sergeant_sally contains:
+{
+	"name": "Sergeant Sally",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Deathrattle: Deal damage equal to this minion's Attack to all enemy minions.",
+	"deathrattle": {
+		"class": "DamageSpell",
+		"target": "ENEMY_MINIONS",
+		"value": {
+			"class": "AttributeValueProvider",
+			"target": "SELF",
+			"attribute": "ATTACK"
+		}
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_weasel_tunneler contains:
+{
+	"name": "Weasel Tunneler",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"race": "BEAST",
+	"description": "Deathrattle: Shuffle this minion into your opponent's deck.",
+	"deathrattle": {
+		"class": "ShuffleMinionToDeckSpell",
+		"target": "SELF",
+		"targetPlayer": "OPPONENT"
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_hired_gun contains:
+{
+	"name": "Hired Gun",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_toxic_sewer_ooze contains:
+{
+	"name": "Toxic Sewer Ooze",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Remove 1 Durability from your opponent's weapon.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "ModifyDurabilitySpell",
+			"targetPlayer": "OPPONENT",
+			"value": -1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_blubber_baron contains:
+{
+	"name": "Blubber Baron",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Whenever you summon a Battlecry minion while this is in your hand, gain +1/+1.",
+	"passiveTrigger": {
+		"eventTrigger": {
+			"class": "MinionSummonedTrigger",
+			"targetPlayer": "SELF",
+			"requiredAttribute": "BATTLECRY"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 1,
+			"hpBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/token_ogre contains:
+{
+	"name": "\"Little Friend\"",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": false,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_naga_corsair contains:
+{
+	"name": "Naga Corsair",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "PIRATE",
+	"description": "Battlecry: Give your weapon +1 Attack.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "BuffSpell",
+			"target": "FRIENDLY_WEAPON",
+			"attackBonus": 1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_wrathion contains:
+{
+	"name": "Wrathion",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Taunt. Battlecry: Draw cards until you draw one that isn't a Dragon.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "DrawCardUntilConditionSpell",
+			"value": 60,
+			"condition": {
+				"class": "RaceCondition",
+				"race": "DRAGON",
+				"invert": true
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_bomb_squad contains:
+{
+	"name": "Bomb Squad",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Deal 5 damage to an enemy minion. Deathrattle: Deal 5 damage to your hero.",
+	"battlecry": {
+		"targetSelection": "ENEMY_MINIONS",
+		"spell": {
+			"class": "DamageSpell",
+			"value": 5
+		}
+	},
+	"deathrattle": {
+		"class": "DamageSpell",
+		"target": "FRIENDLY_HERO",
+		"value": 5
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_dirty_rat contains:
+{
+	"name": "Dirty Rat",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Taunt. Battlecry: Your opponent summons a random minion from their hand.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "PutRandomMinionOnBoardSpell",
+			"targetPlayer": "OPPONENT",
+			"cardLocation": "HAND"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_fight_promoter contains:
+{
+	"name": "Fight Promoter",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Battlecry: If you control a minion with 6 or more Health, draw two cards.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "DrawCardSpell",
+			"value": 2
+		},
+		"condition": {
+			"class": "HasEntityCondition",
+			"target": "FRIENDLY_MINIONS",
+			"filter": {
+				"class": "AttributeFilter",
+				"attribute": "HP",
+				"operation": "GREATER_OR_EQUAL",
+				"value": 6
+			} 
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_defias_cleaner contains:
+{
+	"name": "Defias Cleaner",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Battlecry: Silence a minion with Deathrattle.",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "SilenceSpell",
+			"filter": {
+				"class": "AttributeFilter",
+				"attribute": "DEATHRATTLES",
+				"operation": "HAS"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_finja_the_flying_star contains:
+{
+	"name": "Finja, the Flying Star",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "MURLOC",
+	"description": "Stealth. Whenever this attacks and kills a minion, summon 2 Murlocs from your deck.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterPhysicalAttackTrigger",
+			"targetEntityType": "MINION",
+			"hostTargetType": "IGNORE_OTHER_SOURCES",
+			"fireCondition": {
+				"class": "IsDeadCondition"
+			}
+		},
+		"spell": {
+			"class": "PutRandomMinionOnBoardSpell",
+			"value": 2,
+			"targetPlayer": "SELF",
+			"cardLocation": "DECK",
+			"cardFilter": {
+				"class": "CardFilter",
+				"cardType": "MINION",
+				"race": "MURLOC"
+			}
+		}
+	},
+	"attributes": {
+		"STEALTH": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_streetwise_investigator contains:
+{
+	"name": "Streetwise Investigator",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Enemy minions lose Stealth.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "RemoveAttributeSpell",
+			"target": "ENEMY_MINIONS",
+			"attribute": "STEALTH"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_genzo_the_shark contains:
+{
+	"name": "Genzo, the Shark",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Whenever this attacks, both players draw until they have 3 cards.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TargetAcquisitionTrigger",
+			"actionType": "PHYSICAL_ATTACK",
+			"targetPlayer": "BOTH",
+			"hostTargetType": "IGNORE_OTHER_SOURCES"
+		},
+		"spell": {
+			"class": "DrawCardSpell",
+			"targetPlayer": "BOTH",
+			"value": {
+				"class": "AlgebraicValueProvider",
+				"operation": "SUBTRACT",
+				"value1": 3,
+				"value2": {
+					"class": "PlayerAttributeValueProvider",
+					"targetPlayer": "SELF",
+					"playerAttribute": "HAND_COUNT"
+				}
+			}
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_doppelgangster contains:
+{
+	"name": "Doppelgangster",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Summon 2 copies of this minion.",
+	"battlecry": {
+		"spell": {
+			"class": "SummonCopySpell",
+			"target": "SELF",
+			"value": 2
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_patches_the_pirate contains:
+{
+	"name": "Patches the Pirate",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "PIRATE",
+	"description": "Charge. After you play a pirate, summon this minion from your deck.",
+	"deckTrigger": {
+		"eventTrigger": {
+			"class": "AfterMinionPlayedTrigger",
+			"targetPlayer": "SELF",
+			"queueCondition": {
+				"class": "RaceCondition",
+				"race": "PIRATE"
+			}
+		},
+		"spell": {
+			"class": "PutMinionOnBoardFromDeckSpell",
+			"target": "SELF"
+		}
+	},
+	"attributes": {
+		"CHARGE": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/mean_streets_of_gadgetzan/neutral/minion_madam_goya contains:
+{
+	"name": "Madam Goya",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Choose a friendly minion. Swap it with a minion in your deck.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "custom.MadamGoyaSpell"
+		},
+		"condition": {
+			"class": "DeckContainsCondition",
+			"cardFilter": {
+				"class": "CardFilter",
+				"cardType": "MINION"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}

@@ -1,0 +1,204 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/shaman/minion_whirling_zap-o-matic contains:
+{
+	"name": "Whirling Zap-o-matic",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Windfury",
+	"attributes": {
+		"WINDFURY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/shaman/spell_crackle contains:
+{
+	"name": "Crackle",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"description": "Deal 3-6 damage. Overload: (1)",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "DamageSpell",
+		"value": {
+			"class": "RandomValueProvider",
+			"min": 3,
+			"max": 6
+		}
+	},
+	"attributes": {
+		"OVERLOAD": 1
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/shaman/minion_vitality_totem contains:
+{
+	"name": "Vitality Totem",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 3,
+	"heroClass": "SHAMAN",
+	"rarity": "RARE",
+	"race": "TOTEM",
+	"description": "At the end of your turn, restore 4 Health to your hero.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_HERO",
+			"value": 4
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/shaman/minion_dunemaul_shaman contains:
+{
+	"name": "Dunemaul Shaman",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "SHAMAN",
+	"rarity": "RARE",
+	"description": "Windfury, Overload: (1) 50% chance to attack the wrong enemy.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TargetAcquisitionTrigger",
+			"actionType": "PHYSICAL_ATTACK",
+			"hostTargetType": "IGNORE_OTHER_SOURCES",
+			"queueCondition": {
+				"class": "RandomCondition"
+			}
+		},
+		"spell": {
+			"class": "FumbleSpell",
+			"target": "EVENT_TARGET"
+		}
+	},
+	"attributes": {
+		"OVERLOAD": 1,
+		"WINDFURY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/shaman/weapon_powermace contains:
+{
+	"name": "Powermace",
+	"baseManaCost": 3,
+	"type": "WEAPON",
+	"damage": 3,
+	"durability": 2,
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Give a random friendly Mech +2/+2.",
+	"deathrattle": {
+		"class": "BuffSpell",
+		"target": "FRIENDLY_MINIONS",
+		"attackBonus": 2,
+		"hpBonus": 2,
+		"randomTarget": true,
+		"filter": {
+			"class": "RaceFilter",
+			"race": "MECH"
+		}
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/shaman/spell_ancestors_call contains:
+{
+	"name": "Ancestor's Call",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "EPIC",
+	"description": "Put a random minion from each player's hand into the battlefield.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "PutRandomMinionOnBoardSpell",
+		"targetPlayer": "BOTH",
+		"cardLocation": "HAND"
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/shaman/minion_siltfin_spiritwalker contains:
+{
+	"name": "Siltfin Spiritwalker",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 5,
+	"heroClass": "SHAMAN",
+	"rarity": "EPIC",
+	"race": "MURLOC",
+	"description": "Whenever another friendly Murloc dies, draw a card. Overload: (1)",
+	"trigger": {
+		"eventTrigger": {
+			"class": "MinionDeathTrigger",
+			"targetPlayer": "SELF",
+			"race": "MURLOC"
+		},
+		"spell": {
+			"class": "DrawCardSpell",
+			"value": 1
+		}
+	},
+	"attributes": {
+		"OVERLOAD": 1
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/shaman/minion_neptulon contains:
+{
+	"name": "Neptulon",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 7,
+	"heroClass": "SHAMAN",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Add 4 random Murlocs to your hand. Overload: (3)",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"value": 4,
+			"cardFilter": {
+				"class": "RaceFilter",
+				"race": "MURLOC"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"OVERLOAD": 3
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}

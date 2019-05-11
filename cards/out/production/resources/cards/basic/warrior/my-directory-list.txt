@@ -1,0 +1,239 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/warrior/spell_execute contains:
+{
+	"name": "Execute",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "WARRIOR",
+	"rarity": "FREE",
+	"description": "Destroy a damaged enemy minion.",
+	"targetSelection": "ENEMY_MINIONS",
+	"spell": {
+		"class": "DestroySpell",
+		"filter": {
+			"class": "DamagedFilter"
+		}
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/warrior/spell_cleave contains:
+{
+	"name": "Cleave",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "WARRIOR",
+	"rarity": "FREE",
+	"description": "Deal 2 damage to two random enemy minions.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MultiTargetSpell",
+		"target": "ENEMY_MINIONS",
+		"value": 2,
+		"spell": {
+			"class": "DamageSpell",
+			"value": 2
+		}
+	},
+	"condition": {
+		"class": "MinionCountCondition",
+		"targetPlayer": "OPPONENT",
+		"operation": "GREATER",
+		"value": 1
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/warrior/spell_heroic_strike contains:
+{
+	"name": "Heroic Strike",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "WARRIOR",
+	"rarity": "FREE",
+	"description": "Give your hero +4 Attack this turn.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffHeroSpell",
+		"target": "FRIENDLY_HERO",
+		"attackBonus": 4
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/warrior/weapon_fiery_war_axe contains:
+{
+	"name": "Fiery War Axe",
+	"baseManaCost": 2,
+	"type": "WEAPON",
+	"damage": 3,
+	"durability": 2,
+	"heroClass": "WARRIOR",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/warrior/weapon_arcanite_reaper contains:
+{
+	"name": "Arcanite Reaper",
+	"baseManaCost": 5,
+	"type": "WEAPON",
+	"damage": 5,
+	"durability": 2,
+	"heroClass": "WARRIOR",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/warrior/hero_power_armor_up contains:
+{
+	"name": "Armor Up!",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "WARRIOR",
+	"rarity": "FREE",
+	"description": "Gain 2 Armor.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffHeroSpell",
+		"target": "FRIENDLY_HERO",
+		"armorBonus": 2
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/warrior/minion_korkron_elite contains:
+{
+	"name": "Kor'kron Elite",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 3,
+	"heroClass": "WARRIOR",
+	"rarity": "FREE",
+	"description": "Charge",
+	"attributes": {
+		"CHARGE": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/warrior/minion_warsong_commander contains:
+{
+	"name": "Warsong Commander",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "WARRIOR",
+	"rarity": "FREE",
+	"description": "Your Charge minions have +1 Attack.",
+	"aura": {
+		"class": "BuffAura",
+		"target": "FRIENDLY_MINIONS",
+		"attackBonus": 1,
+		"filter": {
+			"class": "AttributeFilter",
+			"attribute": "CHARGE",
+			"operation": "HAS"
+		}
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/warrior/hero_garrosh contains:
+{
+	"name": "Garrosh Hellscream",
+	"baseManaCost": 0,
+	"heroPower": "hero_power_armor_up",
+	"type": "HERO",
+	"heroClass": "WARRIOR",
+	"rarity": "FREE",
+	"attributes": {
+		"HP": 30,
+		"MAX_HP": 30
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/warrior/spell_charge contains:
+{
+	"name": "Charge",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "WARRIOR",
+	"rarity": "FREE",
+	"description": "Give a friendly minion Charge. It can't attack heroes this turn.",
+	"targetSelection": "FRIENDLY_MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "AddAttributeSpell",
+				"attribute": "CHARGE"
+			},
+			{
+				"class": "AddAttributeSpell",
+				"attribute": "CANNOT_ATTACK_HERO_ON_SUMMON"
+			}
+		]
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/warrior/spell_shield_block contains:
+{
+	"name": "Shield Block",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "WARRIOR",
+	"rarity": "FREE",
+	"description": "Gain 5 Armor. Draw a card.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "BuffHeroSpell",
+				"target": "FRIENDLY_HERO",
+				"armorBonus": 5
+			},
+			{
+				"class": "DrawCardSpell",
+				"value": 1
+			}
+		]
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/warrior/spell_whirlwind contains:
+{
+	"name": "Whirlwind",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "WARRIOR",
+	"rarity": "FREE",
+	"description": "Deal 1 damage to ALL minions.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DamageSpell",
+		"target": "ALL_MINIONS",
+		"value": 1
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}

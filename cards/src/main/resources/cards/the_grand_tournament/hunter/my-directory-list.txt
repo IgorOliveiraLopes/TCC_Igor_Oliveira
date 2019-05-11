@@ -1,0 +1,290 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/hunter/minion_acidmaw contains:
+{
+	"name": "Acidmaw",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 2,
+	"heroClass": "HUNTER",
+	"rarity": "LEGENDARY",
+	"race": "BEAST",
+	"description": "Whenever another minion takes damage, destroy it.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageReceivedTrigger",
+			"targetPlayer": "BOTH",
+			"targetEntityType": "MINION",
+			"hostTargetType": "IGNORE_AS_TARGET"
+		},
+		"spell": {
+			"class": "DestroySpell",
+			"target": "EVENT_TARGET"
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/hunter/minion_kings_elekk contains:
+{
+	"name": "King's Elekk",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "HUNTER",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Battlecry: Reveal a minion in each deck. If yours costs more, draw it.",
+	"battlecry": {
+		"spell": {
+			"class": "JoustSpell",
+			"spell": {
+				"class": "FromDeckToHandSpell"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/hunter/minion_stablemaster contains:
+{
+	"name": "Stablemaster",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 2,
+	"heroClass": "HUNTER",
+	"rarity": "EPIC",
+	"description": "Battlecry: Give a friendly Beast Immune this turn.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "AddAttributeSpell",
+			"attribute": "IMMUNE",
+			"filter": {
+				"class": "RaceFilter",
+				"race": "BEAST"
+			},
+			"revertTrigger": {
+				"class": "TurnEndTrigger"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/hunter/spell_lock_and_load contains:
+{
+	"name": "Lock and Load",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "EPIC",
+	"description": "Each time you cast a spell this turn, add a random Hunter card to your hand.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "AddSpellTriggerSpell",
+		"target": "FRIENDLY_PLAYER",
+		"trigger": {
+			"eventTrigger": {
+				"class": "SpellCastedTrigger",
+				"sourcePlayer": "SELF"
+			},
+			"spell": {
+				"class": "ReceiveCardSpell",
+				"cardFilter": {
+					"class": "CardFilter",
+					"heroClass": "HUNTER"
+				}
+			},
+			"oneTurn": true
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/hunter/secret_bear_trap contains:
+{
+	"name": "Bear Trap",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "COMMON",
+	"description": "Secret: After your hero is attacked, summon a 3/3 Bear with Taunt.",
+	"trigger": {
+		"class": "AfterPhysicalAttackTrigger",
+		"targetPlayer": "SELF",
+		"targetEntityType": "HERO"
+	},
+	"spell": {
+		"class": "SummonSpell",
+		"card": "minion_ironfur_grizzly"
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/hunter/minion_dreadscale contains:
+{
+	"name": "Dreadscale",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 2,
+	"heroClass": "HUNTER",
+	"rarity": "LEGENDARY",
+	"race": "BEAST",
+	"description": "At the end of your turn, deal 1 damage to all other minions.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "DamageSpell",
+			"target": "ALL_OTHER_MINIONS",
+			"value": 1
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/hunter/hero_power_ballista_shot contains:
+{
+	"name": "Ballista Shot",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"description": "Deal 3 damage to the enemy hero.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DamageSpell",
+		"target": "ENEMY_HERO",
+		"value": 3
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/hunter/minion_ram_wrangler contains:
+{
+	"name": "Ram Wrangler",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "HUNTER",
+	"rarity": "RARE",
+	"description": "Battlecry: If you have a Beast, summon a random Beast.",
+	"battlecry": {
+		"spell": {
+			"class": "SummonRandomMinionFilteredSpell",
+			"boardPositionRelative": "RIGHT",
+			"cardFilter": {
+				"class": "RaceFilter",
+				"race": "BEAST"
+			}
+		},
+		"condition": {
+			"class": "MinionOnBoardCondition",
+			"cardFilter": {
+				"class": "RaceFilter",
+				"race": "BEAST"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/hunter/minion_brave_archer contains:
+{
+	"name": "Brave Archer",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "HUNTER",
+	"rarity": "COMMON",
+	"description": "Inspire: If your hand is empty, deal 2 damage to the enemy hero.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF",
+			"fireCondition": {
+				"class": "CardCountCondition",
+				"targetPlayer": "SELF",
+				"operation": "LESS_OR_EQUAL",
+				"value": 0
+			}
+		},
+		"spell": {
+			"class": "DamageSpell",
+			"target": "ENEMY_HERO",
+			"value": 2
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/hunter/spell_ball_of_spiders contains:
+{
+	"name": "Ball of Spiders",
+	"baseManaCost": 6,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "RARE",
+	"description": "Summon three 1/1 Webspinners.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"cards": [
+			"minion_webspinner",
+			"minion_webspinner",
+			"minion_webspinner"
+		]
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/hunter/spell_powershot contains:
+{
+	"name": "Powershot",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "RARE",
+	"description": "Deal 2 damage to a minion and the minions next to it.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "AdjacentEffectSpell",
+		"spell1": {
+			"class": "DamageSpell",
+			"value": 2
+		},
+		"spell2": {
+			"class": "DamageSpell",
+			"value": 2
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}

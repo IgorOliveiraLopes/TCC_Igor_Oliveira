@@ -1,0 +1,301 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/hunter/secret_hidden_cache contains:
+{
+	"name": "Hidden Cache",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "RARE",
+	"description": "Secret: When your opponent plays a minion, give a random minion in your hand +2/+2.",
+	"trigger": {
+		"class": "MinionPlayedTrigger",
+		"targetPlayer": "OPPONENT",
+		"fireCondition": {
+			"class": "HoldsCardCondition",
+			"cardFilter": {
+				"class": "CardFilter",
+				"cardType": "MINION"
+			}
+		}
+	},
+	"spell": {
+		"class": "BuffSpell",
+		"target": "FRIENDLY_HAND",
+		"attackBonus": 2,
+		"hpBonus": 2,
+		"filter": {
+			"class": "CardFilter",
+			"cardType": "MINION"
+		},
+		"randomTarget": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/hunter/minion_shaky_zipgunner contains:
+{
+	"name": "Shaky Zipgunner",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "HUNTER",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Give a random minion in your hand +2/+2.",
+	"deathrattle": {
+		"class": "BuffSpell",
+		"target": "FRIENDLY_HAND",
+		"attackBonus": 2,
+		"hpBonus": 2,
+		"filter": {
+			"class": "CardFilter",
+			"cardType": "MINION"
+		},
+		"randomTarget": true
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/hunter/minion_trogg_beastrager contains:
+{
+	"name": "Trogg Beastrager",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "HUNTER",
+	"rarity": "RARE",
+	"description": "Battlecry: Give a random Beast in your Hand +1/+1.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "FRIENDLY_HAND",
+			"attackBonus": 1,
+			"hpBonus": 1,
+			"filter": {
+				"class": "CardFilter",
+				"cardType": "MINION",
+				"race": "BEAST"
+			},
+			"randomTarget": true
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/hunter/token_piranha contains:
+{
+	"name": "Piranha",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "",
+	"collectible": false,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/hunter/weapon_piranha_launcher contains:
+{
+	"name": "Piranha Launcher",
+	"baseManaCost": 5,
+	"type": "WEAPON",
+	"damage": 2,
+	"durability": 4,
+	"heroClass": "HUNTER",
+	"rarity": "EPIC",
+	"description": "After your Hero attacks, summon a 1/1 Piranha.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterPhysicalAttackTrigger",
+			"sourcePlayer": "SELF",
+			"targetPlayer": "BOTH",
+			"sourceEntityType": "HERO"
+		},
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_piranha"
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/hunter/token_tabbycat contains:
+{
+	"name": "Tabbycat",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "",
+	"collectible": false,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/hunter/minion_knuckles contains:
+{
+	"name": "Knuckles",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 7,
+	"heroClass": "HUNTER",
+	"rarity": "LEGENDARY",
+	"race": "BEAST",
+	"description": "After this attacks a minion, it also hits the enemy Hero.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterPhysicalAttackTrigger",
+			"targetEntityType": "MINION",
+			"hostTargetType": "IGNORE_OTHER_SOURCES"
+		},
+		"spell": {
+			"class": "DamageSpell",
+			"target": "ENEMY_HERO",
+			"value": {
+				"class": "AttributeValueProvider",
+				"target": "SELF",
+				"attribute": "ATTACK"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/hunter/token_rat contains:
+{
+	"name": "Rat",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "",
+	"collectible": false,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/hunter/minion_alleycat contains:
+{
+	"name": "Alleycat",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "HUNTER",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Battlecry: Summon a 1/1 Cat.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_tabbycat"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/hunter/minion_dispatch_kodo contains:
+{
+	"name": "Dispatch Kodo",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "HUNTER",
+	"rarity": "RARE",
+	"race": "BEAST",
+	"description": "Battlecry: Deal damage equal to this minion's Attack.",
+	"battlecry": {
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "DamageSpell",
+			"value": {
+				"class": "AttributeValueProvider",
+				"target": "SELF",
+				"attribute": "ATTACK"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/hunter/spell_smugglers_crate contains:
+{
+	"name": "Smuggler's Crate",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "COMMON",
+	"description": "Give a random Beast in your hand +2/+2.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffSpell",
+		"target": "FRIENDLY_HAND",
+		"attackBonus": 2,
+		"hpBonus": 2,
+		"filter": {
+			"class": "CardFilter",
+			"cardType": "MINION",
+			"race": "BEAST"
+		},
+		"randomTarget": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/hunter/minion_rat_pack contains:
+{
+	"name": "Rat Pack",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "HUNTER",
+	"rarity": "EPIC",
+	"race": "BEAST",
+	"description": "Deathrattle: Summon a number of 1/1 Rats equal to this minion's Attack.",
+	"deathrattle": {
+		"class": "SummonSpell",
+		"card": "token_rat",
+		"value": {
+			"class": "AttributeValueProvider",
+			"target": "SELF",
+			"attribute": "ATTACK"
+		}
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}

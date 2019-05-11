@@ -1,0 +1,191 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/promo/token_repair_bot contains:
+{
+	"name": "Repair Bot",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "MECH",
+	"description": "At the end of your turn, restore 6 Health to a damaged character.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "HealSpell",
+			"target": "ALL_CHARACTERS",
+			"value": 6,
+			"randomTarget": true,
+			"filter": {
+				"class": "DamagedFilter"
+			}
+		}
+	},
+	"collectible": false,
+	"set": "PROMO",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/promo/token_emboldener_3000 contains:
+{
+	"name": "Emboldener 3000",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "MECH",
+	"description": "At the end of your turn, give a random minion +1/+1.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "ALL_MINIONS",
+			"attackBonus": 1,
+			"hpBonus": 1,
+			"randomTarget": true
+		}
+	},
+	"collectible": false,
+	"set": "PROMO",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/promo/spell_i_am_murloc contains:
+{
+	"name": "I Am Murloc",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Summon three, four, or five 1/1 Murlocs.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"value": {
+			"class": "RandomValueProvider",
+			"min": 3,
+			"max": 5
+		},
+		"card": "token_murloc"
+	},
+	"collectible": false,
+	"set": "PROMO",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/promo/spell_rogues_do_it contains:
+{
+	"name": "Rogues Do it...",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Deal 4 damage. Draw a card.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"value": 4
+			},
+			{
+				"class": "DrawCardSpell",
+				"value": 1
+			}
+		]
+	},
+	"collectible": false,
+	"set": "PROMO",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/promo/token_homing_chicken contains:
+{
+	"name": "Homing Chicken",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "MECH",
+	"description": "At the start of your turn, destroy this minion and draw 3 cards.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "DrawCardSpell",
+					"value": 3
+				},
+				{
+					"class": "DestroySpell",
+					"target": "SELF"
+				}
+			]
+		}
+	},
+	"collectible": false,
+	"set": "PROMO",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/promo/token_poultryizer contains:
+{
+	"name": "Poultryizer",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "MECH",
+	"description": "At the start of your turn, transform a random minion into a 1/1 Chicken.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "TransformMinionSpell",
+			"target": "ALL_MINIONS",
+			"card": "token_chicken",
+			"randomTarget": true
+		}
+	},
+	"collectible": false,
+	"set": "PROMO",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/promo/spell_power_of_the_horde contains:
+{
+	"name": "Power of the Horde",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Summon a random Horde Warrior.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonRandomSpell",
+		"cards": [
+			"minion_frostwolf_grunt",
+			"minion_tauren_warrior",
+			"minion_senjin_shieldmasta",
+			"minion_thrallmar_farseer",
+			"minion_silvermoon_guardian",
+			"minion_cairne_bloodhoof"
+		]
+	},
+	"collectible": false,
+	"set": "PROMO",
+	"fileFormatVersion": 1
+}

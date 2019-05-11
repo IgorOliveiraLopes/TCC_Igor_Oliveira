@@ -1,0 +1,242 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/warlock/minion_mistress_of_pain contains:
+{
+	"name": "Mistress of Pain",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 4,
+	"heroClass": "WARLOCK",
+	"rarity": "RARE",
+	"race": "DEMON",
+	"description": "Whenever this minion deals damage, restore that much Health to your hero.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageCausedTrigger",
+			"hostTargetType": "IGNORE_OTHER_SOURCES"
+		},
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_HERO",
+			"value": {
+				"class": "AttributeValueProvider",
+				"target": "EVENT_TARGET",
+				"attribute": "LAST_HIT"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/warlock/spell_darkbomb contains:
+{
+	"name": "Darkbomb",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"description": "Deal 3 damage.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 3
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/warlock/spell_demonheart contains:
+{
+	"name": "Demonheart",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "WARLOCK",
+	"rarity": "EPIC",
+	"description": "Deal 5 damage to a minion. If it's a friendly Demon, give it +5/+5 instead.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "EitherOrSpell",
+		"spell1": {
+			"class": "BuffSpell",
+			"attackBonus": 5,
+			"hpBonus": 5
+		},
+		"spell2": {
+			"class": "DamageSpell",
+			"value": 5
+		},
+		"condition": {
+			"class": "AndCondition",
+			"conditions": [
+				{
+					"class": "OwnedByPlayerCondition",
+					"targetPlayer": "SELF"
+				},
+				{
+					"class": "RaceCondition",
+					"race": "DEMON"
+				}
+			]
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/warlock/minion_malganis contains:
+{
+	"name": "Mal'Ganis",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 9,
+	"baseHp": 7,
+	"heroClass": "WARLOCK",
+	"rarity": "LEGENDARY",
+	"race": "DEMON",
+	"description": "Your other Demons have +2/+2. Your hero is Immune.",
+	"aura": {
+		"class": "BuffAura",
+		"target": "OTHER_FRIENDLY_MINIONS",
+		"attackBonus": 2,
+		"hpBonus": 2,
+		"filter": {
+			"class": "RaceFilter",
+			"race": "DEMON"
+		}
+	},
+	"attributes": {
+		"IMMUNE_HERO": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/warlock/spell_imp-losion contains:
+{
+	"name": "Imp-losion",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "WARLOCK",
+	"rarity": "RARE",
+	"description": "Deal 2-4 damage to a minion. Summon a 1/1 Imp for each damage dealt.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"value": {
+					"class": "RandomValueProvider",
+					"min": 2,
+					"max": 4
+				}
+			},
+			{
+				"class": "SummonSpell",
+				"value": {
+					"class": "AttributeValueProvider",
+					"attribute": "LAST_HIT"
+				},
+				"card": "token_imp"
+			}
+		]
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/warlock/minion_floating_watcher contains:
+{
+	"name": "Floating Watcher",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"race": "DEMON",
+	"description": "Whenever your hero takes damage on your turn, gain +2/+2.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageReceivedTrigger",
+			"targetPlayer": "SELF",
+			"targetEntityType": "HERO",
+			"fireCondition": {
+				"class": "OwnedByPlayerCondition",
+				"targetPlayer": "ACTIVE"
+			}
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 2,
+			"hpBonus": 2
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/warlock/minion_anima_golem contains:
+{
+	"name": "Anima Golem",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 9,
+	"baseHp": 9,
+	"heroClass": "WARLOCK",
+	"rarity": "EPIC",
+	"race": "MECH",
+	"description": "At the end of each turn, destroy this minion if it's your only one.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "BOTH",
+			"queueCondition": {
+				"class": "MinionCountCondition",
+				"targetPlayer": "OWNER",
+				"operation": "LESS_OR_EQUAL",
+				"value": 1
+			}
+		},
+		"spell": {
+			"class": "DestroySpell",
+			"target": "SELF"
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/warlock/minion_fel_cannon contains:
+{
+	"name": "Fel Cannon",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "WARLOCK",
+	"rarity": "RARE",
+	"race": "MECH",
+	"description": "At the end of your turn, deal 2 damage to a non-Mech minion.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "MissilesSpell",
+			"target": "ALL_MINIONS",
+			"value": 2,
+			"howMany": 1,
+			"filter": {
+				"class": "RaceFilter",
+				"race": "MECH",
+				"invert": true
+			}
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}

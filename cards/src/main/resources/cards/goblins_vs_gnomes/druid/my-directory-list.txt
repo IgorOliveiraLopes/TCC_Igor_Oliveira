@@ -1,0 +1,340 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/druid/spell_tree_of_life contains:
+{
+	"name": "Tree of Life",
+	"baseManaCost": 9,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "Restore all characters to full Health.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "HealSpell",
+		"target": "ALL_CHARACTERS",
+		"value": {
+			"class": "AttributeValueProvider",
+			"attribute": "MAX_HP"
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/druid/spell_recycle contains:
+{
+	"name": "Recycle",
+	"baseManaCost": 6,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Shuffle an enemy minion into your opponent's deck.",
+	"targetSelection": "ENEMY_MINIONS",
+	"spell": {
+		"class": "ShuffleMinionToDeckSpell",
+		"targetPlayer": "OWNER"
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/druid/minion_anodized_robo_cub contains:
+{
+	"name": "Anodized Robo Cub",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Taunt. Choose One - +1 Attack; or +1 Health.",
+	"options": [
+		{
+			"description": "+1 Attack",
+			"spell": {
+				"class": "BuffSpell",
+				"target": "SELF",
+				"attackBonus": 1
+			}
+		},
+		{
+			"description": "+1 Health",
+			"spell": {
+				"class": "BuffSpell",
+				"target": "SELF",
+				"hpBonus": 1
+			}
+		}
+	],
+	"bothOptions": {
+		"description": "+1/+1",
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"value": 1
+		}
+	},
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/druid/minion_grove_tender contains:
+{
+	"name": "Grove Tender",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Choose One - Give each player a Mana Crystal; or Each player draws a card.",
+	"options": [
+		{
+			"description": "Mana Crystal",
+			"spell": {
+				"class": "ModifyMaxManaSpell",
+				"targetPlayer": "BOTH",
+				"fullManaCrystals": true,
+				"value": 1
+			}
+		},
+		{
+			"description": "Draw",
+			"spell": {
+				"class": "DrawCardSpell",
+				"targetPlayer": "BOTH",
+				"value": 1
+			}
+		}
+	],
+	"bothOptions": {
+		"description": "Mana Crystal and Draw",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "ModifyMaxManaSpell",
+					"targetPlayer": "BOTH",
+					"fullManaCrystals": true,
+					"value": 1
+				},
+				{
+					"class": "DrawCardSpell",
+					"targetPlayer": "BOTH",
+					"value": 1
+				}
+			]
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/druid/minion_druid_of_the_fang contains:
+{
+	"name": "Druid of the Fang",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Battlecry: If you have a Beast, transform this minion into a 7/7.",
+	"battlecry": {
+		"spell": {
+			"class": "TransformMinionSpell",
+			"target": "SELF",
+			"card": "token_cobra_form"
+		},
+		"condition": {
+			"class": "MinionOnBoardCondition",
+			"cardFilter": {
+				"class": "RaceFilter",
+				"race": "BEAST"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/druid/spell_dark_wispers_2 contains:
+{
+	"name": "+5/5 and Taunt",
+	"baseManaCost": 6,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "+5/5 and Taunt",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "BuffSpell",
+				"attackBonus": 5,
+				"hpBonus": 5
+			},
+			{
+				"class": "AddAttributeSpell",
+				"attribute": "TAUNT"
+			}
+		]
+	},
+	"collectible": false,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/druid/spell_dark_wispers_1 contains:
+{
+	"name": "Summon 5 Wisps",
+	"baseManaCost": 6,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "Summon 5 Wisps",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"cards": [
+			"minion_wisp",
+			"minion_wisp",
+			"minion_wisp",
+			"minion_wisp",
+			"minion_wisp"
+		]
+	},
+	"collectible": false,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/druid/token_cobra_form contains:
+{
+	"name": "Druid Of The Fang (Cobra Form)",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 7,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "",
+	"collectible": false,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/druid/minion_mech-bear-cat contains:
+{
+	"name": "Mech-Bear-Cat",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 6,
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"race": "MECH",
+	"description": "Whenever this minion takes damage, add a Spare Part card to your hand.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageReceivedTrigger",
+			"hostTargetType": "IGNORE_OTHER_TARGETS"
+		},
+		"spell": {
+			"class": "ReceiveRandomCardSpell",
+			"cards": [
+				"spell_armor_plating",
+				"spell_emergency_coolant",
+				"spell_finicky_cloakfield",
+				"spell_reversing_switch",
+				"spell_rusty_horn",
+				"spell_time_rewinder",
+				"spell_whirling_blades"
+			]
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/druid/spell_dark_wispers_3 contains:
+{
+	"name": "+5/5 and Taunt",
+	"baseManaCost": 6,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "Summon 5 Wisps and give a minion +5/5 and Taunt",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "SummonSpell",
+				"cards": [
+					"minion_wisp",
+					"minion_wisp",
+					"minion_wisp",
+					"minion_wisp",
+					"minion_wisp"
+				]
+			},
+			{
+				"class": "BuffSpell",
+				"attackBonus": 5,
+				"hpBonus": 5
+			},
+			{
+				"class": "AddAttributeSpell",
+				"attribute": "TAUNT"
+			}
+		]
+	},
+	"collectible": false,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/druid/minion_malorne contains:
+{
+	"name": "Malorne",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 9,
+	"baseHp": 7,
+	"heroClass": "DRUID",
+	"rarity": "LEGENDARY",
+	"race": "BEAST",
+	"description": "Deathrattle: Shuffle this minion into your deck.",
+	"deathrattle": {
+		"class": "ShuffleMinionToDeckSpell",
+		"target": "SELF"
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/goblins_vs_gnomes/druid/spell_dark_wispers contains:
+{
+	"name": "Dark Wispers",
+	"baseManaCost": 6,
+	"type": "CHOOSE_ONE",
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "Choose One - Summon 5 Wisps; or Give a minion +5/+5 and Taunt.",
+	"targetSelection": "NONE",
+	"options": [
+		"spell_dark_wispers_1",
+		"spell_dark_wispers_2"
+	],
+	"bothOptions": "spell_dark_wispers_3",
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}

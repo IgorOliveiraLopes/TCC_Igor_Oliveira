@@ -1,0 +1,283 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/warrior/minion_bloodhoof_brave contains:
+{
+	"name": "Bloodhoof Brave",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 6,
+	"heroClass": "WARRIOR",
+	"rarity": "COMMON",
+	"description": "Taunt. Enrage: +3 Attack",
+	"trigger": {
+		"eventTrigger": {
+			"class": "EnrageChangedTrigger"
+		},
+		"spell": {
+			"class": "EnrageSpell",
+			"target": "SELF",
+			"attackBonus": 3
+		}
+	},
+	"attributes": {
+		"ENRAGABLE": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/warrior/weapon_rusty_hook contains:
+{
+	"name": "Rusty Hook",
+	"baseManaCost": 1,
+	"type": "WEAPON",
+	"damage": 1,
+	"durability": 3,
+	"heroClass": "WARRIOR",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/warrior/minion_bloodsail_cultist contains:
+{
+	"name": "Bloodsail Cultist",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "WARRIOR",
+	"rarity": "RARE",
+	"race": "PIRATE",
+	"description": "Battlecry: If you control a Pirate, give your weapon +1/+1.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "BuffWeaponSpell",
+			"target": "FRIENDLY_WEAPON",
+			"attackBonus": 1,
+			"hpBonus": 1
+		},
+		"condition": {
+			"class": "MinionOnBoardCondition",
+			"cardFilter": {
+				"class": "RaceFilter",
+				"race": "PIRATE"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/warrior/minion_ancient_shieldbearer contains:
+{
+	"name": "Ancient Shieldbearer",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "WARRIOR",
+	"rarity": "RARE",
+	"description": "Battlecry: If your C'Thun has 10 or more Attack, gain 10 Armor.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffHeroSpell",
+			"target": "FRIENDLY_HERO",
+			"armorBonus": 10
+		},
+		"condition": {
+			"class": "OrCondition",
+			"conditions": [
+				{
+					"class": "ComparisonCondition",
+					"operation": "GREATER_OR_EQUAL",
+					"value1": {
+						"class": "HighestAttributeValueProvider",
+						"target": "FRIENDLY_MINIONS",
+						"attribute": "ATTACK",
+						"filter": {
+							"class": "SpecificCardFilter",
+							"cardId": "minion_cthun"
+						}
+					},
+					"value2": 10
+				},
+				{
+					"class": "ComparisonCondition",
+					"operation": "GREATER_OR_EQUAL",
+					"value1": {
+						"class": "HighestAttributeValueProvider",
+						"target": "FRIENDLY_HAND",
+						"attribute": "ATTACK",
+						"filter": {
+							"class": "SpecificCardFilter",
+							"cardId": "minion_cthun"
+						}
+					},
+					"value2": 10
+				},
+				{
+					"class": "ComparisonCondition",
+					"operation": "GREATER_OR_EQUAL",
+					"value1": {
+						"class": "AttributeValueProvider",
+						"target": "FRIENDLY_PLAYER",
+						"attribute": "CTHUN_ATTACK_BUFF"
+					},
+					"value2": 4
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/warrior/weapon_tentacles_for_arms contains:
+{
+	"name": "Tentacles for Arms",
+	"baseManaCost": 5,
+	"type": "WEAPON",
+	"damage": 2,
+	"durability": 2,
+	"heroClass": "WARRIOR",
+	"rarity": "EPIC",
+	"description": "Deathrattle: Return this to your hand.",
+	"deathrattle": {
+		"class": "ReceiveCardSpell",
+		"card": "weapon_tentacles_for_arms"
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/warrior/minion_malkorok contains:
+{
+	"name": "Malkorok",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 5,
+	"heroClass": "WARRIOR",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Equip a random weapon.",
+	"battlecry": {
+		"spell": {
+			"class": "EquipRandomWeaponSpell",
+			"targetPlayer": "SELF"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/warrior/minion_ravaging_ghoul contains:
+{
+	"name": "Ravaging Ghoul",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "WARRIOR",
+	"rarity": "COMMON",
+	"description": "Battlecry: Deal 1 damage to all other minions.",
+	"battlecry": {
+		"spell": {
+			"class": "DamageSpell",
+			"target": "ALL_OTHER_MINIONS",
+			"value": 1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/warrior/spell_blood_to_ichor contains:
+{
+	"name": "Blood To Ichor",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "WARRIOR",
+	"rarity": "RARE",
+	"description": "Deal 1 damage to a minion. If it survives, summon a 2/2 Slime.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "ConditionalEffectSpell",
+		"spell1": {
+			"class": "DamageSpell",
+			"value": 1
+		},
+		"spell2": {
+			"class": "SummonSpell",
+			"card": "token_tauren_slime"
+		},
+		"condition": {
+			"class": "IsDeadCondition",
+			"invert": true
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/warrior/minion_nzoths_first_mate contains:
+{
+	"name": "N'Zoth's First Mate",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "WARRIOR",
+	"rarity": "COMMON",
+	"race": "PIRATE",
+	"description": "Battlecry: Equip a 1/3 Rusty Hook.",
+	"battlecry": {
+		"spell": {
+			"class": "EquipWeaponSpell",
+			"card": "weapon_rusty_hook"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_old_gods/warrior/spell_blood_warriors contains:
+{
+	"name": "Blood Warriors",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "WARRIOR",
+	"rarity": "EPIC",
+	"description": "Add a copy of each damaged friendly minion to your hand.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "PutCopyInHandSpell",
+		"target": "FRIENDLY_MINIONS",
+		"filter": {
+			"class": "DamagedFilter"
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}

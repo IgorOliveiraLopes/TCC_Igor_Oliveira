@@ -1,0 +1,399 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/minion_auchenai_soulpriest contains:
+{
+	"name": "Auchenai Soulpriest",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "PRIEST",
+	"rarity": "RARE",
+	"description": "Your cards and powers that restore Health now deal damage instead.",
+	"attributes": {
+		"INVERT_HEALING": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/spell_mass_dispel contains:
+{
+	"name": "Mass Dispel",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "RARE",
+	"description": "Silence all enemy minions. Draw a card.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "SilenceSpell",
+				"target": "ENEMY_MINIONS"
+			},
+			{
+				"class": "DrawCardSpell",
+				"value": 1
+			}
+		]
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/minion_temple_enforcer contains:
+{
+	"name": "Temple Enforcer",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "PRIEST",
+	"rarity": "COMMON",
+	"description": "Battlecry: Give a friendly minion +3 Health.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "BuffSpell",
+			"hpBonus": 3
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/spell_circle_of_healing contains:
+{
+	"name": "Circle of Healing",
+	"baseManaCost": 0,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "COMMON",
+	"description": "Restore 4 Health to ALL minions.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "HealSpell",
+		"target": "ALL_MINIONS",
+		"value": 4
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/minion_cabal_shadow_priest contains:
+{
+	"name": "Cabal Shadow Priest",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "PRIEST",
+	"rarity": "EPIC",
+	"description": "Battlecry: Take control of an enemy minion that has 2 or less Attack.",
+	"battlecry": {
+		"targetSelection": "ENEMY_MINIONS",
+		"spell": {
+			"class": "MindControlSpell",
+			"filter": {
+				"class": "AttributeFilter",
+				"attribute": "ATTACK",
+				"operation": "LESS_OR_EQUAL",
+				"value": 2
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/minion_lightwell contains:
+{
+	"name": "Lightwell",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 5,
+	"heroClass": "PRIEST",
+	"rarity": "RARE",
+	"description": "At the start of your turn, restore 3 Health to a damaged friendly character.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_CHARACTERS",
+			"value": 3,
+			"randomTarget": true,
+			"filter": {
+				"class": "DamagedFilter"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/minion_lightspawn contains:
+{
+	"name": "Lightspawn",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 5,
+	"heroClass": "PRIEST",
+	"rarity": "COMMON",
+	"description": "This minion's Attack is always equal to its Health.",
+	"attributes": {
+		"ATTACK_EQUALS_HP": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/minion_prophet_velen contains:
+{
+	"name": "Prophet Velen",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 7,
+	"heroClass": "PRIEST",
+	"rarity": "LEGENDARY",
+	"description": "Double the damage and healing of your spells and Hero Power.",
+	"attributes": {
+		"HEAL_AMPLIFY_MULTIPLIER": 2,
+		"SPELL_AMPLIFY_MULTIPLIER": 2
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/spell_shadow_madness contains:
+{
+	"name": "Shadow Madness",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "RARE",
+	"description": "Gain control of an enemy minion with 3 or less Attack until end of turn.",
+	"targetSelection": "ENEMY_MINIONS",
+	"spell": {
+		"class": "custom.ShadowMadnessSpell",
+		"filter": {
+			"class": "AttributeFilter",
+			"attribute": "ATTACK",
+			"operation": "LESS_OR_EQUAL",
+			"value": 3
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/spell_mindgames contains:
+{
+	"name": "Mindgames",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "EPIC",
+	"description": "Put a copy of a random minion from your opponent's deck into the battlefield.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonRandomMinionFilteredSpell",
+		"card": "token_shadow_of_nothing",
+		"cardSource": {
+			"class": "DeckSource",
+			"targetPlayer": "OPPONENT"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/token_shadow_of_nothing contains:
+{
+	"name": "Shadow of Nothing",
+	"baseManaCost": 0,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 1,
+	"heroClass": "PRIEST",
+	"rarity": "EPIC",
+	"description": "Mindgames whiffed! Your opponent had no minions!",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/spell_inner_fire contains:
+{
+	"name": "Inner Fire",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "COMMON",
+	"description": "Change a minion's Attack to be equal to its Health.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "SetAttackSpell",
+		"value": {
+			"class": "AttributeValueProvider",
+			"attribute": "HP"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/hero_power_mind_shatter contains:
+{
+	"name": "Mind Shatter",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "PRIEST",
+	"rarity": "FREE",
+	"description": "Deal 3 damage.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 3
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/spell_holy_fire contains:
+{
+	"name": "Holy Fire",
+	"baseManaCost": 6,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "RARE",
+	"description": "Deal 5 damage. Restore 5 Health to your hero.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"value": 5
+			},
+			{
+				"class": "HealSpell",
+				"target": "FRIENDLY_HERO",
+				"value": 5
+			}
+		]
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/spell_thoughtsteal contains:
+{
+	"name": "Thoughtsteal",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "COMMON",
+	"description": "Copy 2 cards from your opponent's deck and put them into your hand.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "CopyCardSpell",
+		"value": 2,
+		"cardLocation": "DECK"
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/spell_silence contains:
+{
+	"name": "Silence",
+	"baseManaCost": 0,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "COMMON",
+	"description": "Silence a minion.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "SilenceSpell"
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/hero_power_mind_spike contains:
+{
+	"name": "Mind Spike",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "PRIEST",
+	"rarity": "FREE",
+	"description": "Deal 2 damage.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 2
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/priest/spell_shadowform contains:
+{
+	"name": "Shadowform",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "EPIC",
+	"description": "Your Hero Power becomes 'Deal 2 damage'. If already in Shadowform: 3 damage.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "EitherOrSpell",
+		"targetPlayer": "SELF",
+		"spell1": {
+			"class": "ConditionalSpell",
+			"spell": {
+				"class": "ChangeHeroPowerSpell",
+				"card": "hero_power_mind_shatter"
+			},
+			"condition": {
+				"class": "HasHeroPowerCondition",
+				"cardId": "hero_power_mind_shatter",
+				"invert": true
+			}
+		},
+		"spell2": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "AddAttributeSpell",
+					"target": "FRIENDLY_HERO",
+					"attribute": "SHADOWFORM"
+				},
+				{
+					"class": "ChangeHeroPowerSpell",
+					"card": "hero_power_mind_spike"
+				}
+			]
+		},
+		"condition": {
+			"class": "AttributeCondition",
+			"target": "FRIENDLY_HERO",
+			"attribute": "SHADOWFORM",
+			"operation": "HAS"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}

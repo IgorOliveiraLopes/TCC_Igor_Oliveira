@@ -1,0 +1,257 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/druid/hero_malfurion contains:
+{
+	"name": "Malfurion Stormrage",
+	"baseManaCost": 0,
+	"heroPower": "hero_power_shapeshift",
+	"type": "HERO",
+	"heroClass": "DRUID",
+	"rarity": "FREE",
+	"attributes": {
+		"HP": 30,
+		"MAX_HP": 30
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/druid/spell_mark_of_the_wild contains:
+{
+	"name": "Mark of the Wild",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "FREE",
+	"description": "Give a minion Taunt and +2/+2. (+2 Attack/+2 Health)",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "BuffSpell",
+				"value": 2
+			},
+			{
+				"class": "AddAttributeSpell",
+				"attribute": "TAUNT"
+			}
+		]
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/druid/spell_savage_roar contains:
+{
+	"name": "Savage Roar",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "FREE",
+	"description": "Give your characters +2 Attack this turn.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "TemporaryAttackSpell",
+		"target": "FRIENDLY_CHARACTERS",
+		"value": 2
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/druid/hero_power_shapeshift contains:
+{
+	"name": "Shapeshift",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "DRUID",
+	"rarity": "FREE",
+	"description": "+1 Attack this turn. +1 Armor.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffHeroSpell",
+		"target": "FRIENDLY_HERO",
+		"attackBonus": 1,
+		"armorBonus": 1
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/druid/spell_swipe contains:
+{
+	"name": "Swipe",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "FREE",
+	"description": "Deal 4 damage to an enemy and 1 damage to all other enemies.",
+	"targetSelection": "ENEMY_CHARACTERS",
+	"spell": {
+		"class": "SwipeSpell",
+		"secondaryTarget": "ENEMY_CHARACTERS",
+		"value": 4,
+		"secondaryValue": 1
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/druid/spell_healing_touch contains:
+{
+	"name": "Healing Touch",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "FREE",
+	"description": "Restore 8 Health.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "HealSpell",
+		"value": 8
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/druid/spell_innervate contains:
+{
+	"name": "Innervate",
+	"baseManaCost": 0,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "FREE",
+	"description": "Gain 2 Mana Crystals this turn only.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "GainManaSpell",
+		"value": 2
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/druid/minion_ironbark_protector contains:
+{
+	"name": "Ironbark Protector",
+	"baseManaCost": 8,
+	"type": "MINION",
+	"baseAttack": 8,
+	"baseHp": 8,
+	"heroClass": "DRUID",
+	"rarity": "FREE",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/druid/spell_claw contains:
+{
+	"name": "Claw",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "FREE",
+	"description": "Give your hero +2 Attack this turn and 2 Armor.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffHeroSpell",
+		"target": "FRIENDLY_HERO",
+		"attackBonus": 2,
+		"armorBonus": 2
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/druid/spell_wild_growth contains:
+{
+	"name": "Wild Growth",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "FREE",
+	"description": "Gain an empty Mana Crystal.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "EitherOrSpell",
+		"spell1": {
+			"class": "ReceiveCardSpell",
+			"targetPlayer": "SELF",
+			"card": "spell_excess_mana"
+		},
+		"spell2": {
+			"class": "ModifyMaxManaSpell",
+			"value": 1
+		},
+		"condition": {
+			"class": "ManaMaxedCondition"
+		}
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/druid/spell_moonfire contains:
+{
+	"name": "Moonfire",
+	"baseManaCost": 0,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "FREE",
+	"description": "Deal 1 damage.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 1
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/druid/spell_starfire contains:
+{
+	"name": "Starfire",
+	"baseManaCost": 6,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "FREE",
+	"description": "Deal 5 damage. Draw a card.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"value": 5
+			},
+			{
+				"class": "DrawCardSpell",
+				"value": 1
+			}
+		]
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/basic/druid/spell_excess_mana contains:
+{
+	"name": "Excess Mana",
+	"baseManaCost": 0,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "FREE",
+	"description": "Draw a card. (You can only have 10 Mana in your tray.)",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DrawCardSpell",
+		"targetPlayer": "SELF",
+		"value": 1
+	},
+	"collectible": false,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}

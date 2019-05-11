@@ -1,0 +1,887 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_bite contains:
+{
+	"name": "Bite",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Give your hero +4 Attack this turn and 4 Armor.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffHeroSpell",
+		"target": "FRIENDLY_HERO",
+		"attackBonus": 4,
+		"armorBonus": 4
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_nourish_1 contains:
+{
+	"name": "+2 Mana Crystals",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Gain 2 Mana Crystals",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "ModifyMaxManaSpell",
+		"fullManaCrystals": true,
+		"value": 2
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_power_of_the_wild_2 contains:
+{
+	"name": "Summon Panther",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Summon a 3/2 Panther.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"card": "token_panther"
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_wrath_1 contains:
+{
+	"name": "3 damage",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Deal 3 damage to a minion",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 3
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_nourish_2 contains:
+{
+	"name": "Draw 3 cards",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Draw 3 cards",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DrawCardSpell",
+		"value": 3
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_starfall_1 contains:
+{
+	"name": "5 damage single",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Deal 5 damage to a minion",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 5
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_starfall contains:
+{
+	"name": "Starfall",
+	"baseManaCost": 5,
+	"type": "CHOOSE_ONE",
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Choose One - Deal 5 damage to a minion; or 2 damage to all enemy minions.",
+	"targetSelection": "NONE",
+	"options": [
+		"spell_starfall_1",
+		"spell_starfall_2"
+	],
+	"bothOptions": "spell_starfall_3",
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_nourish_3 contains:
+{
+	"name": "+2 Mana Crystals and draw 3 cards",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Gain 2 Mana Crystals and Draw 3 cards",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "ModifyMaxManaSpell",
+				"fullManaCrystals": true,
+				"value": 2
+			},
+			{
+				"class": "DrawCardSpell",
+				"value": 3
+			}
+		]
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_mark_of_nature_1 contains:
+{
+	"name": "+4 Attack",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Give a minion +4 Attack",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "BuffSpell",
+		"attackBonus": 4
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_force_of_nature contains:
+{
+	"name": "Force of Nature",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "Summon three 2/2 Treants.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"cards": [
+			"token_treant",
+			"token_treant",
+			"token_treant"
+		]
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_wrath_2 contains:
+{
+	"name": "1 damage + draw card",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Deal 1 damage to a minion and draw a card.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DrawCardSpell",
+				"value": "1"
+			},
+			{
+				"class": "DamageSpell",
+				"value": 1
+			}
+		]
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_power_of_the_wild_3 contains:
+{
+	"name": "Summon Panther and +1/+1",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Summon a 3/2 Panther. Give your minions +1/+1.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "SummonSpell",
+				"card": "token_panther"
+			},
+			{
+				"class": "BuffSpell",
+				"target": "FRIENDLY_MINIONS",
+				"attackBonus": 1,
+				"hpBonus": 1
+			}
+		]
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_nourish contains:
+{
+	"name": "Nourish",
+	"baseManaCost": 5,
+	"type": "CHOOSE_ONE",
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Choose One - Gain 2 Mana Crystals; or Draw 3 cards.",
+	"targetSelection": "NONE",
+	"options": [
+		"spell_nourish_1",
+		"spell_nourish_2"
+	],
+	"bothOptions": "spell_nourish_3",
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/token_catbear_form contains:
+{
+	"name": "Druid of the Claw (CatBear)",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 6,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Taunt",
+	"attributes": {
+		"CHARGE": true,
+		"TAUNT": true
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/minion_ancient_of_lore contains:
+{
+	"name": "Ancient of Lore",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "Choose One - Draw a card; or Restore 5 Health.",
+	"options": [
+		{
+			"description": "Draw a card",
+			"spell": {
+				"class": "DrawCardSpell",
+				"value": 1
+			}
+		},
+		{
+			"description": "Heal for 5",
+			"targetSelection": "ANY",
+			"spell": {
+				"class": "HealSpell",
+				"value": 5
+			}
+		}
+	],
+	"bothOptions": {
+		"description": "Draw a card and heal for 5",
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "DrawCardSpell",
+					"value": 1
+				},
+				{
+					"class": "HealSpell",
+					"value": 5
+				}
+			]
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_soul_of_the_forest contains:
+{
+	"name": "Soul of the Forest",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Give your minions \"Deathrattle: Summon a 2/2 Treant.\"",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "AddDeathrattleSpell",
+		"target": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_treant"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_power_of_the_wild_1 contains:
+{
+	"name": "+1/+1",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Give your minions +1/+1",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffSpell",
+		"target": "FRIENDLY_MINIONS",
+		"attackBonus": 1,
+		"hpBonus": 1
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_wrath contains:
+{
+	"name": "Wrath",
+	"baseManaCost": 2,
+	"type": "CHOOSE_ONE",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Choose One - Deal 3 damage to a minion; or 1 damage and draw a card.",
+	"targetSelection": "NONE",
+	"options": [
+		"spell_wrath_1",
+		"spell_wrath_2"
+	],
+	"bothOptions": "spell_wrath_3",
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/token_treant contains:
+{
+	"name": "Treant",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "DRUID",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/minion_druid_of_the_claw contains:
+{
+	"name": "Druid of the Claw",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Choose One - Charge; or +2 Health and Taunt.",
+	"options": [
+		{
+			"description": "Charge",
+			"spell": {
+				"class": "TransformMinionSpell",
+				"target": "SELF",
+				"card": "token_cat_form"
+			}
+		},
+		{
+			"description": "+2 Health and Taunt",
+			"spell": {
+				"class": "TransformMinionSpell",
+				"target": "SELF",
+				"card": "token_bear_form"
+			}
+		}
+	],
+	"bothOptions": {
+		"description": "Charge, +2 Health, and Taunt",
+		"spell": {
+			"class": "TransformMinionSpell",
+			"target": "SELF",
+			"card": "token_catbear_form"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_mark_of_nature_3 contains:
+{
+	"name": "+4/+4, Taunt",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Give a minion +4/+4 and Taunt",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "BuffSpell",
+				"value": 4
+			},
+			{
+				"class": "AddAttributeSpell",
+				"attribute": "TAUNT"
+			}
+		]
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/token_panther contains:
+{
+	"name": "Panther",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_mark_of_nature contains:
+{
+	"name": "Mark of Nature",
+	"baseManaCost": 3,
+	"type": "CHOOSE_ONE",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Choose One - Give a minion +4 Attack; or +4 Health and Taunt.",
+	"targetSelection": "NONE",
+	"options": [
+		"spell_mark_of_nature_1",
+		"spell_mark_of_nature_2"
+	],
+	"bothOptions": "spell_mark_of_nature_3",
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_power_of_the_wild contains:
+{
+	"name": "Power of the Wild",
+	"baseManaCost": 2,
+	"type": "CHOOSE_ONE",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Choose One - Give your minions +1/+1; or Summon a 3/2 Panther.",
+	"targetSelection": "NONE",
+	"options": [
+		"spell_power_of_the_wild_1",
+		"spell_power_of_the_wild_2"
+	],
+	"bothOptions": "spell_power_of_the_wild_3",
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/token_cat_form contains:
+{
+	"name": "Druid of the Claw (Cat)",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Charge",
+	"attributes": {
+		"CHARGE": true
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/token_treant_taunt contains:
+{
+	"name": "Treant",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "DRUID",
+	"rarity": "FREE",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_savagery contains:
+{
+	"name": "Savagery",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Deal damage equal to your hero's Attack to a minion.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "DamageSpell",
+		"value": {
+			"class": "AttributeValueProvider",
+			"target": "FRIENDLY_HERO",
+			"attribute": "ATTACK"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_wrath_3 contains:
+{
+	"name": "4 damage and draw a card",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Deal 3 damage to a minion",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"value": 4
+			},
+			{
+				"class": "DrawCardSpell",
+				"targetPlayer": "SELF",
+				"value": "1"
+			}
+		]
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/minion_keeper_of_the_grove contains:
+{
+	"name": "Keeper of the Grove",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Choose One - Deal 2 damage; or Silence a minion.",
+	"options": [
+		{
+			"description": "2 damage",
+			"targetSelection": "ANY",
+			"spell": {
+				"class": "DamageSpell",
+				"value": 2
+			}
+		},
+		{
+			"description": "Silence",
+			"targetSelection": "MINIONS",
+			"spell": {
+				"class": "SilenceSpell"
+			}
+		}
+	],
+	"bothOptions": {
+		"description": "Silence and deal 2 damage",
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "ConditionalSpell",
+					"spell": {
+						"class": "SilenceSpell"
+					},
+					"condition": {
+						"class": "CardPropertyCondition",
+						"cardType": "MINION"
+					}
+				},
+				{
+					"class": "DamageSpell",
+					"value": 2
+				}
+			]
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/token_bear_form contains:
+{
+	"name": "Druid of the Claw (Bear)",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 6,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/minion_ancient_of_war contains:
+{
+	"name": "Ancient of War",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "Choose One - +5 Attack; or +5 Health and Taunt.",
+	"options": [
+		{
+			"description": "+5 Attack",
+			"spell": {
+				"class": "BuffSpell",
+				"target": "SELF",
+				"attackBonus": 5
+			}
+		},
+		{
+			"description": "+5 Health/Taunt",
+			"spell": {
+				"class": "MetaSpell",
+				"spells": [
+					{
+						"class": "BuffSpell",
+						"target": "SELF",
+						"hpBonus": 5
+					},
+					{
+						"class": "AddAttributeSpell",
+						"target": "SELF",
+						"attribute": "TAUNT"
+					}
+				]
+			}
+		}
+	],
+	"bothOptions": {
+		"description": "+5/+5 and Taunt",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "SELF",
+					"value": 5
+				},
+				{
+					"class": "AddAttributeSpell",
+					"target": "SELF",
+					"attribute": "TAUNT"
+				}
+			]
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_starfall_2 contains:
+{
+	"name": "2 damage AoE",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Deal 2 damage to all enemy minions",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DamageSpell",
+		"target": "ENEMY_MINIONS",
+		"value": 2
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_naturalize contains:
+{
+	"name": "Naturalize",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Destroy a minion. Your opponent draws 2 cards.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DestroySpell"
+			},
+			{
+				"class": "DrawCardSpell",
+				"targetPlayer": "OPPONENT",
+				"value": 2
+			}
+		]
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_mark_of_nature_2 contains:
+{
+	"name": "+4 Health, Taunt",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "+4 Health and Taunt",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "BuffSpell",
+				"hpBonus": 4
+			},
+			{
+				"class": "AddAttributeSpell",
+				"attribute": "TAUNT"
+			}
+		]
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/spell_starfall_3 contains:
+{
+	"name": "7 damage single and 2 damage AoE",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Deal 7 damage to a minion. Deal 2 damage to all other enemy minions.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "SwipeSpell",
+		"secondaryTarget": "ENEMY_MINIONS",
+		"value": 7,
+		"secondaryValue": 2
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/druid/minion_cenarius contains:
+{
+	"name": "Cenarius",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 8,
+	"heroClass": "DRUID",
+	"rarity": "LEGENDARY",
+	"description": "Choose One - Give your other minions +2/+2; or Summon two 2/2 Treants with Taunt.",
+	"options": [
+		{
+			"description": "+2/2",
+			"spell": {
+				"class": "BuffSpell",
+				"target": "OTHER_FRIENDLY_MINIONS",
+				"attackBonus": 2,
+				"hpBonus": 2
+			}
+		},
+		{
+			"description": "2 Treants",
+			"spell": {
+				"class": "MetaSpell",
+				"spells": [
+					{
+						"class": "SummonSpell",
+						"card": "token_treant_taunt",
+						"boardPositionRelative": "RIGHT"
+					},
+					{
+						"class": "SummonSpell",
+						"card": "token_treant_taunt",
+						"boardPositionRelative": "LEFT"
+					}
+				]
+			}
+		}
+	],
+	"bothOptions": {
+		"description": "2 Treants and +2/+2",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "SummonSpell",
+					"card": "token_treant_taunt",
+					"boardPositionRelative": "RIGHT"
+				},
+				{
+					"class": "SummonSpell",
+					"card": "token_treant_taunt",
+					"boardPositionRelative": "LEFT"
+				},
+				{
+					"class": "BuffSpell",
+					"target": "OTHER_FRIENDLY_MINIONS",
+					"attackBonus": 2,
+					"hpBonus": 2
+				}
+			]
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}

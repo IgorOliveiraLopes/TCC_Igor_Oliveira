@@ -1,0 +1,230 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/mage/minion_rhonin contains:
+{
+	"name": "Rhonin",
+	"baseManaCost": 8,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 7,
+	"heroClass": "MAGE",
+	"rarity": "LEGENDARY",
+	"description": "Deathrattle: Add 3 copies of Arcane Missiles to your hand.",
+	"deathrattle": {
+		"class": "ReceiveCardSpell",
+		"cards": [
+			"spell_arcane_missiles",
+			"spell_arcane_missiles",
+			"spell_arcane_missiles"
+		]
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/mage/hero_power_fireblast_rank_2 contains:
+{
+	"name": "Fireblast Rank 2",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"description": "Deal 2 damage.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 2
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/mage/spell_polymorph_boar contains:
+{
+	"name": "Polymorph: Boar",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "RARE",
+	"description": "Transform a minion into a 4/2 Boar with Charge.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "TransformMinionSpell",
+		"card": "token_mage_huffer"
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/mage/minion_coldarra_drake contains:
+{
+	"name": "Coldarra Drake",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "MAGE",
+	"rarity": "EPIC",
+	"description": "You can use your Hero Power any number of times.",
+	"race": "DRAGON",
+	"attributes": {
+		"HERO_POWER_USAGES": -1
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/mage/minion_spellslinger contains:
+{
+	"name": "Spellslinger",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "MAGE",
+	"rarity": "COMMON",
+	"description": "Battlecry: Add a random spell to each player's hand.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"targetPlayer": "BOTH",
+			"cardFilter": {
+				"class": "CardFilter",
+				"cardType": "SPELL"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/mage/spell_arcane_blast contains:
+{
+	"name": "Arcane Blast",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "EPIC",
+	"description": "Deal 2 damage to a minion. This spell gets double bonus from Spell Damage.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 2
+	},
+	"attributes": {
+		"SPELL_DAMAGE_MULTIPLIER": 2
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/mage/minion_fallen_hero contains:
+{
+	"name": "Fallen Hero",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "MAGE",
+	"rarity": "RARE",
+	"description": "Your Hero Power deals 1 extra damage.",
+	"attributes": {
+		"HERO_POWER_DAMAGE": 1
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/mage/token_mage_huffer contains:
+{
+	"name": "Boar",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 2,
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "Charge",
+	"attributes": {
+		"CHARGE": true
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/mage/spell_flame_lance contains:
+{
+	"name": "Flame Lance",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "COMMON",
+	"description": "Deal 8 damage to a minion.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 8
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/mage/minion_dalaran_aspirant contains:
+{
+	"name": "Dalaran Aspirant",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "MAGE",
+	"rarity": "COMMON",
+	"description": "Inspire: Gain Spell Damage +1.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "ModifyAttributeSpell",
+			"target": "SELF",
+			"attribute": "SPELL_DAMAGE",
+			"value": 1
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/mage/secret_effigy contains:
+{
+	"name": "Effigy",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "RARE",
+	"description": "Secret: When a friendly minion dies, summon a random minion with the same Cost.",
+	"trigger": {
+		"class": "MinionDeathTrigger",
+		"targetPlayer": "SELF"
+	},
+	"spell": {
+		"class": "SummonRandomMinionFilteredSpell",
+		"cardFilter": {
+			"class": "CardFilter",
+			"manaCost": {
+				"class": "AttributeValueProvider",
+				"target": "EVENT_TARGET",
+				"attribute": "BASE_MANA_COST"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}

@@ -1,0 +1,362 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/shaman/spell_summon_stoneclaw_totem contains:
+{
+	"name": "Stoneclaw Totem",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Summon a Stoneclaw Totem.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"card": "token_stoneclaw_totem"
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/shaman/minion_thunder_bluff_valiant contains:
+{
+	"name": "Thunder Bluff Valiant",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 6,
+	"heroClass": "SHAMAN",
+	"rarity": "RARE",
+	"description": "Inspire: Give your Totems +2 Attack.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "FRIENDLY_MINIONS",
+			"attackBonus": 2,
+			"filter": {
+				"class": "RaceFilter",
+				"race": "TOTEM"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/shaman/spell_summon_searing_totem contains:
+{
+	"name": "Searing Totem",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Summon a Searing Totem.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"card": "token_searing_totem"
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/shaman/minion_draenei_totemcarver contains:
+{
+	"name": "Draenei Totemcarver",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "SHAMAN",
+	"rarity": "RARE",
+	"description": "Battlecry: Gain +1/+1 for each friendly Totem.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"value": {
+				"class": "EntityCounter",
+				"target": "FRIENDLY_MINIONS",
+				"filter": {
+					"class": "RaceFilter",
+					"race": "TOTEM"
+				}
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/shaman/hero_power_lightning_jolt contains:
+{
+	"name": "Lightning Jolt",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Deal 2 damage.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 2
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/shaman/spell_summon_wrath_of_air_totem contains:
+{
+	"name": "Wrath of Air Totem",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Summon a Wrath of Air Totem.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"card": "token_wrath_of_air_totem"
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/shaman/spell_elemental_destruction contains:
+{
+	"name": "Elemental Destruction",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "EPIC",
+	"description": "Deal 4-5 damage to all minions. Overload: (5)",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DamageSpell",
+		"target": "ALL_MINIONS",
+		"value": {
+			"class": "RandomValueProvider",
+			"min": 4,
+			"max": 5
+		}
+	},
+	"attributes": {
+		"OVERLOAD": 5
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/shaman/minion_tuskarr_totemic contains:
+{
+	"name": "Tuskarr Totemic",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"description": "Battlecry: Summon a random basic Totem.",
+	"battlecry": {
+		"spell": {
+			"class": "SummonRandomSpell",
+			"boardPositionRelative": "RIGHT",
+			"cards": [
+				"token_searing_totem",
+				"token_healing_totem",
+				"token_wrath_of_air_totem",
+				"token_stoneclaw_totem"
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/shaman/spell_summon_healing_totem contains:
+{
+	"name": "Healing Totem",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Summon a Healing Totem.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"card": "token_healing_totem"
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/shaman/minion_the_mistcaller contains:
+{
+	"name": "The Mistcaller",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "SHAMAN",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Give all minions in your hand and deck +1/+1.",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "FRIENDLY_HAND",
+					"attackBonus": 1,
+					"hpBonus": 1,
+					"filter": {
+						"class": "CardFilter",
+						"cardType": "MINION"
+					}
+				},
+				{
+					"class": "AddSpellTriggerSpell",
+					"target": "FRIENDLY_PLAYER",
+					"trigger": {
+						"eventTrigger": {
+							"class": "CardDrawnTrigger",
+							"targetPlayer": "SELF",
+							"queueCondition": {
+								"class": "CardPropertyCondition",
+								"target": "EVENT_TARGET",
+								"cardType": "MINION"
+							}
+						},
+						"spell": {
+							"class": "BuffSpell",
+							"target": "EVENT_TARGET",
+							"attackBonus": 1,
+							"hpBonus": 1
+						}
+					}
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/shaman/weapon_charged_hammer contains:
+{
+	"name": "Charged Hammer",
+	"baseManaCost": 4,
+	"type": "WEAPON",
+	"damage": 2,
+	"durability": 4,
+	"heroClass": "SHAMAN",
+	"rarity": "EPIC",
+	"description": "Deathrattle: Your Hero Power becomes 'Deal 2 damage.'",
+	"deathrattle": {
+		"class": "ChangeHeroPowerSpell",
+		"targetPlayer": "SELF",
+		"card": "hero_power_lightning_jolt"
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/shaman/spell_ancestral_knowledge contains:
+{
+	"name": "Ancestral Knowledge",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"description": "Draw 2 cards. Overload: (2)",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DrawCardSpell",
+		"value": 2
+	},
+	"attributes": {
+		"OVERLOAD": 2
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/shaman/hero_power_totemic_slam contains:
+{
+	"name": "Totemic Slam",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "SHAMAN",
+	"rarity": "FREE",
+	"description": "Summon a Totem of your choice.",
+	"targetSelection": "NONE",
+	"options": [
+		"spell_summon_searing_totem",
+		"spell_summon_healing_totem",
+		"spell_summon_wrath_of_air_totem",
+		"spell_summon_stoneclaw_totem"
+	],
+	"condition": {
+		"class": "MinionCountCondition",
+		"operation": "LESS",
+		"value": 7
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/shaman/spell_healing_wave contains:
+{
+	"name": "Healing Wave",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "RARE",
+	"description": "Restore 7 Health. Reveal a minion in each deck. If yours costs more, Restore 14 instead.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "JoustSpell",
+		"spell1": {
+			"class": "HealSpell",
+			"value": 7
+		},
+		"spell2": {
+			"class": "HealSpell",
+			"value": 14
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/shaman/minion_totem_golem contains:
+{
+	"name": "Totem Golem",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"race": "TOTEM",
+	"description": "Overload: (1)",
+	"attributes": {
+		"OVERLOAD": 1
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}

@@ -1,0 +1,277 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/warlock/hero_power_soul_tap contains:
+{
+	"name": "Soul Tap",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "WARLOCK",
+	"rarity": "FREE",
+	"description": "Draw a card.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DrawCardSpell",
+		"value": 1
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/warlock/spell_dark_bargain contains:
+{
+	"name": "Dark Bargain",
+	"baseManaCost": 6,
+	"type": "SPELL",
+	"heroClass": "WARLOCK",
+	"rarity": "EPIC",
+	"description": "Destroy 2 random enemy minions. Discard 2 random cards.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "MultiTargetSpell",
+				"target": "ENEMY_MINIONS",
+				"value": 2,
+				"spell": {
+					"class": "DestroySpell"
+				}
+			},
+			{
+				"class": "DiscardSpell",
+				"value": 2
+			}
+		]
+	},
+	"condition": {
+		"class": "MinionCountCondition",
+		"targetPlayer": "OPPONENT",
+		"operation": "GREATER",
+		"value": 1
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/warlock/minion_fearsome_doomguard contains:
+{
+	"name": "Fearsome Doomguard",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 8,
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"race": "DEMON",
+	"description": "",
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/warlock/minion_void_crusher contains:
+{
+	"name": "Void Crusher",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "WARLOCK",
+	"rarity": "RARE",
+	"race": "DEMON",
+	"description": "Inspire: Destroy a random minion for each player.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "DestroySpell",
+					"target": "FRIENDLY_MINIONS",
+					"randomTarget": true
+				},
+				{
+					"class": "DestroySpell",
+					"target": "ENEMY_MINIONS",
+					"randomTarget": true
+				}
+			]
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/warlock/minion_wrathguard contains:
+{
+	"name": "Wrathguard",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 3,
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"race": "DEMON",
+	"description": "Whenever this minion takes damage, also deal that amount to your hero.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageReceivedTrigger",
+			"hostTargetType": "IGNORE_OTHER_TARGETS"
+		},
+		"spell": {
+			"class": "DamageSpell",
+			"target": "FRIENDLY_HERO",
+			"value": {
+				"class": "AttributeValueProvider",
+				"target": "SELF",
+				"attribute": "LAST_HIT"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/warlock/minion_dreadsteed contains:
+{
+	"name": "Dreadsteed",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "WARLOCK",
+	"rarity": "EPIC",
+	"race": "DEMON",
+	"description": "Deathrattle: Summon a Dreadsteed.",
+	"deathrattle": {
+		"class": "SummonSpell",
+		"card": "minion_dreadsteed"
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/warlock/spell_fist_of_jaraxxus contains:
+{
+	"name": "Fist of Jaraxxus",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "WARLOCK",
+	"rarity": "RARE",
+	"description": "When you play or discard this, deal 4 damage to a random enemy.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MissilesSpell",
+		"target": "ENEMY_CHARACTERS",
+		"value": 4,
+		"howMany": 1
+	},
+	"passiveTrigger": {
+		"eventTrigger": {
+			"class": "DiscardTrigger",
+			"target": "SELF"
+		},
+		"spell": {
+			"class": "MissilesSpell",
+			"target": "ENEMY_CHARACTERS",
+			"value": 4,
+			"howMany": 1
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/warlock/minion_wilfred_fizzlebang contains:
+{
+	"name": "Wilfred Fizzlebang",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "WARLOCK",
+	"rarity": "LEGENDARY",
+	"description": "Cards you draw from your Hero Power cost (0).",
+	"trigger": {
+		"eventTrigger": {
+			"class": "CardDrawnTrigger",
+			"sourceType": "HERO_POWER",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "CardCostModifierSpell",
+			"target": "FRIENDLY_PLAYER",
+			"cardCostModifier": {
+				"class": "CardCostModifier",
+				"target": "EVENT_TARGET",
+				"operation": "SET",
+				"value": 0
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/warlock/spell_demonfuse contains:
+{
+	"name": "Demonfuse",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"description": "Give a Demon +3/+3. Give your opponent a Mana Crystal.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "BuffSpell",
+				"attackBonus": 3,
+				"hpBonus": 3
+			},
+			{
+				"class": "ModifyMaxManaSpell",
+				"targetPlayer": "OPPONENT",
+				"value": 1
+			}
+		],
+		"filter": {
+			"class": "RaceFilter",
+			"race": "DEMON"
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_grand_tournament/warlock/minion_tiny_knight_of_evil contains:
+{
+	"name": "Tiny Knight of Evil",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "WARLOCK",
+	"rarity": "RARE",
+	"race": "DEMON",
+	"description": "Whenever you discard a card, gain +1/+1.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DiscardTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 1,
+			"hpBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}

@@ -1,0 +1,335 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/hunter/spell_arcane_shot contains:
+{
+	"name": "Arcane Shot",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"description": "Deal 2 damage.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 2
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/hunter/token_huffer contains:
+{
+	"name": "Huffer",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 2,
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "Charge",
+	"attributes": {
+		"CHARGE": true
+	},
+	"collectible": false,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/hunter/minion_tundra_rhino contains:
+{
+	"name": "Tundra Rhino",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 5,
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "Your Beasts have Charge.",
+	"aura": {
+		"class": "AttributeAura",
+		"target": "FRIENDLY_MINIONS",
+		"attribute": "CHARGE",
+		"filter": {
+			"class": "RaceFilter",
+			"race": "BEAST"
+		}
+	},
+	"attributes": {
+		"CHARGE": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/hunter/minion_houndmaster contains:
+{
+	"name": "Houndmaster",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 3,
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"description": "Battlecry: Give a friendly Beast +2/+2 and Taunt.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"attackBonus": 2,
+					"hpBonus": 2
+				},
+				{
+					"class": "AddAttributeSpell",
+					"attribute": "TAUNT"
+				}
+			],
+			"filter": {
+				"class": "RaceFilter",
+				"race": "BEAST"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/hunter/spell_animal_companion contains:
+{
+	"name": "Animal Companion",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"description": "Summon a random Beast Companion.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonRandomSpell",
+		"cards": [
+			"token_huffer",
+			"token_misha",
+			"token_leokk"
+		]
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/hunter/spell_tracking contains:
+{
+	"name": "Tracking",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"description": "Look at the top three cards of your deck. Draw one and discard the others.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DiscoverDrawSpell",
+		"spell": {
+			"class": "ReceiveCardSpell"
+		}
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/hunter/hero_power_steady_shot contains:
+{
+	"name": "Steady Shot",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"description": "Deal 2 damage to the enemy hero.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DamageSpell",
+		"target": "ENEMY_HERO",
+		"value": 2
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/hunter/token_misha contains:
+{
+	"name": "Misha",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": false,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/hunter/hero_rexxar contains:
+{
+	"name": "Rexxar",
+	"baseManaCost": 0,
+	"heroPower": "hero_power_steady_shot",
+	"type": "HERO",
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"attributes": {
+		"HP": 30,
+		"MAX_HP": 30
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/hunter/spell_kill_command contains:
+{
+	"name": "Kill Command",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"description": "Deal 3 damage. If you have a Beast, deal 5 damage instead.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "DamageSpell",
+		"value": {
+			"class": "ConditionalValueProvider",
+			"ifTrue": 5,
+			"ifFalse": 3,
+			"condition": {
+				"class": "MinionOnBoardCondition",
+				"cardFilter": {
+					"class": "RaceFilter",
+					"race": "BEAST"
+				}
+			}
+		}
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/hunter/minion_timber_wolf contains:
+{
+	"name": "Timber Wolf",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "Your other Beasts have +1 Attack.",
+	"aura": {
+		"class": "BuffAura",
+		"target": "OTHER_FRIENDLY_MINIONS",
+		"attackBonus": 1,
+		"filter": {
+			"class": "RaceFilter",
+			"race": "BEAST"
+		}
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/hunter/minion_starving_buzzard contains:
+{
+	"name": "Starving Buzzard",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "Whenever you summon a Beast, draw a card.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "MinionSummonedTrigger",
+			"targetPlayer": "SELF",
+			"race": "BEAST"
+		},
+		"spell": {
+			"class": "DrawCardSpell",
+			"value": 1
+		}
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/hunter/spell_hunters_mark contains:
+{
+	"name": "Hunter's Mark",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"description": "Change a minion's Health to 1.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "SetHpSpell",
+		"value": 1
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/hunter/token_leokk contains:
+{
+	"name": "Leokk",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "Your other minions have +1 Attack.",
+	"aura": {
+		"class": "BuffAura",
+		"target": "OTHER_FRIENDLY_MINIONS",
+		"attackBonus": 1
+	},
+	"collectible": false,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/basic/hunter/spell_multi-shot contains:
+{
+	"name": "Multi-Shot",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "FREE",
+	"description": "Deal 3 damage to two random enemy minions.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MultiTargetSpell",
+		"target": "ENEMY_MINIONS",
+		"value": 2,
+		"spell": {
+			"class": "DamageSpell",
+			"value": 3
+		}
+	},
+	"condition": {
+		"class": "MinionCountCondition",
+		"targetPlayer": "OPPONENT",
+		"operation": "GREATER",
+		"value": 1
+	},
+	"collectible": true,
+	"set": "BASIC",
+	"fileFormatVersion": 1
+}

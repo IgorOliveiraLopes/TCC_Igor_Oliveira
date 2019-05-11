@@ -1,0 +1,1422 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_ogre_brute contains:
+{
+	"name": "Ogre Brute",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "50% chance to attack the wrong enemy.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TargetAcquisitionTrigger",
+			"actionType": "PHYSICAL_ATTACK",
+			"hostTargetType": "IGNORE_OTHER_SOURCES",
+			"queueCondition": {
+				"class": "RandomCondition"
+			}
+		},
+		"spell": {
+			"class": "FumbleSpell",
+			"target": "EVENT_TARGET"
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_enhance-o_mechano contains:
+{
+	"name": "Enhance-o Mechano",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"race": "MECH",
+	"description": "Battlecry: Give your other minions Windfury, Taunt, or Divine Shield. (at random)",
+	"battlecry": {
+		"spell": {
+			"class": "RandomlyCastSpell",
+			"target": "OTHER_FRIENDLY_MINIONS",
+			"spells": [
+				{
+					"class": "AddAttributeSpell",
+					"attribute": "WINDFURY"
+				},
+				{
+					"class": "AddAttributeSpell",
+					"attribute": "TAUNT"
+				},
+				{
+					"class": "AddAttributeSpell",
+					"attribute": "DIVINE_SHIELD"
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_mogor_the_ogre contains:
+{
+	"name": "Mogor the Ogre",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "All minions have a 50% chance to attack the wrong enemy.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TargetAcquisitionTrigger",
+			"actionType": "PHYSICAL_ATTACK",
+			"sourcePlayer": "BOTH",
+			"targetPlayer": "BOTH",
+			"sourceEntityType": "MINION",
+			"queueCondition": {
+				"class": "RandomCondition"
+			}
+		},
+		"spell": {
+			"class": "FumbleSpell",
+			"target": "EVENT_TARGET"
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_puddlestomper contains:
+{
+	"name": "Puddlestomper",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MURLOC",
+	"description": "",
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/token_boom_bot contains:
+{
+	"name": "Boom Bot",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "MECH",
+	"description": "Deathrattle: Deal 1-4 damage to a random enemy.",
+	"deathrattle": {
+		"class": "MissilesSpell",
+		"target": "ENEMY_CHARACTERS",
+		"value": {
+			"class": "RandomValueProvider",
+			"min": 1,
+			"max": 4
+		},
+		"howMany": 1
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": false,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_lost_tallstrider contains:
+{
+	"name": "Lost Tallstrider",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "",
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_lil_exorcist contains:
+{
+	"name": "Lil' Exorcist",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Taunt. Battlecry: Gain +1/+1 for each enemy Deathrattle minion.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"value": {
+				"class": "AttributeCounter",
+				"target": "ENEMY_MINIONS",
+				"attribute": "DEATHRATTLES"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_target_dummy contains:
+{
+	"name": "Target Dummy",
+	"baseManaCost": 0,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "MECH",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_madder_bomber contains:
+{
+	"name": "Madder Bomber",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Deal 6 damage randomly split between all other characters.",
+	"battlecry": {
+		"spell": {
+			"class": "MissilesSpell",
+			"target": "ALL_OTHER_CHARACTERS",
+			"value": 1,
+			"howMany": 6
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_dr_boom contains:
+{
+	"name": "Dr. Boom",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Summon two 1/1 Boom Bots. WARNING: Bots may explode.",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "SummonSpell",
+					"card": "token_boom_bot",
+					"boardPositionRelative": "RIGHT"
+				},
+				{
+					"class": "SummonSpell",
+					"card": "token_boom_bot",
+					"boardPositionRelative": "LEFT"
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_mini-mage contains:
+{
+	"name": "Mini-Mage",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Stealth. Spell Damage +1",
+	"attributes": {
+		"SPELL_DAMAGE": 1,
+		"STEALTH": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_ships_cannon contains:
+{
+	"name": "Ship's Cannon",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "After you summon a Pirate, deal 2 damage to a random enemy.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterMinionSummonedTrigger",
+			"targetPlayer": "SELF",
+			"race": "PIRATE"
+		},
+		"spell": {
+			"class": "MissilesSpell",
+			"target": "ENEMY_CHARACTERS",
+			"value": 2,
+			"howMany": 1
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_fel_reaver contains:
+{
+	"name": "Fel Reaver",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 8,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"race": "MECH",
+	"description": "Whenever your opponent plays a card, discard the top 3 cards of your deck.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "CardPlayedTrigger",
+			"targetPlayer": "OPPONENT"
+		},
+		"spell": {
+			"class": "DiscardCardsFromDeckSpell",
+			"value": 3
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_flying_machine contains:
+{
+	"name": "Flying Machine",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Windfury",
+	"attributes": {
+		"WINDFURY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_explosive_sheep contains:
+{
+	"name": "Explosive Sheep",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Deathrattle: Deal 2 damage to all minions.",
+	"deathrattle": {
+		"class": "DamageSpell",
+		"target": "ALL_MINIONS",
+		"value": 2
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_annoy-o-tron contains:
+{
+	"name": "Annoy-o-Tron",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Taunt. Divine Shield",
+	"attributes": {
+		"DIVINE_SHIELD": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_toshley contains:
+{
+	"name": "Toshley",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry and Deathrattle: Add a Spare Part to your hand.",
+	"battlecry": {
+		"spell": {
+			"class": "ReceiveRandomCardSpell",
+			"cards": [
+				"spell_armor_plating",
+				"spell_emergency_coolant",
+				"spell_finicky_cloakfield",
+				"spell_reversing_switch",
+				"spell_rusty_horn",
+				"spell_time_rewinder",
+				"spell_whirling_blades"
+			]
+		}
+	},
+	"deathrattle": {
+		"class": "ReceiveRandomCardSpell",
+		"cards": [
+			"spell_armor_plating",
+			"spell_emergency_coolant",
+			"spell_finicky_cloakfield",
+			"spell_reversing_switch",
+			"spell_rusty_horn",
+			"spell_time_rewinder",
+			"spell_whirling_blades"
+		]
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/token_v-07-tr-0n contains:
+{
+	"name": "V-07-TR-0N",
+	"baseManaCost": 8,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "MECH",
+	"description": "Charge. Mega-Windfury (Can attack four times a turn.)",
+	"attributes": {
+		"CHARGE": true,
+		"MEGA_WINDFURY": true
+	},
+	"collectible": false,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_micro_machine contains:
+{
+	"name": "Micro Machine",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "At the start of each turn, gain +1 Attack.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "BOTH"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_sneeds_old_shredder contains:
+{
+	"name": "Sneed's Old Shredder",
+	"baseManaCost": 8,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "MECH",
+	"description": "Deathrattle: Summon a random legendary minion.",
+	"deathrattle": {
+		"class": "SummonRandomMinionFilteredSpell",
+		"cardFilter": {
+			"class": "CardFilter",
+			"rarity": "LEGENDARY"
+		}
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_bomb_lobber contains:
+{
+	"name": "Bomb Lobber",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Deal 4 damage to a random enemy minion.",
+	"battlecry": {
+		"spell": {
+			"class": "MissilesSpell",
+			"target": "ENEMY_MINIONS",
+			"value": 4,
+			"howMany": 1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_gnomish_experimenter contains:
+{
+	"name": "Gnomish Experimenter",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Draw a card, if it is a minion turn it into a chicken.",
+	"battlecry": {
+		"spell": {
+			"class": "DrawCardAndDoSomethingSpell",
+			"spell": {
+				"class": "ConditionalSpell",
+				"spell": {
+					"class": "TransformCardSpell",
+					"card": "token_chicken_gvg"
+				},
+				"condition": {
+					"class": "CardPropertyCondition",
+					"cardType": "MINION"
+				}
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_burly_rockjaw_trogg contains:
+{
+	"name": "Burly Rockjaw Trogg",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Each time your opponent cast a spell, gain +2 Attack.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "SpellCastedTrigger",
+			"sourcePlayer": "OPPONENT"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 2
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_arcane_nullifier_x-21 contains:
+{
+	"name": "Arcane Nullifier X-21",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "MECH",
+	"description": "Taunt. Can't be targeted by spells or Hero Powers.",
+	"attributes": {
+		"TAUNT": true,
+		"UNTARGETABLE_BY_SPELLS": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_junkbot contains:
+{
+	"name": "Junkbot",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"race": "MECH",
+	"description": "Whenever a friendly Mech dies, gain +2/+2.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "MinionDeathTrigger",
+			"targetPlayer": "SELF",
+			"race": "MECH"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 2,
+			"hpBonus": 2
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_piloted_shredder contains:
+{
+	"name": "Piloted Shredder",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Deathrattle: Summon a random 2-cost minion.",
+	"deathrattle": {
+		"class": "SummonRandomMinionFilteredSpell",
+		"cardFilter": {
+			"class": "CardFilter",
+			"manaCost": 2
+		}
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_jeeves contains:
+{
+	"name": "Jeeves",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "MECH",
+	"description": "At the end of each player's turn, that player draws until they have 3 cards.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "BOTH"
+		},
+		"spell": {
+			"class": "DrawCardSpell",
+			"targetPlayer": "ACTIVE",
+			"value": {
+				"class": "AlgebraicValueProvider",
+				"operation": "SUBTRACT",
+				"value1": 3,
+				"value2": {
+					"class": "PlayerAttributeValueProvider",
+					"targetPlayer": "SELF",
+					"playerAttribute": "HAND_COUNT"
+				}
+			}
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_gilblin_stalker contains:
+{
+	"name": "Gilblin Stalker",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Stealth",
+	"attributes": {
+		"STEALTH": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_gazlowe contains:
+{
+	"name": "Gazlowe",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Whenever you cast a 1-mana spell, add a random Mech to your hand.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "SpellCastedTrigger",
+			"sourcePlayer": "SELF",
+			"queueCondition": {
+				"class": "ComparisonCondition",
+				"value1": {
+					"class": "PlayerAttributeValueProvider",
+					"playerAttribute": "LAST_MANA_COST"
+				},
+				"value2": 1,
+				"operation": "EQUAL"
+			}
+		},
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"cardFilter": {
+				"class": "RaceFilter",
+				"race": "MECH"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_blingtron_3000 contains:
+{
+	"name": "Blingtron 3000",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "MECH",
+	"description": "Battlecry: Equip a random weapon for each player",
+	"battlecry": {
+		"spell": {
+			"class": "EquipRandomWeaponSpell",
+			"targetPlayer": "BOTH"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_mechanical_yeti contains:
+{
+	"name": "Mechanical Yeti",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Deathrattle: Give each player a Spare Part.",
+	"deathrattle": {
+		"class": "ReceiveRandomCardSpell",
+		"targetPlayer": "BOTH",
+		"cards": [
+			"spell_armor_plating",
+			"spell_emergency_coolant",
+			"spell_finicky_cloakfield",
+			"spell_reversing_switch",
+			"spell_rusty_horn",
+			"spell_time_rewinder",
+			"spell_whirling_blades"
+		]
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_recombobulator contains:
+{
+	"name": "Recombobulator",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Battlecry: Transform a friendly minion into a random minion with the same Cost.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "TransformToRandomMinionSpell",
+			"cardFilter": {
+				"class": "CardFilter",
+				"manaCost": {
+					"class": "AttributeValueProvider",
+					"target": "TARGET",
+					"attribute": "BASE_MANA_COST"
+				}
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_hobgoblin contains:
+{
+	"name": "Hobgoblin",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Whenever you play a 1-Attack minion, give it +2/+2.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "BeforeMinionPlayedTrigger",
+			"targetPlayer": "SELF",
+			"queueCondition": {
+				"class": "AttributeCondition",
+				"attribute": "ATTACK",
+				"operation": "EQUAL",
+				"value": 1
+			}
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "EVENT_TARGET",
+			"attackBonus": 2,
+			"hpBonus": 2
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_salty_dog contains:
+{
+	"name": "Salty Dog",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "PIRATE",
+	"description": "",
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_troggzor_the_earthinator contains:
+{
+	"name": "Troggzor the Earthinator",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Whenever your opponent casts a spell, summon a Burly Rockjaw Trogg.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "SpellCastedTrigger",
+			"sourcePlayer": "OPPONENT"
+		},
+		"spell": {
+			"class": "SummonSpell",
+			"card": "minion_burly_rockjaw_trogg",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_illuminator contains:
+{
+	"name": "Illuminator",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "If you control a Secret at the end of your turn, restore 4 health to your hero.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF",
+			"fireCondition": {
+				"class": "ControlsSecretCondition"
+			}
+		},
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_HERO",
+			"value": 4
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_mechwarper contains:
+{
+	"name": "Mechwarper",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Your Mechs cost (1) less.",
+	"cardCostModifier": {
+		"class": "CardCostModifier",
+		"cardType": "MINION",
+		"targetPlayer": "SELF",
+		"race": "MECH",
+		"value": -1
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_antique_healbot contains:
+{
+	"name": "Antique Healbot",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Battlecry: Restore 8 Health to your hero.",
+	"battlecry": {
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_HERO",
+			"value": 8
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_tinkertown_technician contains:
+{
+	"name": "Tinkertown Technician",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: If you control a Mech, gain +1/+1 and put a Spare Part in your hand.",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "SELF",
+					"attackBonus": 1,
+					"hpBonus": 1
+				},
+				{
+					"class": "ReceiveRandomCardSpell",
+					"cards": [
+						"spell_armor_plating",
+						"spell_emergency_coolant",
+						"spell_finicky_cloakfield",
+						"spell_reversing_switch",
+						"spell_rusty_horn",
+						"spell_time_rewinder",
+						"spell_whirling_blades"
+					]
+				}
+			]
+		},
+		"condition": {
+			"class": "MinionOnBoardCondition",
+			"cardFilter": {
+				"class": "RaceFilter",
+				"race": "MECH"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_gnomeregan_infantry contains:
+{
+	"name": "Gnomeregan Infantry",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Charge. Taunt",
+	"attributes": {
+		"CHARGE": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_spider_tank contains:
+{
+	"name": "Spider Tank",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "",
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_piloted_sky_golem contains:
+{
+	"name": "Piloted Sky Golem",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"race": "MECH",
+	"description": "Deathrattle: Summon a random 4-Cost minion.",
+	"deathrattle": {
+		"class": "SummonRandomMinionFilteredSpell",
+		"cardFilter": {
+			"class": "CardFilter",
+			"manaCost": 4
+		}
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/token_chicken_gvg contains:
+{
+	"name": "Chicken",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "",
+	"collectible": false,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_hemet_nesingwary contains:
+{
+	"name": "Hemet Nesingwary",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Destroy a Beast.",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "DestroySpell",
+			"filter": {
+				"class": "RaceFilter",
+				"race": "BEAST"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_force-tank_max contains:
+{
+	"name": "Force-Tank MAX",
+	"baseManaCost": 8,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Divine Shield",
+	"attributes": {
+		"DIVINE_SHIELD": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_goblin_sapper contains:
+{
+	"name": "Goblin Sapper",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Has +4 Attack while your opponent has 6 or more cards in hand.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "GameStateChangedTrigger"
+		},
+		"spell": {
+			"class": "ConditionalAttackBonusSpell",
+			"target": "SELF",
+			"value": {
+				"class": "ConditionalValueProvider",
+				"ifTrue": 4,
+				"ifFalse": 0,
+				"condition": {
+					"class": "CardCountCondition",
+					"targetPlayer": "OPPONENT",
+					"operation": "GREATER_OR_EQUAL",
+					"value": 6
+				}
+			}
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_mimirons_head contains:
+{
+	"name": "Mimiron's Head",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "MECH",
+	"description": "At the start of your turn, if you have at least 3 Mechs, destroy them all, and form V-07-TR-0N.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF",
+			"fireCondition": {
+				"class": "MinionOnBoardCondition",
+				"value": 3,
+				"cardFilter": {
+					"class": "RaceFilter",
+					"race": "MECH"
+				}
+			}
+		},
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "DestroySpell",
+					"target": "FRIENDLY_MINIONS",
+					"filter": {
+						"class": "RaceFilter",
+						"race": "MECH"
+					}
+				},
+				{
+					"class": "ForceDeathPhaseSpell"
+				},
+				{
+					"class": "SummonSpell",
+					"card": "token_v-07-tr-0n"
+				}
+			]
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_clockwork_giant contains:
+{
+	"name": "Clockwork Giant",
+	"baseManaCost": 12,
+	"type": "MINION",
+	"baseAttack": 8,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"race": "MECH",
+	"description": "Costs (1) less Mana for each card in your opponent's hand.",
+	"manaCostModifier": {
+		"class": "PlayerAttributeValueProvider",
+		"targetPlayer": "OPPONENT",
+		"playerAttribute": "HAND_COUNT"
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_foe_reaper_4000 contains:
+{
+	"name": "Foe Reaper 4000",
+	"baseManaCost": 8,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 9,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "MECH",
+	"description": "Also damages the minions next to whomever he attacks.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterPhysicalAttackTrigger",
+			"targetEntityType": "MINION",
+			"hostTargetType": "IGNORE_OTHER_SOURCES"
+		},
+		"spell": {
+			"class": "AdjacentEffectSpell",
+			"target": "EVENT_TARGET",
+			"spell2": {
+				"class": "DamageSpell",
+				"value": {
+					"class": "AttributeValueProvider",
+					"target": "SELF",
+					"attribute": "ATTACK"
+				}
+			}
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_clockwork_gnome contains:
+{
+	"name": "Clockwork Gnome",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Deathrattle: Put a Spare Part card in your hand.",
+	"deathrattle": {
+		"class": "ReceiveRandomCardSpell",
+		"cards": [
+			"spell_armor_plating",
+			"spell_emergency_coolant",
+			"spell_finicky_cloakfield",
+			"spell_reversing_switch",
+			"spell_rusty_horn",
+			"spell_time_rewinder",
+			"spell_whirling_blades"
+		]
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_stonesplinter_trogg contains:
+{
+	"name": "Stonesplinter Trogg",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Whenever your opponent casts a spell, gain +1 Attack.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "SpellCastedTrigger",
+			"sourcePlayer": "OPPONENT"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_kezan_mystic contains:
+{
+	"name": "Kezan Mystic",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Take control of a random enemy Secret.",
+	"battlecry": {
+		"spell": {
+			"class": "StealRandomSecretSpell"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_cogmaster contains:
+{
+	"name": "Cogmaster",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Has +2 Attack while you have a Mech.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "BoardChangedTrigger"
+		},
+		"spell": {
+			"class": "ConditionalAttackBonusSpell",
+			"target": "SELF",
+			"value": {
+				"class": "ConditionalValueProvider",
+				"ifTrue": 2,
+				"ifFalse": 0,
+				"condition": {
+					"class": "MinionOnBoardCondition",
+					"cardFilter": {
+						"class": "RaceFilter",
+						"race": "MECH"
+					}
+				}
+			}
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/goblins_vs_gnomes/neutral/minion_mekgineer_thermaplugg contains:
+{
+	"name": "Mekgineer Thermaplugg",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 9,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "MECH",
+	"description": "Whenever an enemy minion dies, summon a Leper Gnome.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "MinionDeathTrigger",
+			"targetPlayer": "OPPONENT"
+		},
+		"spell": {
+			"class": "SummonSpell",
+			"card": "minion_leper_gnome",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"collectible": true,
+	"set": "GOBLINS_VS_GNOMES",
+	"fileFormatVersion": 1
+}

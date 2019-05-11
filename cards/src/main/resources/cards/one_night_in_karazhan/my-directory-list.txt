@@ -1,0 +1,1580 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_onyx_bishop contains:
+{
+	"name": "Onyx Bishop",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "PRIEST",
+	"rarity": "RARE",
+	"description": "Battlecry: Summon a friendly minion that died this game.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "ResurrectSpell"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/token_pawn contains:
+{
+	"name": "Pawn",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "WARRIOR",
+	"rarity": "RARE",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": false,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_runic_egg contains:
+{
+	"name": "Runic Egg",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Draw a card.",
+	"deathrattle": {
+		"class": "DrawCardSpell",
+		"value": 1
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/spell_kara_kazham contains:
+{
+	"name": "Kara Kazham!",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"description": "Summon a 1/1 Candle, 2/2 Broom, and 3/3 Teapot.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "SummonSpell",
+				"card": "token_candle"
+			},
+			{
+				"class": "SummonSpell",
+				"card": "token_broom"
+			},
+			{
+				"class": "SummonSpell",
+				"card": "token_teapot"
+			}
+		]
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_arcane_anomaly contains:
+{
+	"name": "Arcane Anomaly",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Whenever you cast a spell, give this minion +1 Health.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "SpellCastedTrigger",
+			"sourcePlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"hpBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_menagerie_warden contains:
+{
+	"name": "Menagerie Warden",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Battlecry: Choose a friendly Beast. Summon a copy of it.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "SummonCopySpell",
+			"filter": {
+				"class": "RaceFilter",
+				"race": "BEAST"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_cloaked_huntress contains:
+{
+	"name": "Cloaked Huntress",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "HUNTER",
+	"rarity": "COMMON",
+	"description": "Your Secrets cost (0).",
+	"cardCostModifier": {
+		"class": "CardCostModifier",
+		"cardType": "SPELL",
+		"targetPlayer": "SELF",
+		"operation": "SET",
+		"value": 0,
+		"requiredAttribute": "SECRET"
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_enchanted_raven contains:
+{
+	"name": "Enchanted Raven",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "",
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/weapon_fools_bane contains:
+{
+	"name": "Fool's Bane",
+	"baseManaCost": 5,
+	"type": "WEAPON",
+	"damage": 3,
+	"durability": 4,
+	"heroClass": "WARRIOR",
+	"rarity": "COMMON",
+	"description": "Unlimited attacks each turn. Can't attack heroes.",
+	"onEquip": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "AddAttributeSpell",
+				"target": "FRIENDLY_HERO",
+				"attribute": "CANNOT_ATTACK_HEROES"
+			},
+			{
+				"class": "AddAttributeSpell",
+				"target": "FRIENDLY_HERO",
+				"attribute": "UNLIMITED_ATTACKS"
+			}
+		]
+	},
+	"onUnequip": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "RemoveAttributeSpell",
+				"target": "FRIENDLY_HERO",
+				"attribute": "CANNOT_ATTACK_HEROES"
+			},
+			{
+				"class": "RemoveAttributeSpell",
+				"target": "FRIENDLY_HERO",
+				"attribute": "UNLIMITED_ATTACKS"
+			}
+		]
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/spell_silvermoon_portal contains:
+{
+	"name": "Silvermoon Portal",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "Give a minion +2/+2. Summon a random 2-Cost minion.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "BuffSpell",
+				"value": 2
+			},
+			{
+				"class": "SummonRandomMinionFilteredSpell",
+				"cardFilter": {
+					"class": "CardFilter",
+					"manaCost": 2
+				}
+			}
+		]
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_the_curator contains:
+{
+	"name": "The Curator",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "MECH",
+	"description": "Taunt. Battlecry: Draw a Beast, Dragon, and Murloc from your deck.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "FromDeckToHandSpell",
+					"value": 1,
+					"cardFilter": {
+						"class": "CardFilter",
+						"race": "BEAST"
+					}
+				},
+				{
+					"class": "FromDeckToHandSpell",
+					"value": 1,
+					"cardFilter": {
+						"class": "CardFilter",
+						"race": "DRAGON"
+					}
+				},
+				{
+					"class": "FromDeckToHandSpell",
+					"value": 1,
+					"cardFilter": {
+						"class": "CardFilter",
+						"race": "MURLOC"
+					}
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_medivhs_valet contains:
+{
+	"name": "Medivh's Valet",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "MAGE",
+	"rarity": "COMMON",
+	"description": "Battlecry: If you control a Secret, deal 3 damage.",
+	"battlecry": {
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "DamageSpell",
+			"value": 3
+		},
+		"condition": {
+			"class": "ControlsSecretCondition"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_moroes contains:
+{
+	"name": "Moroes",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Stealth. At the end of your turn, summon a 1/1 Steward.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_steward",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"attributes": {
+		"STEALTH": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/spell_moonglade_portal contains:
+{
+	"name": "Moonglade Portal",
+	"baseManaCost": 6,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Restore 6 Health. Summon a random 6-Cost minion.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "HealSpell",
+				"value": 6
+			},
+			{
+				"class": "SummonRandomMinionFilteredSpell",
+				"cardFilter": {
+					"class": "CardFilter",
+					"manaCost": 6
+				}
+			}
+		]
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/secret_cat_trick contains:
+{
+	"name": "Cat Trick",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "RARE",
+	"description": "Secret: After your opponent plays a spell, summon a 4/2 Panther with Stealth.",
+	"trigger": {
+		"class": "AfterSpellCastedTrigger",
+		"sourcePlayer": "OPPONENT"
+	},
+	"spell": {
+		"class": "SummonSpell",
+		"card": "token_cat_in_a_hat"
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_priest_of_the_feast contains:
+{
+	"name": "Priest of the Feast",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 6,
+	"heroClass": "PRIEST",
+	"rarity": "COMMON",
+	"description": "Whenever you cast a spell, restore 3 Health to your hero.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "SpellCastedTrigger",
+			"sourcePlayer": "SELF"
+		},
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_HERO",
+			"value": 3
+		}
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_violet_illusionist contains:
+{
+	"name": "Violet Illusionist",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "During your turn, your Hero is immune.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "BoardChangedTrigger"
+		},
+		"spell": {
+			"class": "EitherOrSpell",
+			"target": "SELF",
+			"spell1": {
+				"class": "AddAttributeSpell",
+				"attribute": "IMMUNE_HERO"
+			},
+			"spell2": {
+				"class": "RemoveAttributeSpell",
+				"attribute": "IMMUNE_HERO"
+			},
+			"condition": {
+				"class": "OwnedByPlayerCondition",
+				"targetPlayer": "ACTIVE"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_medivh_the_guardian contains:
+{
+	"name": "Medivh, the Guardian",
+	"baseManaCost": 8,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Equip Atiesh, Greatstaff of the Guardian.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "EquipWeaponSpell",
+			"card": "weapon_atiesh"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_ivory_knight contains:
+{
+	"name": "Ivory Knight",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "PALADIN",
+	"rarity": "RARE",
+	"description": "Battlecry: Discover a spell. Restore health equal to its Cost.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "DiscoverRandomCardSpell",
+			"spell": {
+				"class": "ReceiveCardAndDoSomethingSpell",
+				"targetPlayer": "SELF",
+				"spell": {
+					"class": "HealSpell",
+					"targetPlayer": "SELF",
+					"target": "FRIENDLY_HERO",
+					"value": {
+						"class": "AttributeValueProvider",
+						"target": "EVENT_CARD",
+						"attribute": "BASE_MANA_COST"
+					}
+				}
+			},
+			"cardFilter": {
+				"class": "CardFilter",
+				"cardType": "SPELL"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_arcane_giant contains:
+{
+	"name": "Arcane Giant",
+	"baseManaCost": 12,
+	"type": "MINION",
+	"baseAttack": 8,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Costs (1) less for each spell you've cast this game.",
+	"manaCostModifier": {
+		"class": "PlayerAttributeValueProvider",
+		"playerAttribute": "SPELLS_CAST"
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_swashburglar contains:
+{
+	"name": "Swashburglar",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ROGUE",
+	"rarity": "COMMON",
+	"race": "PIRATE",
+	"description": "Battlecry: Add a random card class card to your hand (from your opponent's class).",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"value": 1,
+			"card": "spell_the_coin",
+			"cardFilter": {
+				"class": "CardFilter",
+				"heroClass": "OPPONENT"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/token_candle contains:
+{
+	"name": "Candle",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": false,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_ethereal_peddler contains:
+{
+	"name": "Ethereal Peddler",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 6,
+	"heroClass": "ROGUE",
+	"rarity": "RARE",
+	"description": "Battlecry: If you're holding any non-Rogue class cards, reduce their cost by (2).",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "CardCostModifierSpell",
+			"target": "FRIENDLY_PLAYER",
+			"cardFilter": {
+				"class": "CardFilter",
+				"heroClasses": [
+					"ROGUE",
+					"ANY"
+				],
+				"invert": true
+			},
+			"cardCostModifier": {
+				"class": "CardCostModifier",
+				"target": "FRIENDLY_HAND",
+				"operation": "SUBTRACT",
+				"value": 2
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_arcanosmith contains:
+{
+	"name": "Arcanosmith",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Summon a 0/5 minion with Taunt.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_animated_shield",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_prince_malchezaar contains:
+{
+	"name": "Prince Malchezaar",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "DEMON",
+	"description": "When the game starts, add 5 extra Legendary minions to your deck.",
+	"deckTrigger": {
+		"eventTrigger": {
+			"class": "GameStartTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "CastRepeatedlySpell",
+			"howMany": 5,
+			"spell": {
+				"class": "ShuffleToDeckSpell",
+				"cardFilter": {
+					"class": "AndFilter",
+					"filters": [
+						{
+							"class": "CardFilter",	
+							"cardType": "MINION",
+							"rarity": "LEGENDARY"
+						},
+						{
+							"class": "OrFilter",
+							"invert": true,
+							"filters": [
+								{
+									"class": "InDeckFilter"
+								},
+								{
+									"class": "InHandFilter"
+								}
+							]
+						},
+						{
+							"class": "OrFilter",
+							"filters": [
+								{
+									"class": "CardFilter",
+									"heroClass": "ANY"
+								},
+								{
+									"class": "CardFilter",
+									"heroClass": "SELF"
+								}
+							]
+						}
+					]
+				}
+			}
+		}
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/token_animated_shield contains:
+{
+	"name": "Animated Shield",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": false,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/token_teapot contains:
+{
+	"name": "Teapot",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": false,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_kindly_grandmother contains:
+{
+	"name": "Kindly Grandmother",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "HUNTER",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Deathrattle: Summon a 3/2 Big Bad Wolf.",
+	"deathrattle": {
+		"class": "SummonSpell",
+		"card": "token_big_bad_wolf"
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_malchezaars_imp contains:
+{
+	"name": "Malchezaar's Imp",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 3,
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"race": "DEMON",
+	"description": "Whenever you discard a card, draw a card.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DiscardTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "DrawCardSpell",
+			"target": "SELF",
+			"value": 1
+		}
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/token_big_bad_wolf contains:
+{
+	"name": "Big Bad Wolf",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "HUNTER",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "",
+	"collectible": false,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/token_broom contains:
+{
+	"name": "Broom",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": false,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/weapon_spirit_claws contains:
+{
+	"name": "Spirit Claws",
+	"baseManaCost": 1,
+	"type": "WEAPON",
+	"damage": 1,
+	"durability": 3,
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"description": "Has +2 Attack while you have Spell Damage.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "BoardChangedTrigger"
+		},
+		"spell": {
+			"class": "ConditionalAttackBonusSpell",
+			"target": "SELF",
+			"value": {
+				"class": "ConditionalValueProvider",
+				"ifTrue": 2,
+				"ifFalse": 0,
+				"condition": {
+					"class": "ComparisonCondition",
+					"value1": {
+						"class": "AttributeCounter",
+						"target": "FRIENDLY_CHARACTERS",
+						"attribute": "SPELL_DAMAGE"
+					},
+					"value2": 1,
+					"operation": "GREATER_OR_EQUAL"
+				}
+			}
+		}
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/token_cat_in_a_hat contains:
+{
+	"name": "Cat in a Hat",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 2,
+	"heroClass": "HUNTER",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Stealth",
+	"attributes": {
+		"STEALTH": true
+	},
+	"collectible": false,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_silverware_golem contains:
+{
+	"name": "Silverware Golem",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "WARLOCK",
+	"rarity": "RARE",
+	"description": "If you discard this minion, summon it.",
+	"passiveTrigger": {
+		"eventTrigger": {
+			"class": "DiscardTrigger",
+			"target": "SELF"
+		},
+		"spell": {
+			"class": "SummonSpell",
+			"card": "minion_silverware_golem"
+		}
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_moat_lurker contains:
+{
+	"name": "Moat Lurker",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Destroy a minion. Deathrattle: Resummon it.",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "custom.MoatLurkerSpell"
+		}
+	},
+	"deathrattle": {
+		"class": "NullSpell"
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/spell_protect_the_king contains:
+{
+	"name": "Protect the King!",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "WARRIOR",
+	"rarity": "RARE",
+	"description": "For each enemy minion, summon a 1/1 Pawn with Taunt.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"value": {
+			"class": "EntityCounter",
+			"target": "ENEMY_MINIONS"
+		},
+		"card": "token_pawn"
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_book_wyrm contains:
+{
+	"name": "Book Wyrm",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "DRAGON",
+	"description": "Battlecry: If you're holding a Dragon, destroy an enemy minion with 3 or less Attack.",
+	"battlecry": {
+		"targetSelection": "ENEMY_MINIONS",
+		"spell": {
+			"class": "DestroySpell",
+			"filter": {
+				"class": "AttributeFilter",
+				"attribute": "ATTACK",
+				"operation": "LESS_OR_EQUAL",
+				"value": 3
+			}
+		},
+		"condition": {
+			"class": "HoldsCardCondition",
+			"cardFilter": {
+				"class": "CardFilter",
+				"race": "DRAGON"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_menagerie_magician contains:
+{
+	"name": "Menagerie Magician",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Give a random friendly Beast, Dragon, and Murloc +2/+2.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"attackBonus": 2,
+					"hpBonus": 2,
+					"target": "FRIENDLY_MINIONS",
+					"randomTarget": true,
+					"filter": {
+						"class": "CardFilter",
+						"race": "BEAST"
+					}
+				},
+				{
+					"class": "BuffSpell",
+					"attackBonus": 2,
+					"hpBonus": 2,
+					"target": "FRIENDLY_MINIONS",
+					"randomTarget": true,
+					"filter": {
+						"class": "CardFilter",
+						"race": "DRAGON"
+					}
+				},
+				{
+					"class": "BuffSpell",
+					"attackBonus": 2,
+					"hpBonus": 2,
+					"target": "FRIENDLY_MINIONS",
+					"randomTarget": true,
+					"filter": {
+						"class": "CardFilter",
+						"race": "MURLOC"
+					}
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/spell_firelands_portal contains:
+{
+	"name": "Firelands Portal",
+	"baseManaCost": 7,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "COMMON",
+	"description": "Deal 5 damage. Summon a random 5-Cost minion.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"value": 5
+			},
+			{
+				"class": "SummonRandomMinionFilteredSpell",
+				"cardFilter": {
+					"class": "CardFilter",
+					"manaCost": 5
+				}
+			}
+		]
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_deadly_fork contains:
+{
+	"name": "Deadly Fork",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ROGUE",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Add a 3/2 weapon to your hand.",
+	"deathrattle": {
+		"class": "ReceiveCardSpell",
+		"card": "weapon_sharp_fork"
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_netherspite_historian contains:
+{
+	"name": "Netherspite Historian",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: If you're holding a Dragon, Discover a Dragon.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "DiscoverRandomCardSpell",
+			"spell": {
+				"class": "ReceiveCardSpell",
+				"targetPlayer": "SELF"
+			},
+			"cardFilter": {
+				"class": "CardFilter",
+				"race": "DRAGON"
+			}
+		},
+		"condition": {
+			"class": "HoldsCardCondition",
+			"cardFilter": {
+				"class": "CardFilter",
+				"race": "DRAGON"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/weapon_sharp_fork contains:
+{
+	"name": "Sharp Fork",
+	"baseManaCost": 3,
+	"type": "WEAPON",
+	"damage": 3,
+	"durability": 2,
+	"heroClass": "ROGUE",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": false,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_wicked_witchdoctor contains:
+{
+	"name": "Wicked Witchdoctor",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"description": "Whenever you cast a spell, summon a random basic Totem.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "SpellCastedTrigger",
+			"sourcePlayer": "SELF"
+		},
+		"spell": {
+			"class": "SummonRandomSpell",
+			"cards": [
+				"token_searing_totem",
+				"token_healing_totem",
+				"token_wrath_of_air_totem",
+				"token_stoneclaw_totem"
+			]
+		}
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_pantry_spider contains:
+{
+	"name": "Pantry Spider",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Battlecry: Summon a 1/3 Spider.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_cellar_spider",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/token_cellar_spider contains:
+{
+	"name": "Cellar Spider",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "",
+	"collectible": false,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_avian_watcher contains:
+{
+	"name": "Avian Watcher",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: If you control a Secret, gain +1/+1 and Taunt.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "SELF",
+					"attackBonus": 1,
+					"hpBonus": 1
+				},
+				{
+					"class": "AddAttributeSpell",
+					"target": "SELF",
+					"attribute": "TAUNT"
+				}
+			]
+		},
+		"condition": {
+			"class": "ControlsSecretCondition"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/spell_maelstrom_portal contains:
+{
+	"name": "Maelstrom Portal",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "RARE",
+	"description": "Deal 1 damage to all enemy minions. Summon a random 1-Cost minion.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"target": "ENEMY_MINIONS",
+				"value": 1
+			},
+			{
+				"class": "SummonRandomMinionFilteredSpell",
+				"cardFilter": {
+					"class": "CardFilter",
+					"manaCost": 1
+				}
+			}
+		]
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_babbling_book contains:
+{
+	"name": "Babbling Book",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "MAGE",
+	"rarity": "RARE",
+	"description": "Battlecry: Add a random Mage spell to your hand.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"cardFilter": {
+				"class": "CardFilter",
+				"cardType": "SPELL",
+				"heroClass": "MAGE"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_pompous_thespian contains:
+{
+	"name": "Pompous Thespian",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_barnes contains:
+{
+	"name": "Barnes",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Summon a 1/1 copy of a random minion in your deck.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "SummonOneOneCopySpell",
+			"cardSource": {
+				"class": "DeckSource",
+				"targetPlayer": "SELF"
+			},
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/spell_ironforge_portal contains:
+{
+	"name": "Ironforge Portal",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "WARRIOR",
+	"rarity": "COMMON",
+	"description": "Gain +4 Armor. Summon a random 4-Cost minion.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "BuffHeroSpell",
+				"armorBonus": 4
+			},
+			{
+				"class": "SummonRandomMinionFilteredSpell",
+				"cardFilter": {
+					"class": "CardFilter",
+					"manaCost": 4
+				}
+			}
+		]
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/spell_purify contains:
+{
+	"name": "Purify",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "COMMON",
+	"description": "Silence a friendly minion. Draw a card.",
+	"targetSelection": "FRIENDLY_MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "SilenceSpell"
+			},
+			{
+				"class": "DrawCardSpell"
+			}
+		]
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/token_steward contains:
+{
+	"name": "Steward",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "",
+	"collectible": false,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/weapon_atiesh contains:
+{
+	"name": "Atiesh",
+	"baseManaCost": 3,
+	"type": "WEAPON",
+	"damage": 1,
+	"durability": 3,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "After you cast a spell, summon a random minion of the same Cost. Lose 1 Durability.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterSpellCastedTrigger",
+			"sourcePlayer": "SELF",
+			"fireCondition": {
+				"class": "MinionCountCondition",
+				"targetPlayer": "SELF",
+				"operation": "LESS",
+				"value": 7
+			}
+		},
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "SummonRandomMinionFilteredSpell",
+					"cardFilter": {
+						"class": "CardFilter",
+						"manaCost": {
+							"class": "PlayerAttributeValueProvider",
+							"playerAttribute": "LAST_MANA_COST"
+						}
+					}
+				},
+				{
+					"class": "BuffWeaponSpell",
+					"target": "FRIENDLY_WEAPON",
+					"hpBonus": -1
+				}
+			]
+		}
+	},
+	"collectible": false,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_nightbane_templar contains:
+{
+	"name": "Nightbane Templar",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "Battlecry: If you're holding a Dragon, summon two 1/1 Whelps.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "SummonSpell",
+					"card": "token_whelp",
+					"boardPositionRelative": "RIGHT"
+				},
+				{
+					"class": "SummonSpell",
+					"card": "token_whelp",
+					"boardPositionRelative": "LEFT"
+				}
+			]
+		},
+		"condition": {
+			"class": "HoldsCardCondition",
+			"cardFilter": {
+				"class": "CardFilter",
+				"race": "DRAGON"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/one_night_in_karazhan/minion_zoobot contains:
+{
+	"name": "Zoobot",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Battlecry: Give a random friendly Beast, Dragon, and Murloc +1/+1.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"attackBonus": 1,
+					"hpBonus": 1,
+					"target": "FRIENDLY_MINIONS",
+					"randomTarget": true,
+					"filter": {
+						"class": "CardFilter",
+						"race": "BEAST"
+					}
+				},
+				{
+					"class": "BuffSpell",
+					"attackBonus": 1,
+					"hpBonus": 1,
+					"target": "FRIENDLY_MINIONS",
+					"randomTarget": true,
+					"filter": {
+						"class": "CardFilter",
+						"race": "DRAGON"
+					}
+				},
+				{
+					"class": "BuffSpell",
+					"attackBonus": 1,
+					"hpBonus": 1,
+					"target": "FRIENDLY_MINIONS",
+					"randomTarget": true,
+					"filter": {
+						"class": "CardFilter",
+						"race": "MURLOC"
+					}
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "ONE_NIGHT_IN_KARAZHAN",
+	"fileFormatVersion": 1
+}

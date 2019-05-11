@@ -1,0 +1,475 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/druid/spell_jade_blossom contains:
+{
+	"name": "Jade Blossom",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Summon a Jade Golem. Gain an empty Mana Crystal.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "CreateSummonSpell",
+				"name": "Jade Golem",
+				"attackBonus": {
+					"class": "AttributeValueProvider",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "JADE_BUFF",
+					"offset": 1
+				},
+				"hpBonus": {
+					"class": "AttributeValueProvider",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "JADE_BUFF",
+					"offset": 1
+				},
+				"mana": {
+					"class": "AlgebraicValueProvider",
+					"operation": "MAXIMUM",
+					"value1": {
+						"class": "AttributeValueProvider",
+						"target": "FRIENDLY_PLAYER",
+						"attribute": "JADE_BUFF",
+						"offset": 1
+					},
+					"value2": 10
+				},
+				"spell": {
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "JADE_BUFF",
+					"value": 1
+				}
+			},
+			{
+				"class": "ModifyMaxManaSpell",
+				"value": 1
+			}
+		]
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/druid/minion_kun_the_forgotten_king contains:
+{
+	"name": "Kun the Forgotten King",
+	"baseManaCost": 10,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 7,
+	"heroClass": "DRUID",
+	"rarity": "LEGENDARY",
+	"description": "Choose One - Gain 10 Armor; or Refresh your Mana Crystals.",
+	"options": [
+		{
+			"description": "Gain 10 Armor",
+			"spell": {
+				"class": "BuffHeroSpell",
+				"target": "FRIENDLY_HERO",
+				"armorBonus": 10
+			}
+		},
+		{
+			"description": "Refresh Mana",
+			"spell": {
+				"class": "GainManaSpell",
+				"value": {
+					"class": "AlgebraicValueProvider",
+					"operation": "SUBTRACT",
+					"value1": {
+						"class": "PlayerAttributeValueProvider",
+						"playerAttribute": "MAX_MANA"
+					},
+					"value2": {
+						"class": "PlayerAttributeValueProvider",
+						"playerAttribute": "MANA"
+					}
+				}
+			}
+		}
+	],
+	"bothOptions": {
+		"description": "10 Armor and Refresh",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffHeroSpell",
+					"target": "FRIENDLY_HERO",
+					"armorBonus": 10
+				},
+				{
+					"class": "GainManaSpell",
+					"value": {
+						"class": "AlgebraicValueProvider",
+						"operation": "SUBTRACT",
+						"value1": {
+							"class": "PlayerAttributeValueProvider",
+							"playerAttribute": "MAX_MANA"
+						},
+						"value2": {
+							"class": "PlayerAttributeValueProvider",
+							"playerAttribute": "MANA"
+						}
+					}
+				}
+			]
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/druid/spell_lunar_visions contains:
+{
+	"name": "Lunar Visions",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "Draw 2 cards. Minions drawn cost (2) less.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DrawCardAndDoSomethingSpell",
+		"value": 2,
+		"spell": {
+			"class": "ConditionalSpell",
+			"spell": {
+				"class": "CardCostModifierSpell",
+				"target": "FRIENDLY_PLAYER",
+				"cardCostModifier": {
+					"class": "CardCostModifier",
+					"target": "EVENT_CARD",
+					"operation": "SUBTRACT",
+					"value": 2
+				}
+			},
+			"condition": {
+				"class": "CardPropertyCondition",
+				"cardType": "MINION"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/druid/spell_jade_idol_2 contains:
+{
+	"name": "Shuffle 3 Copies",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Shuffle 3 copies of this into your deck.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "ShuffleToDeckSpell",
+		"value": 3,
+		"target": "NONE",
+		"card": "spell_jade_idol"
+	},
+	"collectible": false,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/druid/minion_celestial_dreamer contains:
+{
+	"name": "Celestial Dreamer",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Battlecry: If a friendly minion has 5 or more Attack, gain +2/+2.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "BuffSpell",
+			"value": 2,
+			"target": "SELF"
+		},
+		"condition": {
+			"class": "HasEntityCondition",
+			"target": "OTHER_FRIENDLY_MINIONS",
+			"filter": {
+				"class": "AttributeFilter",
+				"attribute": "ATTACK",
+				"operation": "GREATER_OR_EQUAL",
+				"value": 5
+			} 
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/druid/minion_virmen_sensei contains:
+{
+	"name": "Virmen Sensei",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Battlecry: Give a friendly Beast +2/+2.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "BuffSpell",
+			"value": 2,
+			"filter": {
+				"class": "RaceFilter",
+				"race": "BEAST"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/druid/spell_jade_idol contains:
+{
+	"name": "Jade Idol",
+	"baseManaCost": 1,
+	"type": "CHOOSE_ONE",
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Choose One - Summon a Jade Golem; or Shuffle 3 copies of this card into your deck.",
+	"targetSelection": "NONE",
+	"options": [
+		"spell_jade_idol_1",
+		"spell_jade_idol_2"
+	],
+	"bothOptions": "spell_jade_idol_3",
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/druid/spell_pilfered_power contains:
+{
+	"name": "Pilfered Power",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "Gain an empty Mana Crystal for each friendly minion.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "EitherOrSpell",
+		"spell1": {
+			"class": "ReceiveCardSpell",
+			"targetPlayer": "SELF",
+			"card": "spell_excess_mana"
+		},
+		"spell2": {
+			"class": "ModifyMaxManaSpell",
+			"value": {
+				"class": "EntityCounter",
+				"target": "FRIENDLY_MINIONS"
+			}
+		},
+		"condition": {
+			"class": "AndCondition",
+			"conditions": [
+				{
+					"class": "ManaMaxedCondition"
+				},
+				{
+					"class": "HasEntityCondition",
+					"target": "FRIENDLY_MINIONS"
+				}
+			]
+			
+		}
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/druid/spell_jade_idol_1 contains:
+{
+	"name": "Summon a Jade Golem",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Summon a Jade Golem.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "CreateSummonSpell",
+		"name": "Jade Golem",
+		"attackBonus": {
+			"class": "AttributeValueProvider",
+			"target": "FRIENDLY_PLAYER",
+			"attribute": "JADE_BUFF",
+			"offset": 1
+		},
+		"hpBonus": {
+			"class": "AttributeValueProvider",
+			"target": "FRIENDLY_PLAYER",
+			"attribute": "JADE_BUFF",
+			"offset": 1
+		},
+		"mana": {
+			"class": "AlgebraicValueProvider",
+			"operation": "MAXIMUM",
+			"value1": {
+				"class": "AttributeValueProvider",
+				"target": "FRIENDLY_PLAYER",
+				"attribute": "JADE_BUFF",
+				"offset": 1
+			},
+			"value2": 10
+		},
+		"spell": {
+			"class": "ModifyAttributeSpell",
+			"target": "FRIENDLY_PLAYER",
+			"attribute": "JADE_BUFF",
+			"value": 1
+		}
+	},
+	"collectible": false,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/druid/spell_mark_of_the_lotus contains:
+{
+	"name": "Mark of the Lotus",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Give your minions +1/+1.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffSpell",
+		"target": "FRIENDLY_MINIONS",
+		"value": 1
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/druid/spell_jade_idol_3 contains:
+{
+	"name": "Summon Jade Golem and Add 3",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Summon a Jade Golem. Shuffle 3 copies of this card into your deck.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "ShuffleToDeckSpell",
+				"value": 3,
+				"target": "NONE",
+				"card": "spell_jade_idol"
+			},
+			{
+				"class": "CreateSummonSpell",
+				"name": "Jade Golem",
+				"attackBonus": {
+					"class": "AttributeValueProvider",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "JADE_BUFF",
+					"offset": 1
+				},
+				"hpBonus": {
+					"class": "AttributeValueProvider",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "JADE_BUFF",
+					"offset": 1
+				},
+				"mana": {
+					"class": "AlgebraicValueProvider",
+					"operation": "MAXIMUM",
+					"value1": {
+						"class": "AttributeValueProvider",
+						"target": "FRIENDLY_PLAYER",
+						"attribute": "JADE_BUFF",
+						"offset": 1
+					},
+					"value2": 10
+				},
+				"spell": {
+					"class": "ModifyAttributeSpell",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "JADE_BUFF",
+					"value": 1
+				}
+			}
+		]
+	},
+	"collectible": false,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/mean_streets_of_gadgetzan/druid/minion_jade_behemoth contains:
+{
+	"name": "Jade Behemoth",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 6,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Taunt. Battlecry: Summon a Jade Golem.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "CreateSummonSpell",
+			"name": "Jade Golem",
+			"attackBonus": {
+				"class": "AttributeValueProvider",
+				"target": "FRIENDLY_PLAYER",
+				"attribute": "JADE_BUFF",
+				"offset": 1
+			},
+			"hpBonus": {
+				"class": "AttributeValueProvider",
+				"target": "FRIENDLY_PLAYER",
+				"attribute": "JADE_BUFF",
+				"offset": 1
+			},
+			"mana": {
+				"class": "AlgebraicValueProvider",
+				"operation": "MAXIMUM",
+				"value1": {
+					"class": "AttributeValueProvider",
+					"target": "FRIENDLY_PLAYER",
+					"attribute": "JADE_BUFF",
+					"offset": 1
+				},
+				"value2": 10
+			},
+			"spell": {
+				"class": "ModifyAttributeSpell",
+				"target": "FRIENDLY_PLAYER",
+				"attribute": "JADE_BUFF",
+				"value": 1
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "MEAN_STREETS_OF_GADGETZAN",
+	"fileFormatVersion": 1
+}

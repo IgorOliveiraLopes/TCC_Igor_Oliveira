@@ -1,0 +1,789 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_mad_scientist contains:
+{
+	"name": "Mad Scientist",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Put a Secret from your deck into the battlefield.",
+	"deathrattle": {
+		"class": "PutRandomSecretIntoPlaySpell"
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_maexxna contains:
+{
+	"name": "Maexxna",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "BEAST",
+	"description": "Destroy any minion damaged by this minion.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageCausedTrigger",
+			"targetEntityType": "MINION",
+			"hostTargetType": "IGNORE_OTHER_SOURCES"
+		},
+		"spell": {
+			"class": "DestroySpell",
+			"target": "EVENT_TARGET"
+		}
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/token_slime contains:
+{
+	"name": "Slime",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": false,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_nerubian_egg contains:
+{
+	"name": "Nerubian Egg",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Deathrattle: Summon a 4/4 Nerubian.",
+	"deathrattle": {
+		"class": "SummonSpell",
+		"card": "token_nerubian"
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_echoing_ooze contains:
+{
+	"name": "Echoing Ooze",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Battlecry: Summon an exact copy of this minion at the end of the turn.",
+	"battlecry": {
+		"spell": {
+			"class": "AddSpellTriggerSpell",
+			"target": "SELF",
+			"trigger": {
+				"eventTrigger": {
+					"class": "TurnEndTrigger"
+				},
+				"spell": {
+					"class": "SummonCopySpell",
+					"target": "SELF"
+				},
+				"oneTurn": true
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_dancing_swords contains:
+{
+	"name": "Dancing Swords",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Your opponent draws a card.",
+	"deathrattle": {
+		"class": "DrawCardSpell",
+		"targetPlayer": "OPPONENT",
+		"value": 1
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_zombie_chow contains:
+{
+	"name": "Zombie Chow",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Restore 5 Health to the enemy hero.",
+	"deathrattle": {
+		"class": "HealSpell",
+		"target": "ENEMY_HERO",
+		"value": 5
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/spell_poison_seeds contains:
+{
+	"name": "Poison Seeds",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Destroy all minions and summon 2/2 treants to replace them",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "custom.PoisonSeedsSpell"
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_unstable_ghoul contains:
+{
+	"name": "Unstable Ghoul",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt. Deathrattle: Deal 1 damage to all minions.",
+	"deathrattle": {
+		"class": "DamageSpell",
+		"target": "ALL_MINIONS",
+		"value": 1
+	},
+	"attributes": {
+		"DEATHRATTLES": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/spell_reincarnate contains:
+{
+	"name": "Reincarnate",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"description": "Destroy a minion, then return it to life with full Health.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DestroySpell"
+			},
+			{
+				"class": "ReviveMinionSpell",
+				"targetPlayer": "OWNER"
+			}
+		]
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_undertaker contains:
+{
+	"name": "Undertaker",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Whenever you summon a minion with Deathrattle, gain +1 Attack",
+	"trigger": {
+		"eventTrigger": {
+			"class": "MinionSummonedTrigger",
+			"targetPlayer": "SELF",
+			"requiredAttribute": "DEATHRATTLES"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_webspinner contains:
+{
+	"name": "Webspinner",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "HUNTER",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Deathrattle: Add a random Beast card to your hand.",
+	"deathrattle": {
+		"class": "ReceiveCardSpell",
+		"cardFilter": {
+			"class": "RaceFilter",
+			"race": "BEAST"
+		}
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_feugen contains:
+{
+	"name": "Feugen",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Deathrattle: If Stalagg also died this game, summon Thaddius.",
+	"deathrattle": {
+		"class": "ConditionalSpell",
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_thaddius"
+		},
+		"condition": {
+			"class": "GraveyardContainsCondition",
+			"cardId": "minion_stalagg"
+		}
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_baron_rivendare contains:
+{
+	"name": "Baron Rivendare",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Your minions trigger their Deathrattles twice.",
+	"attributes": {
+		"DOUBLE_DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_anubar_ambusher contains:
+{
+	"name": "Anub'ar Ambusher",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "ROGUE",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Return a friendly minion to your hand.",
+	"deathrattle": {
+		"class": "ReturnMinionToHandSpell",
+		"target": "FRIENDLY_MINIONS",
+		"randomTarget": true
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/weapon_deaths_bite contains:
+{
+	"name": "Death's Bite",
+	"baseManaCost": 4,
+	"type": "WEAPON",
+	"damage": 4,
+	"durability": 2,
+	"heroClass": "WARRIOR",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Deal 1 damage to all minions.",
+	"deathrattle": {
+		"class": "DamageSpell",
+		"target": "ALL_MINIONS",
+		"value": 1
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_stoneskin_gargoyle contains:
+{
+	"name": "Stoneskin Gargoyle",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "At the start of your turn, restore this minion to full Health.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "HealSpell",
+			"target": "SELF",
+			"value": {
+				"class": "AttributeValueProvider",
+				"attribute": "MAX_HP"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_haunted_creeper contains:
+{
+	"name": "Haunted Creeper",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Deathrattle: Summon two 1/1 Spectral Spiders.",
+	"deathrattle": {
+		"class": "SummonSpell",
+		"cards": [
+			"token_spectral_spider",
+			"token_spectral_spider"
+		]
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/secret_duplicate contains:
+{
+	"name": "Duplicate",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "COMMON",
+	"description": "Secret: When a friendly minion dies, put 2 copies of it in your hand.",
+	"trigger": {
+		"class": "MinionDeathTrigger",
+		"targetPlayer": "SELF",
+		"fireCondition": {
+			"class": "CardCountCondition",
+			"targetPlayer": "SELF",
+			"operation": "LESS",
+			"value": 10
+		}
+	},
+	"spell": {
+		"class": "PutCopyInHandSpell",
+		"target": "EVENT_TARGET",
+		"howMany": 2
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_loatheb contains:
+{
+	"name": "Loatheb",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Enemy spells cost (5) more next turn.",
+	"battlecry": {
+		"spell": {
+			"class": "CardCostModifierSpell",
+			"target": "FRIENDLY_PLAYER",
+			"cardCostModifier": {
+				"class": "CardCostModifier",
+				"cardType": "SPELL",
+				"targetPlayer": "OPPONENT",
+				"operation": "ADD",
+				"value": 5,
+				"expirationTrigger": {
+					"class": "TurnEndTrigger",
+					"targetPlayer": "OPPONENT"
+				}
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_shade_of_naxxramas contains:
+{
+	"name": "Shade of Naxxramas",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Stealth. At the start of your turn, gain +1/+1",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 1,
+			"hpBonus": 1
+		}
+	},
+	"attributes": {
+		"STEALTH": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_kelthuzad contains:
+{
+	"name": "Kel'Thuzad",
+	"baseManaCost": 8,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "At the end of the turn, summon all friendly minions that died this turn.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "BOTH"
+		},
+		"spell": {
+			"class": "custom.KelThuzadSpell"
+		}
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_sludge_belcher contains:
+{
+	"name": "Sludge Belcher",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Taunt. Deathrattle: Summon a 1/2 Slime with Taunt.",
+	"deathrattle": {
+		"class": "SummonSpell",
+		"card": "token_slime"
+	},
+	"attributes": {
+		"DEATHRATTLES": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_spectral_knight contains:
+{
+	"name": "Spectral Knight",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Can't be targeted by spells or Hero Powers.",
+	"attributes": {
+		"UNTARGETABLE_BY_SPELLS": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_deathlord contains:
+{
+	"name": "Deathlord",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Taunt. Deathrattle: Your opponent puts a minion from their deck into the battlefield.",
+	"deathrattle": {
+		"class": "PutRandomMinionOnBoardSpell",
+		"targetPlayer": "OPPONENT",
+		"cardLocation": "DECK"
+	},
+	"attributes": {
+		"DEATHRATTLES": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/secret_avenge contains:
+{
+	"name": "Avenge",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "Secret: When one of your minions dies, give a random friendly minion +3/+2",
+	"targetSelection": "NONE",
+	"trigger": {
+		"class": "MinionDeathTrigger",
+		"queueCondition": {
+			"class": "MinionCountCondition",
+			"operation": "GREATER",
+			"value": 0
+		},
+		"fireCondition": {
+			"class": "MinionCountCondition",
+			"operation": "GREATER",
+			"value": 0
+		}
+	},
+	"spell": {
+		"class": "BuffSpell",
+		"target": "FRIENDLY_MINIONS",
+		"attackBonus": 3,
+		"hpBonus": 2,
+		"randomTarget": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_nerubar_weblord contains:
+{
+	"name": "Nerub'ar Weblord",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Minions with Battlecry cost (2) more.",
+	"cardCostModifier": {
+		"class": "CardCostModifier",
+		"cardType": "MINION",
+		"targetPlayer": "BOTH",
+		"value": 2,
+		"requiredAttribute": "BATTLECRY"
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/token_nerubian contains:
+{
+	"name": "Nerubian",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": false,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_voidcaller contains:
+{
+	"name": "Voidcaller",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"race": "DEMON",
+	"description": "Deathrattle: Put a random Demon from your hand into the battlefield.",
+	"deathrattle": {
+		"class": "PutRandomMinionOnBoardSpell",
+		"cardLocation": "HAND",
+		"cardFilter": {
+			"class": "RaceFilter",
+			"race": "DEMON"
+		}
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_stalagg contains:
+{
+	"name": "Stalagg",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Deathrattle: If Feugen also died this game, summon Thaddius.",
+	"deathrattle": {
+		"class": "ConditionalSpell",
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_thaddius"
+		},
+		"condition": {
+			"class": "GraveyardContainsCondition",
+			"cardId": "minion_feugen"
+		}
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/token_thaddius contains:
+{
+	"name": "Thaddius",
+	"baseManaCost": 10,
+	"type": "MINION",
+	"baseAttack": 11,
+	"baseHp": 11,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "",
+	"collectible": false,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_dark_cultist contains:
+{
+	"name": "Dark Cultist",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "PRIEST",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Give a random friendly minion +3 Health.",
+	"deathrattle": {
+		"class": "BuffSpell",
+		"target": "FRIENDLY_MINIONS",
+		"hpBonus": 3,
+		"randomTarget": true
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/token_spectral_spider contains:
+{
+	"name": "Spectral Spider",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": false,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/naxxramas/minion_wailing_soul contains:
+{
+	"name": "Wailing Soul",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Silence your other minions.",
+	"battlecry": {
+		"spell": {
+			"class": "SilenceSpell",
+			"target": "OTHER_FRIENDLY_MINIONS"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "NAXXRAMAS",
+	"fileFormatVersion": 1
+}

@@ -1,0 +1,482 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/minion_pit_lord contains:
+{
+	"name": "Pit Lord",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 6,
+	"heroClass": "WARLOCK",
+	"rarity": "EPIC",
+	"race": "DEMON",
+	"description": "Battlecry: Deal 5 damage to your hero.",
+	"battlecry": {
+		"spell": {
+			"class": "DamageSpell",
+			"target": "FRIENDLY_HERO",
+			"value": 5
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/weapon_blood_fury contains:
+{
+	"name": "Blood Fury",
+	"baseManaCost": 3,
+	"type": "WEAPON",
+	"damage": 3,
+	"durability": 8,
+	"heroClass": "WARLOCK",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/minion_felguard contains:
+{
+	"name": "Felguard",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "WARLOCK",
+	"rarity": "FREE",
+	"race": "DEMON",
+	"description": "Taunt. Battlecry: Destroy one of your Mana Crystals.",
+	"battlecry": {
+		"spell": {
+			"class": "ModifyMaxManaSpell",
+			"value": -1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/token_infernal contains:
+{
+	"name": "Infernal",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"race": "DEMON",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/spell_siphon_soul contains:
+{
+	"name": "Siphon Soul",
+	"baseManaCost": 6,
+	"type": "SPELL",
+	"heroClass": "WARLOCK",
+	"rarity": "RARE",
+	"description": "Destroy a minion. Restore 3 Health to your hero.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DestroySpell"
+			},
+			{
+				"class": "HealSpell",
+				"target": "FRIENDLY_HERO",
+				"value": 3
+			}
+		]
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/minion_flame_imp contains:
+{
+	"name": "Flame Imp",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"race": "DEMON",
+	"description": "Battlecry: Deal 3 damage to your hero.",
+	"battlecry": {
+		"spell": {
+			"class": "DamageSpell",
+			"target": "FRIENDLY_HERO",
+			"value": 3
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/spell_shadowflame contains:
+{
+	"name": "Shadowflame",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "WARLOCK",
+	"rarity": "RARE",
+	"description": "Destroy a friendly minion and deal its Attack damage to all enemy minions.",
+	"targetSelection": "FRIENDLY_MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DestroySpell"
+			},
+			{
+				"class": "DamageSpell",
+				"target": "ENEMY_MINIONS",
+				"value": {
+					"class": "AttributeValueProvider",
+					"target": "TARGET",
+					"attribute": "ATTACK"
+				}
+			}
+		]
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/spell_bane_of_doom contains:
+{
+	"name": "Bane of Doom",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "WARLOCK",
+	"rarity": "EPIC",
+	"description": "Deal 2 damage to a character.  If that kills it, summon a random Demon.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "ConditionalEffectSpell",
+		"spell1": {
+			"class": "DamageSpell",
+			"value": 2
+		},
+		"spell2": {
+			"class": "SummonRandomMinionFilteredSpell",
+			"cardFilter": {
+				"class": "RaceFilter",
+				"race": "DEMON"
+			}
+		},
+		"condition": {
+			"class": "IsDeadCondition"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/token_worthless_imp contains:
+{
+	"name": "Worthless Imp",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"race": "DEMON",
+	"description": "You are out of demons! At least there are always imps...",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/minion_doomguard contains:
+{
+	"name": "Doomguard",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 7,
+	"heroClass": "WARLOCK",
+	"rarity": "RARE",
+	"race": "DEMON",
+	"description": "Charge. Battlecry: Discard two random cards.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "DiscardSpell",
+			"value": 2
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"CHARGE": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/minion_blood_imp contains:
+{
+	"name": "Blood Imp",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 1,
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"race": "DEMON",
+	"description": "Stealth. At the end of your turn, give another random friendly minion +1 Health.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "OTHER_FRIENDLY_MINIONS",
+			"hpBonus": 1,
+			"randomTarget": true
+		}
+	},
+	"attributes": {
+		"STEALTH": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/spell_sense_demons contains:
+{
+	"name": "Sense Demons",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"description": "Put 2 random Demons from your deck into your hand.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "FromDeckToHandSpell",
+		"value": 2,
+		"card": "token_worthless_imp",
+		"cardFilter": {
+			"class": "CardFilter",
+			"race": "DEMON"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/spell_twisting_nether contains:
+{
+	"name": "Twisting Nether",
+	"baseManaCost": 8,
+	"type": "SPELL",
+	"heroClass": "WARLOCK",
+	"rarity": "EPIC",
+	"description": "Destroy all minions.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DestroySpell",
+		"target": "ALL_MINIONS"
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/minion_lord_jaraxxus contains:
+{
+	"name": "Lord Jaraxxus",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 15,
+	"heroClass": "WARLOCK",
+	"rarity": "LEGENDARY",
+	"race": "DEMON",
+	"description": "Battlecry: Destroy your hero and replace him with Lord Jaraxxus.",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "DestroySpell",
+					"target": "SELF"
+				},
+				{
+					"class": "ChangeHeroSpell",
+					"card": "hero_jaraxxus"
+				},
+				{
+					"class": "EquipWeaponSpell",
+					"card": "weapon_blood_fury"
+				},
+				{
+					"class": "OverrideTargetSpell",
+					"target": "FRIENDLY_HERO" 
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/hero_power_inferno contains:
+{
+	"name": "INFERNO!",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "WARLOCK",
+	"rarity": "FREE",
+	"description": "Summon a 6/6 Infernal.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"card": "token_infernal"
+	},
+	"condition": {
+		"class": "MinionCountCondition",
+		"operation": "LESS",
+		"value": 7
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/hero_jaraxxus contains:
+{
+	"name": "Lord Jaraxxus",
+	"baseManaCost": 9,
+	"heroPower": "hero_power_inferno",
+	"type": "HERO",
+	"heroClass": "WARLOCK",
+	"rarity": "LEGENDARY",
+	"race": "DEMON",
+	"attributes": {
+		"HP": 15,
+		"MAX_HP": 15
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/minion_void_terror contains:
+{
+	"name": "Void Terror",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "WARLOCK",
+	"rarity": "RARE",
+	"race": "DEMON",
+	"description": "Battlecry: Destroy the minions on either side of this minion and gain their Attack and Health.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "SELF",
+					"attackBonus": {
+						"class": "AttributeValueProvider",
+						"target": "ADJACENT_MINIONS",
+						"attribute": "ATTACK"
+					},
+					"hpBonus": {
+						"class": "AttributeValueProvider",
+						"target": "ADJACENT_MINIONS",
+						"attribute": "HP"
+					}
+				},
+				{
+					"class": "DestroySpell",
+					"target": "ADJACENT_MINIONS"
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/minion_summoning_portal contains:
+{
+	"name": "Summoning Portal",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 4,
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"description": "Your minions cost (2) less, but not less than (1).",
+	"cardCostModifier": {
+		"class": "CardCostModifier",
+		"cardType": "MINION",
+		"value": -2,
+		"minValue": 1
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/classic/warlock/spell_demonfire contains:
+{
+	"name": "Demonfire",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"description": "Deal 2 damage to a minion. If it's a friendly Demon, give it +2/+2 instead.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "EitherOrSpell",
+		"spell1": {
+			"class": "BuffSpell",
+			"attackBonus": 2,
+			"hpBonus": 2
+		},
+		"spell2": {
+			"class": "DamageSpell",
+			"value": 2
+		},
+		"condition": {
+			"class": "AndCondition",
+			"conditions": [
+				{
+					"class": "OwnedByPlayerCondition",
+					"targetPlayer": "SELF"
+				},
+				{
+					"class": "RaceCondition",
+					"race": "DEMON"
+				}
+			]
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}

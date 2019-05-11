@@ -1,0 +1,412 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/minion_wildwalker contains:
+{
+	"name": "Wildwalker",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Battlecry: Give a friendly Beast +3 Health.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "BuffSpell",
+			"hpBonus": 3,
+			"filter": {
+				"class": "RaceFilter",
+				"race": "BEAST"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/minion_savage_combatant contains:
+{
+	"name": "Savage Combatant",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"race": "BEAST",
+	"description": "Inspire: Give your hero +2 Attack this turn.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "InspireTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffHeroSpell",
+			"target": "FRIENDLY_HERO",
+			"attackBonus": 2
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/minion_druid_of_the_saber contains:
+{
+	"name": "Druid of the Saber",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Choose One - Transform to gain Charge; or +1/+1 and Stealth.",
+	"options": [
+		{
+			"description": "Charge",
+			"spell": {
+				"class": "TransformMinionSpell",
+				"target": "SELF",
+				"card": "token_sabertooth_lion"
+			}
+		},
+		{
+			"description": "Stealth +1/+1",
+			"spell": {
+				"class": "TransformMinionSpell",
+				"target": "SELF",
+				"card": "token_sabertooth_panther"
+			}
+		}
+	],
+	"bothOptions": {
+		"description": "Charge, Stealth, +1/+1",
+		"spell": {
+			"class": "TransformMinionSpell",
+			"target": "SELF",
+			"card": "token_sabertooth_tiger"
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/spell_living_roots contains:
+{
+	"name": "Living Roots",
+	"baseManaCost": 1,
+	"type": "CHOOSE_ONE",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Choose One - Deal 2 damage; or Summon two 1/1 Saplings.",
+	"targetSelection": "NONE",
+	"options": [
+		"spell_living_roots_1",
+		"spell_living_roots_2"
+	],
+	"bothOptions": "spell_living_roots_3",
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/minion_aviana contains:
+{
+	"name": "Aviana",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "DRUID",
+	"rarity": "LEGENDARY",
+	"description": "Your minions cost (1).",
+	"cardCostModifier": {
+		"class": "CardCostModifier",
+		"cardType": "MINION",
+		"operation": "SET",
+		"value": 1
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/spell_living_roots_1 contains:
+{
+	"name": "2 damage",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Deal 2 damage",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 2
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/token_sabertooth_tiger contains:
+{
+	"name": "Sabertooth Tiger",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Charge, Stealth",
+	"attributes": {
+		"CHARGE": true,
+		"STEALTH": true
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/hero_power_dire_shapeshift contains:
+{
+	"name": "Dire Shapeshift",
+	"baseManaCost": 2,
+	"type": "HERO_POWER",
+	"heroClass": "DRUID",
+	"rarity": "FREE",
+	"description": "Gain 2 Armor and +2 Attack this turn.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffHeroSpell",
+		"target": "FRIENDLY_HERO",
+		"attackBonus": 2,
+		"armorBonus": 2
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/spell_living_roots_2 contains:
+{
+	"name": "Summon two 1/1",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Summon two 1/1 Saplings",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"cards": [
+			"token_sapling",
+			"token_sapling"
+		]
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/minion_knight_of_the_wild contains:
+{
+	"name": "Knight of the Wild",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Whenever you summon a Beast, reduce the Cost of this card by (1).",
+	"passiveTrigger": {
+		"eventTrigger": {
+			"class": "MinionSummonedTrigger",
+			"targetPlayer": "SELF",
+			"race": "BEAST"
+		},
+		"spell": {
+			"class": "CardCostModifierSpell",
+			"target": "FRIENDLY_PLAYER",
+			"cardCostModifier": {
+				"class": "CardCostModifier",
+				"target": "SELF",
+				"operation": "SUBTRACT",
+				"value": 1
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/token_sabertooth_lion contains:
+{
+	"name": "Sabertooth Lion",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Charge",
+	"attributes": {
+		"CHARGE": true
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/spell_mulch contains:
+{
+	"name": "Mulch",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "Destroy a minion. Add a random minion to your opponent's hand.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DestroySpell"
+			},
+			{
+				"class": "ReceiveCardSpell",
+				"targetPlayer": "OPPONENT",
+				"cardFilter": {
+					"class": "CardFilter",
+					"cardType": "MINION"
+				}
+			}
+		]
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/spell_living_roots_3 contains:
+{
+	"name": "Deal 2 damage and summon two 1/1",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Deal 2 damage. Summon two 1/1 Saplings.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"value": 2
+			},
+			{
+				"class": "SummonSpell",
+				"cards": [
+					"token_sapling",
+					"token_sapling"
+				]
+			}
+		]
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/minion_darnassus_aspirant contains:
+{
+	"name": "Darnassus Aspirant",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"description": "Battlecry: Gain an empty Mana Crystal.Deathrattle: Lose a Mana Crystal.",
+	"battlecry": {
+		"spell": {
+			"class": "ModifyMaxManaSpell",
+			"value": 1
+		}
+	},
+	"deathrattle": {
+		"class": "ModifyMaxManaSpell",
+		"value": -1
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/spell_astral_communion contains:
+{
+	"name": "Astral Communion",
+	"baseManaCost": 4,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "EPIC",
+	"description": "Gain 10 Mana Crystals. Discard your hand.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DiscardSpell",
+				"value": -1
+			},
+			{
+				"class": "EitherOrSpell",
+				"spell1": {
+					"class": "ReceiveCardSpell",
+					"targetPlayer": "SELF",
+					"card": "spell_excess_mana"
+				},
+				"spell2": {
+					"class": "ModifyMaxManaSpell",
+					"fullManaCrystals": true,
+					"value": 10
+				},
+				"condition": {
+					"class": "ManaMaxedCondition"
+				}
+			}
+		]
+	},
+	"collectible": true,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/token_sabertooth_panther contains:
+{
+	"name": "Sabertooth Panther",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Stealth",
+	"attributes": {
+		"STEALTH": true
+	},
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/the_grand_tournament/druid/token_sapling contains:
+{
+	"name": "Sapling",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": false,
+	"set": "THE_GRAND_TOURNAMENT",
+	"fileFormatVersion": 1
+}

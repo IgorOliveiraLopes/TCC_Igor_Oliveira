@@ -1,0 +1,1579 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_tunnel_trogg contains:
+{
+	"name": "Tunnel Trogg",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 3,
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"description": "Whenever you Overload, gain +1 Attack per locked Mana Crystal.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "OverloadTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": {
+				"class": "AttributeValueProvider",
+				"target": "EVENT_TARGET",
+				"attribute": "OVERLOAD"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_archthief_rafaam contains:
+{
+	"name": "Arch-Thief Rafaam",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Discover a powerful Artifact.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "DiscoverCardSpell",
+			"cards": [
+				"spell_lantern_of_power",
+				"spell_mirror_of_doom",
+				"spell_timepiece_of_horror"
+			],
+			"spell": {
+				"class": "ReceiveCardSpell"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/token_mummy_zombie contains:
+{
+	"name": "Mummy Zombie",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": false,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_explorers_hat contains:
+{
+	"name": "Explorer's Hat",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "RARE",
+	"description": "Give a minion +1/+1 and \"Deathrattle: Add an Explorer's Hat to your Hand.\"",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "BuffSpell",
+				"attackBonus": 1,
+				"hpBonus": 1
+			},
+			{
+				"class": "AddDeathrattleSpell",
+				"spell": {
+					"class": "ReceiveCardSpell",
+					"card": "spell_explorers_hat"
+				}
+			}
+		]
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_forgotten_torch contains:
+{
+	"name": "Forgotten Torch",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "COMMON",
+	"description": "Deal 3 damage. Shuffle a 'Roaring Torch' into your deck that deals 6 damage.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"value": 3
+			},
+			{
+				"class": "ShuffleToDeckSpell",
+				"target": "NONE",
+				"card": "spell_roaring_torch"
+			}
+		]
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_ancient_shade contains:
+{
+	"name": "Ancient Shade",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Shuffle an 'Ancient Curse' into your deck that deals 7 damage to you when drawn.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "ShuffleToDeckSpell",
+			"card": "spell_ancient_curse"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_summoning_stone contains:
+{
+	"name": "Summoning Stone",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Whenever you cast a spell, summon a minion of the same Cost.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "SpellCastedTrigger",
+			"sourcePlayer": "SELF"
+		},
+		"spell": {
+			"class": "SummonRandomMinionFilteredSpell",
+			"cardFilter": {
+				"class": "CardFilter",
+				"manaCost": {
+					"class": "PlayerAttributeValueProvider",
+					"playerAttribute": "LAST_MANA_COST"
+				}
+			}
+		}
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/token_scarab contains:
+{
+	"name": "Scarab",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "WARRIOR",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": false,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_djinni_of_zephyrs contains:
+{
+	"name": "Djinni of Zephyrs",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "After you target another friendly minion with a spell, cast it on this one.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterSpellCastedTrigger",
+			"sourcePlayer": "SELF",
+			"targetPlayer": "SELF",
+			"targetEntityType": "MINION",
+			"hostTargetType": "IGNORE_AS_TARGET"
+		},
+		"spell": {
+			"class": "RecastSpell",
+			"target": "SELF",
+			"card": "PENDING_CARD"
+		}
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_gorillabot_a3 contains:
+{
+	"name": "Gorillabot A-3",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Battlecry: If you control another Mech, Discover a Mech.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "DiscoverRandomCardSpell",
+			"spell": {
+				"class": "ReceiveCardSpell",
+				"targetPlayer": "SELF"
+			},
+			"cardFilter": {
+				"class": "CardFilter",
+				"cardType": "MINION",
+				"race": "MECH"
+			}
+		},
+		"condition": {
+			"class": "MinionOnBoardCondition",
+			"cardFilter": {
+				"class": "RaceFilter",
+				"race": "MECH"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_eerie_statue contains:
+{
+	"name": "Eerie Statue",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Can't attack unless it's the only minion on the battlefield.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "BoardChangedTrigger"
+		},
+		"spell": {
+			"class": "EitherOrSpell",
+			"target": "SELF",
+			"spell1": {
+				"class": "RemoveAttributeSpell",
+				"attribute": "CANNOT_ATTACK"
+			},
+			"spell2": {
+				"class": "AddAttributeSpell",
+				"attribute": "CANNOT_ATTACK"
+			},
+			"condition": {
+				"class": "MinionCountCondition",
+				"targetPlayer": "BOTH",
+				"operation": "EQUAL",
+				"value": 1
+			}
+		}
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/token_grumbly_runt contains:
+{
+	"name": "Grumbly Runt",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": false,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_obsidian_destroyer contains:
+{
+	"name": "Obsidian Destroyer",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 7,
+	"heroClass": "WARRIOR",
+	"rarity": "COMMON",
+	"description": "At the end of your turn, summon a 1/1 Scarab with Taunt.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_scarab",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_cursed contains:
+{
+	"name": "Cursed!",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "WARLOCK",
+	"rarity": "FREE",
+	"description": "While this is in your hand, take 2 damage at the start of your turn.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "NullSpell"
+	},
+	"passiveTrigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "DamageSpell",
+			"target": "FRIENDLY_HERO",
+			"value": 2,
+			"ignoreSpellDamage": true
+		}
+	},
+	"collectible": false,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_fossilized_devilsaur contains:
+{
+	"name": "Fossilized Devilsaur",
+	"baseManaCost": 8,
+	"type": "MINION",
+	"baseAttack": 8,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: If you control a Beast, gain Taunt.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "AddAttributeSpell",
+			"target": "SELF",
+			"attribute": "TAUNT"
+		},
+		"condition": {
+			"class": "MinionOnBoardCondition",
+			"cardFilter": {
+				"class": "RaceFilter",
+				"race": "BEAST"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_reno_jackson contains:
+{
+	"name": "Reno Jackson",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: If your deck contains no duplicates, fully heal your Hero.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_HERO",
+			"value": {
+				"class": "AttributeValueProvider",
+				"attribute": "MAX_HP"
+			}
+		},
+		"condition": {
+			"class": "HighlanderDeckCondition"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_lantern_of_power contains:
+{
+	"name": "Lantern of Power",
+	"baseManaCost": 10,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Give a minion +10/+10.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "BuffSpell",
+		"attackBonus": 10,
+		"hpBonus": 10
+	},
+	"collectible": false,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_reliquary_seeker contains:
+{
+	"name": "Reliquary Seeker",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "WARLOCK",
+	"rarity": "RARE",
+	"description": "Battlecry: If you have 6 other minions, gain +4/+4.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 4,
+			"hpBonus": 4
+		},
+		"condition": {
+			"class": "MinionCountCondition",
+			"targetPlayer": "SELF",
+			"operation": "EQUAL",
+			"value": 7
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_museum_curator contains:
+{
+	"name": "Museum Curator",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "PRIEST",
+	"rarity": "COMMON",
+	"description": "Battlecry: Discover a Deathrattle card.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "DiscoverRandomCardSpell",
+			"spell": {
+				"class": "ReceiveCardSpell",
+				"targetPlayer": "SELF"
+			},
+			"cardFilter": {
+				"class": "CardFilter",
+				"attribute": "DEATHRATTLES",
+				"operation": "HAS"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/token_golden_monkey contains:
+{
+	"name": "Golden Monkey",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Taunt. Battlecry: Replace your hand and deck with Legendary minions.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "ReplaceCardLocationSpell",
+					"cardLocation": "HAND",
+					"cardFilter": {
+						"class": "CardFilter",
+						"cardType": "MINION",
+						"rarity": "LEGENDARY"
+					}
+				},
+				{
+					"class": "ReplaceCardLocationSpell",
+					"cardLocation": "DECK",
+					"cardFilter": {
+						"class": "CardFilter",
+						"cardType": "MINION",
+						"rarity": "LEGENDARY"
+					}
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"TAUNT": true
+	},
+	"collectible": false,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_excavated_evil contains:
+{
+	"name": "Excavated Evil",
+	"baseManaCost": 5,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "RARE",
+	"description": "Deal 3 damage to all minions. Shuffle this card into your opponent's deck.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DamageSpell",
+				"target": "ALL_MINIONS",
+				"value": 3
+			},
+			{
+				"class": "ShuffleToDeckSpell",
+				"targetPlayer": "OPPONENT",
+				"card": "spell_excavated_evil"
+			}
+		]
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_raven_idol_3 contains:
+{
+	"name": "Discover a minion and a spell",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Discover a minion. Discover a spell.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "DiscoverRandomCardSpell",
+				"spell": {
+					"class": "ReceiveCardSpell",
+					"targetPlayer": "SELF"
+				},
+				"cardFilter": {
+					"class": "CardFilter",
+					"cardType": "MINION"
+				}
+			},
+			{
+				"class": "DiscoverRandomCardSpell",
+				"spell": {
+					"class": "ReceiveCardSpell",
+					"targetPlayer": "SELF"
+				},
+				"cardFilter": {
+					"class": "CardFilter",
+					"cardType": "SPELL"
+				}
+			}
+		]
+	},
+	"collectible": false,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_elise_starseeker contains:
+{
+	"name": "Elise Starseeker",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Shuffle the 'Map to the Golden Monkey' into your deck.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "ShuffleToDeckSpell",
+			"card": "spell_map_to_the_golden_monkey"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_tomb_pillager contains:
+{
+	"name": "Tomb Pillager",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "ROGUE",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Add a Coin to your Hand.",
+	"deathrattle": {
+		"class": "ReceiveCardSpell",
+		"card": "spell_the_coin"
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_mirror_of_doom contains:
+{
+	"name": "Mirror of Doom",
+	"baseManaCost": 10,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Fill your board with 3/3 Mummy Zombies.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "SummonSpell",
+		"cards": [
+			"token_mummy_zombie",
+			"token_mummy_zombie",
+			"token_mummy_zombie",
+			"token_mummy_zombie",
+			"token_mummy_zombie",
+			"token_mummy_zombie",
+			"token_mummy_zombie"
+		]
+	},
+	"collectible": false,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_dark_peddler contains:
+{
+	"name": "Dark Peddler",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"description": "Battlecry: Discover a 1-Cost card.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "DiscoverRandomCardSpell",
+			"spell": {
+				"class": "ReceiveCardSpell",
+				"targetPlayer": "SELF"
+			},
+			"cardFilter": {
+				"class": "CardFilter",
+				"manaCost": 1
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_raven_idol contains:
+{
+	"name": "Raven Idol",
+	"baseManaCost": 1,
+	"type": "CHOOSE_ONE",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Choose One - Discover a minion; or Discover a spell.",
+	"targetSelection": "NONE",
+	"options": [
+		"spell_raven_idol_1",
+		"spell_raven_idol_2"
+	],
+	"bothOptions": "spell_raven_idol_3",
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_raven_idol_2 contains:
+{
+	"name": "Discover a spell",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Discover a spell.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DiscoverRandomCardSpell",
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"targetPlayer": "SELF"
+		},
+		"cardFilter": {
+			"class": "CardFilter",
+			"cardType": "SPELL"
+		}
+	},
+	"collectible": false,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_unearthed_raptor contains:
+{
+	"name": "Unearthed Raptor",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "ROGUE",
+	"rarity": "RARE",
+	"description": "Battlecry: Choose a friendly minion. Gain a copy of its Deathrattle effect.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "CopyDeathrattleSpell",
+			"filter": {
+				"class": "AttributeFilter",
+				"attribute": "DEATHRATTLES",
+				"operation": "HAS"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_entomb contains:
+{
+	"name": "Entomb",
+	"baseManaCost": 6,
+	"type": "SPELL",
+	"heroClass": "PRIEST",
+	"rarity": "COMMON",
+	"description": "Choose an enemy minion. Shuffle it into your deck.",
+	"targetSelection": "ENEMY_MINIONS",
+	"spell": {
+		"class": "ShuffleMinionToDeckSpell",
+		"targetPlayer": "SELF"
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_raven_idol_1 contains:
+{
+	"name": "Discover a minion",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"description": "Discover a minion.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DiscoverRandomCardSpell",
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"targetPlayer": "SELF"
+		},
+		"cardFilter": {
+			"class": "CardFilter",
+			"cardType": "MINION"
+		}
+	},
+	"collectible": false,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_timepiece_of_horror contains:
+{
+	"name": "Timepiece of Horror",
+	"baseManaCost": 10,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Deal 10 damage randomly split among all enemies.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MissilesSpell",
+		"target": "ENEMY_CHARACTERS",
+		"value": 1,
+		"howMany": 10
+	},
+	"collectible": false,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_rumbling_elemental contains:
+{
+	"name": "Rumbling Elemental",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 6,
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"description": "After you play a Battlecry minion, deal 2 damage to a random enemy.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterMinionPlayedTrigger",
+			"targetPlayer": "SELF",
+			"requiredAttribute": "BATTLECRY"
+		},
+		"spell": {
+			"class": "MissilesSpell",
+			"target": "ENEMY_CHARACTERS",
+			"value": 2,
+			"howMany": 1
+		}
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_keeper_of_uldaman contains:
+{
+	"name": "Keeper of Uldaman",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "Battlecry: Set a minion's Attack and Health to 3.",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "SetAttackSpell",
+					"value": 3
+				},
+				{
+					"class": "SetHpSpell",
+					"value": 3
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_jungle_moonkin contains:
+{
+	"name": "Jungle Moonkin",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "DRUID",
+	"rarity": "RARE",
+	"race": "BEAST",
+	"description": "Both players have Spell Damage +2",
+	"attributes": {
+		"OPPONENT_SPELL_DAMAGE": 2,
+		"SPELL_DAMAGE": 2
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/token_wily_runt contains:
+{
+	"name": "Wily Runt",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": false,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/token_rascally_runt contains:
+{
+	"name": "Rascally Runt",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": false,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_pit_snake contains:
+{
+	"name": "Pit Snake",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ROGUE",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Destroy any minion damaged by this minion.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageCausedTrigger",
+			"targetEntityType": "MINION",
+			"hostTargetType": "IGNORE_OTHER_SOURCES"
+		},
+		"spell": {
+			"class": "DestroySpell",
+			"target": "EVENT_TARGET"
+		}
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_huge_toad contains:
+{
+	"name": "Huge Toad",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Deathrattle: Deal 1 damage to a random enemy.",
+	"deathrattle": {
+		"class": "MissilesSpell",
+		"target": "ENEMY_CHARACTERS",
+		"value": 1,
+		"howMany": 1
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/weapon_cursed_blade contains:
+{
+	"name": "Cursed Blade",
+	"baseManaCost": 1,
+	"type": "WEAPON",
+	"damage": 2,
+	"durability": 3,
+	"heroClass": "WARRIOR",
+	"rarity": "RARE",
+	"description": "Double all damage dealt to your hero.",
+	"onEquip": {
+		"class": "AddAttributeSpell",
+		"target": "FRIENDLY_HERO",
+		"attribute": "TAKE_DOUBLE_DAMAGE"
+	},
+	"onUnequip": {
+		"class": "RemoveAttributeSpell",
+		"target": "FRIENDLY_HERO",
+		"attribute": "TAKE_DOUBLE_DAMAGE"
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/secret_sacred_trial contains:
+{
+	"name": "Sacred Trial",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "COMMON",
+	"description": "Secret: When your opponent has at least 3 or more minions and plays another, destroy it.",
+	"targetSelection": "NONE",
+	"trigger": {
+		"class": "MinionPlayedTrigger",
+		"targetPlayer": "OPPONENT",
+		"queueCondition": {
+			"class": "MinionCountCondition",
+			"targetPlayer": "OPPONENT",
+			"operation": "GREATER",
+			"value": 3
+		}
+	},
+	"spell": {
+		"class": "DestroySpell",
+		"target": "EVENT_TARGET"
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_naga_sea_witch contains:
+{
+	"name": "Naga Sea Witch",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Your cards cost (5).",
+	"cardCostModifier": {
+		"class": "CardCostModifier",
+		"operation": "SET",
+		"value": 5
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_everyfin_is_awesome contains:
+{
+	"name": "Everyfin is Awesome",
+	"baseManaCost": 7,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "RARE",
+	"description": "Give your minions +2/+2. Costs (1) less for each Murloc you control.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "BuffSpell",
+		"target": "FRIENDLY_MINIONS",
+		"attackBonus": 2,
+		"hpBonus": 2
+	},
+	"manaCostModifier": {
+		"class": "EntityCounter",
+		"target": "FRIENDLY_MINIONS",
+		"filter": {
+			"class": "RaceFilter",
+			"race": "MURLOC"
+		}
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_wobbling_runts contains:
+{
+	"name": "Wobbling Runts",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Deathrattle: Summon three 2/2 Runts.",
+	"deathrattle": {
+		"class": "SummonSpell",
+		"cards": [
+			"token_grumbly_runt",
+			"token_rascally_runt",
+			"token_wily_runt"
+		]
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_anubisath_sentinel contains:
+{
+	"name": "Anubisath Sentinel",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Give a random friendly minion +3/+3.",
+	"deathrattle": {
+		"class": "BuffSpell",
+		"attackBonus": 3,
+		"hpBonus": 3,
+		"target": "FRIENDLY_MINIONS",
+		"randomTarget": true
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/secret_dart_trap contains:
+{
+	"name": "Dart Trap",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "HUNTER",
+	"rarity": "COMMON",
+	"description": "Secret: When an opposing Hero Power is used, deal 5 damage to a random enemy.",
+	"targetSelection": "NONE",
+	"trigger": {
+		"class": "InspireTrigger",
+		"targetPlayer": "OPPONENT"
+	},
+	"spell": {
+		"class": "MissilesSpell",
+		"target": "ENEMY_CHARACTERS",
+		"value": 5,
+		"howMany": 1
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_ancient_curse contains:
+{
+	"name": "Ancient Curse",
+	"baseManaCost": 0,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "When you draw this, take 7 damage and draw a card.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "NullSpell"
+	},
+	"passiveTrigger": {
+		"eventTrigger": {
+			"class": "CardDrawnTrigger",
+			"hostTargetType": "IGNORE_OTHER_TARGETS"
+		},
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "DamageSpell",
+					"target": "FRIENDLY_HERO",
+					"value": 7,
+					"ignoreSpellDamage": true
+				},
+				{
+					"class": "RemoveCardSpell",
+					"target": "EVENT_TARGET"
+				},
+				{
+					"class": "DrawCardSpell"
+				}
+			]
+		}
+	},
+	"collectible": false,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_ethereal_conjurer contains:
+{
+	"name": "Ethereal Conjurer",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 3,
+	"heroClass": "MAGE",
+	"rarity": "COMMON",
+	"description": "Battlecry: Discover a spell.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "DiscoverRandomCardSpell",
+			"spell": {
+				"class": "ReceiveCardSpell",
+				"targetPlayer": "SELF"
+			},
+			"cardFilter": {
+				"class": "CardFilter",
+				"cardType": "SPELL"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_map_to_the_golden_monkey contains:
+{
+	"name": "Map to the Golden Monkey",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Shuffle the Golden Monkey into your Deck. Draw a card.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "ShuffleToDeckSpell",
+				"card": "token_golden_monkey"
+			},
+			{
+				"class": "DrawCardSpell",
+				"value": 1
+			}
+		]
+	},
+	"collectible": false,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_roaring_torch contains:
+{
+	"name": "Roaring Torch",
+	"baseManaCost": 3,
+	"type": "SPELL",
+	"heroClass": "MAGE",
+	"rarity": "FREE",
+	"description": "Deal 6 damage.",
+	"targetSelection": "ANY",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 6
+	},
+	"collectible": false,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_anyfin_can_happen contains:
+{
+	"name": "Anyfin Can Happen",
+	"baseManaCost": 10,
+	"type": "SPELL",
+	"heroClass": "PALADIN",
+	"rarity": "RARE",
+	"description": "Summon 7 Murlocs that died this game.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "ResurrectFromBothSpell",
+		"value": 7,
+		"cardFilter": {
+			"class": "CardFilter",
+			"race": "MURLOC"
+		}
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_jeweled_scarab contains:
+{
+	"name": "Jeweled Scarab",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Battlecry: Discover a 3-Cost card.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "DiscoverRandomCardSpell",
+			"spell": {
+				"class": "ReceiveCardSpell",
+				"targetPlayer": "SELF"
+			},
+			"cardFilter": {
+				"class": "CardFilter",
+				"manaCost": 3
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_brann_bronzebeard contains:
+{
+	"name": "Brann Bronzebeard",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Your Battlecries trigger twice.",
+	"attributes": {
+		"DOUBLE_BATTLECRIES": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_desert_camel contains:
+{
+	"name": "Desert Camel",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 4,
+	"heroClass": "HUNTER",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Battlecry: Put a random 1-Cost minion from each deck into the battlefield.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "PutRandomMinionOnBoardSpell",
+			"targetPlayer": "BOTH",
+			"cardLocation": "DECK",
+			"cardFilter": {
+				"class": "CardFilter",
+				"cardType": "MINION",
+				"manaCost": 1
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_animated_armor contains:
+{
+	"name": "Animated Armor",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "MAGE",
+	"rarity": "RARE",
+	"description": "Your hero can only take 1 damage at a time.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "PreDamageTrigger",
+			"sourcePlayer": "BOTH",
+			"targetPlayer": "SELF",
+			"targetEntityType": "HERO"
+		},
+		"spell": {
+			"class": "ModifyDamageSpell",
+			"operation": "SET",
+			"value": 1
+		}
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_tomb_spider contains:
+{
+	"name": "Tomb Spider",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Battlecry: Discover a Beast.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "DiscoverRandomCardSpell",
+			"spell": {
+				"class": "ReceiveCardSpell",
+				"targetPlayer": "SELF"
+			},
+			"cardFilter": {
+				"class": "CardFilter",
+				"race": "BEAST"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/spell_curse_of_rafaam contains:
+{
+	"name": "Curse of Rafaam",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "WARLOCK",
+	"rarity": "COMMON",
+	"description": "Give your opponent a 'Cursed!' card. While they hold it, they take 2 damage on their turn.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "ReceiveCardSpell",
+		"targetPlayer": "OPPONENT",
+		"card": "spell_cursed"
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_mounted_raptor contains:
+{
+	"name": "Mounted Raptor",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "DRUID",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Deathrattle: Summon a random 1-Cost minion.",
+	"deathrattle": {
+		"class": "SummonRandomMinionFilteredSpell",
+		"cardFilter": {
+			"class": "CardFilter",
+			"manaCost": 1
+		}
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_fierce_monkey contains:
+{
+	"name": "Fierce Monkey",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 4,
+	"heroClass": "WARRIOR",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_sir_finley_mrrgglton contains:
+{
+	"name": "Sir Finley Mrrgglton",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "MURLOC",
+	"description": "Battlecry: Discover a new basic Hero Power.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "DiscoverCardSpell",
+			"cards": [
+				"hero_power_shapeshift",
+				"hero_power_steady_shot",
+				"hero_power_fireblast",
+				"hero_power_reinforce",
+				"hero_power_lesser_heal",
+				"hero_power_dagger_mastery",
+				"hero_power_totemic_call",
+				"hero_power_life_tap",
+				"hero_power_armor_up"
+			],
+			"spell": {
+				"class": "ChangeHeroPowerSpell",
+				"targetPlayer": "SELF"
+			},
+			"cannotReceiveOwned": true
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/league_of_explorers/minion_murloc_tinyfin contains:
+{
+	"name": "Murloc Tinyfin",
+	"baseManaCost": 0,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MURLOC",
+	"description": "",
+	"collectible": true,
+	"set": "LEAGUE_OF_EXPLORERS",
+	"fileFormatVersion": 1
+}

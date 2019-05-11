@@ -1,0 +1,2985 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/token_devilsaur contains:
+{
+	"name": "Devilsaur",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_mountain_giant contains:
+{
+	"name": "Mountain Giant",
+	"baseManaCost": 12,
+	"type": "MINION",
+	"baseAttack": 8,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Costs (1) less for each other card in your hand.",
+	"manaCostModifier": {
+		"class": "PlayerAttributeValueProvider",
+		"targetPlayer": "SELF",
+		"playerAttribute": "HAND_COUNT",
+		"offset": -1
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_spellbreaker contains:
+{
+	"name": "Spellbreaker",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Silence a minion.",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "SilenceSpell"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_southsea_deckhand contains:
+{
+	"name": "Southsea Deckhand",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "PIRATE",
+	"description": "Has Charge while you have a weapon equipped.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "BoardChangedTrigger"
+		},
+		"spell": {
+			"class": "ConditionalEffectSpell",
+			"exclusive": true,
+			"spell1": {
+				"class": "RemoveAttributeSpell",
+				"target": "SELF",
+				"attribute": "CHARGE"
+			},
+			"spell2": {
+				"class": "AddAttributeSpell",
+				"target": "SELF",
+				"attribute": "CHARGE"
+			},
+			"condition": {
+				"class": "HasWeaponCondition"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_harvest_golem contains:
+{
+	"name": "Harvest Golem",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "Deathrattle: Summon a 2/1 Damaged Golem.",
+	"deathrattle": {
+		"class": "SummonSpell",
+		"card": "token_damaged_golem"
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_leper_gnome contains:
+{
+	"name": "Leper Gnome",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Deal 2 damage to the enemy hero.",
+	"deathrattle": {
+		"class": "DamageSpell",
+		"target": "ENEMY_HERO",
+		"value": 2
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/token_flame_of_azzinoth contains:
+{
+	"name": "Flame of Azzinoth",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_sunwalker contains:
+{
+	"name": "Sunwalker",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Taunt. Divine Shield",
+	"attributes": {
+		"DIVINE_SHIELD": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_nat_pagle contains:
+{
+	"name": "Nat Pagle",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "At the start of your turn, you have a 50% chance to draw an extra card.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "DrawCardSpell",
+			"value": {
+				"class": "ConditionalValueProvider",
+				"ifTrue": 1,
+				"ifFalse": 0,
+				"condition": {
+					"class": "RandomCondition"
+				}
+			}
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_silver_hand_knight contains:
+{
+	"name": "Silver Hand Knight",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Summon a 2/2 Squire.",
+	"battlecry": {
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_squire",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_lightwarden contains:
+{
+	"name": "Lightwarden",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Whenever a character is healed, gain +2 Attack.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "HealingTrigger"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 2
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_hogger contains:
+{
+	"name": "Hogger",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "At the end of your turn, summon a 2/2 Gnoll with Taunt.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_gnoll",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_violet_teacher contains:
+{
+	"name": "Violet Teacher",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Whenever you cast a spell, summon a 1/1 Violet Apprentice.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "SpellCastedTrigger",
+			"sourcePlayer": "SELF"
+		},
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_violet_apprentice",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_abusive_sergeant contains:
+{
+	"name": "Abusive Sergeant",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Give a minion +2 Attack this turn.",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "TemporaryAttackSpell",
+			"value": 2
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_jungle_panther contains:
+{
+	"name": "Jungle Panther",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Stealth",
+	"attributes": {
+		"STEALTH": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_doomsayer contains:
+{
+	"name": "Doomsayer",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "At the start of your turn, destroy ALL minions.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "DestroySpell",
+			"target": "ALL_MINIONS"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_arcane_golem contains:
+{
+	"name": "Arcane Golem",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Give your opponent a Mana Crystal.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "ModifyMaxManaSpell",
+			"targetPlayer": "OPPONENT",
+			"value": 1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_mogushan_warden contains:
+{
+	"name": "Mogu'shan Warden",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_earthen_ring_farseer contains:
+{
+	"name": "Earthen Ring Farseer",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Restore 3 Health.",
+	"battlecry": {
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "HealSpell",
+			"value": 3
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_mind_control_tech contains:
+{
+	"name": "Mind Control Tech",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: If your opponent has 4 or more minions, take control of one at random.",
+	"battlecry": {
+		"spell": {
+			"class": "MindControlSpell",
+			"target": "ENEMY_MINIONS",
+			"randomTarget": true
+		},
+		"condition": {
+			"class": "MinionCountCondition",
+			"targetPlayer": "OPPONENT",
+			"operation": "GREATER_OR_EQUAL",
+			"value": 4
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_southsea_captain contains:
+{
+	"name": "Southsea Captain",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"race": "PIRATE",
+	"description": "Your other Pirates have +1/+1.",
+	"aura": {
+		"class": "BuffAura",
+		"target": "OTHER_FRIENDLY_MINIONS",
+		"attackBonus": 1,
+		"hpBonus": 1,
+		"filter": {
+			"class": "RaceFilter",
+			"race": "PIRATE"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_twilight_drake contains:
+{
+	"name": "Twilight Drake",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "DRAGON",
+	"description": "Battlecry: Gain +1 Health for each card in your hand.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"hpBonus": {
+				"class": "PlayerAttributeValueProvider",
+				"targetPlayer": "SELF",
+				"playerAttribute": "HAND_COUNT"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_lorewalker_cho contains:
+{
+	"name": "Lorewalker Cho",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Whenever a player casts a spell, put a copy into the other player's hand.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "SpellCastedTrigger",
+			"sourcePlayer": "BOTH"
+		},
+		"spell": {
+			"class": "CopyCardSpell",
+			"target": "EVENT_TARGET",
+			"targetPlayer": "INACTIVE"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_venture_co_mercenary contains:
+{
+	"name": "Venture Co. Mercenary",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Your minions cost (3) more.",
+	"cardCostModifier": {
+		"class": "CardCostModifier",
+		"cardType": "MINION",
+		"targetPlayer": "SELF",
+		"value": 3
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_young_priestess contains:
+{
+	"name": "Young Priestess",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "At the end of your turn, give another random friendly minion +1 Health.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "OTHER_FRIENDLY_MINIONS",
+			"hpBonus": 1,
+			"randomTarget": true
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/token_murloc contains:
+{
+	"name": "Murloc",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "MURLOC",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_sunfury_protector contains:
+{
+	"name": "Sunfury Protector",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Give adjacent minions Taunt.",
+	"battlecry": {
+		"spell": {
+			"class": "AddAttributeSpell",
+			"target": "ADJACENT_MINIONS",
+			"attribute": "TAUNT"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_big_game_hunter contains:
+{
+	"name": "Big Game Hunter",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Battlecry: Destroy a minion with an Attack of 7 or more.",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "DestroySpell",
+			"filter": {
+				"class": "AttributeFilter",
+				"attribute": "ATTACK",
+				"operation": "GREATER",
+				"value": 6
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/token_laughing_sister contains:
+{
+	"name": "Laughing Sister",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Can't be targeted by spells or Hero Powers.",
+	"attributes": {
+		"UNTARGETABLE_BY_SPELLS": true
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/token_squire contains:
+{
+	"name": "Squire",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/token_baine_bloodhoof contains:
+{
+	"name": "Baine Bloodhoof",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/token_gnoll contains:
+{
+	"name": "Gnoll",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_deathwing contains:
+{
+	"name": "Deathwing",
+	"baseManaCost": 10,
+	"type": "MINION",
+	"baseAttack": 12,
+	"baseHp": 12,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "DRAGON",
+	"description": "Battlecry: Destroy all other minions and discard your hand.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "DestroySpell",
+					"target": "ALL_OTHER_MINIONS"
+				},
+				{
+					"class": "DiscardSpell",
+					"value": -1
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_leeroy_jenkins contains:
+{
+	"name": "Leeroy Jenkins",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 6,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "NONE",
+	"description": "Charge. Battlecry: Summon two 1/1 Whelps for your opponent.",
+	"battlecry": {
+		"spell": {
+			"class": "SummonSpell",
+			"targetPlayer": "OPPONENT",
+			"cards": [
+				"token_whelp",
+				"token_whelp"
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true,
+		"CHARGE": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_tauren_warrior contains:
+{
+	"name": "Tauren Warrior",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt. Enrage: +3 Attack",
+	"trigger": {
+		"eventTrigger": {
+			"class": "EnrageChangedTrigger"
+		},
+		"spell": {
+			"class": "EnrageSpell",
+			"target": "SELF",
+			"attackBonus": 3
+		}
+	},
+	"attributes": {
+		"ENRAGABLE": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_loot_hoarder contains:
+{
+	"name": "Loot Hoarder",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Deathrattle: Draw a card.",
+	"deathrattle": {
+		"class": "DrawCardSpell",
+		"value": 1
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_silvermoon_guardian contains:
+{
+	"name": "Silvermoon Guardian",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Divine Shield",
+	"attributes": {
+		"DIVINE_SHIELD": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/token_imp contains:
+{
+	"name": "Imp",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "DEMON",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/token_violet_apprentice contains:
+{
+	"name": "Violet Apprentice",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_amani_berserker contains:
+{
+	"name": "Amani Berserker",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Enrage: +3 Attack",
+	"trigger": {
+		"eventTrigger": {
+			"class": "EnrageChangedTrigger"
+		},
+		"spell": {
+			"class": "EnrageSpell",
+			"target": "SELF",
+			"attackBonus": 3
+		}
+	},
+	"attributes": {
+		"ENRAGABLE": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/spell_nightmare contains:
+{
+	"name": "Nightmare",
+	"baseManaCost": 0,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Give a minion +5/+5. At the start of your next turn, destroy it.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "MetaSpell",
+		"spells": [
+			{
+				"class": "BuffSpell",
+				"attackBonus": 5,
+				"hpBonus": 5
+			},
+			{
+				"class": "AddSpellTriggerSpell",
+				"trigger": {
+					"eventTrigger": {
+						"class": "TurnStartTrigger",
+						"targetPlayer": "SELF"
+					},
+					"spell": {
+						"class": "DestroySpell",
+						"target": "SELF"
+					}
+				}
+			}
+		]
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_sea_giant contains:
+{
+	"name": "Sea Giant",
+	"baseManaCost": 10,
+	"type": "MINION",
+	"baseAttack": 8,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Costs (1) less for each other minion on the battlefield.",
+	"manaCostModifier": {
+		"class": "EntityCounter",
+		"target": "ALL_OTHER_MINIONS"
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_the_black_knight contains:
+{
+	"name": "The Black Knight",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Destroy an enemy minion with Taunt.",
+	"battlecry": {
+		"targetSelection": "ENEMY_MINIONS",
+		"spell": {
+			"class": "DestroySpell",
+			"filter": {
+				"class": "AttributeFilter",
+				"attribute": "TAUNT",
+				"operation": "HAS"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_wild_pyromancer contains:
+{
+	"name": "Wild Pyromancer",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "After you cast a spell, deal 1 damage to ALL minions.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterSpellCastedTrigger",
+			"sourcePlayer": "SELF"
+		},
+		"spell": {
+			"class": "DamageSpell",
+			"target": "ALL_MINIONS",
+			"value": 1
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_mana_wraith contains:
+{
+	"name": "Mana Wraith",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "ALL minions cost (1) more.",
+	"cardCostModifier": {
+		"class": "CardCostModifier",
+		"cardType": "MINION",
+		"targetPlayer": "BOTH",
+		"value": 1
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_gruul contains:
+{
+	"name": "Gruul",
+	"baseManaCost": 8,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "At the end of each turn, gain +1/+1.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "BOTH"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 1,
+			"hpBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_murloc_tidecaller contains:
+{
+	"name": "Murloc Tidecaller",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "MURLOC",
+	"description": "Whenever you summon a Murloc, gain +1 Attack.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "MinionSummonedTrigger",
+			"targetPlayer": "SELF",
+			"race": "MURLOC"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_knife_juggler contains:
+{
+	"name": "Knife Juggler",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "After you summon a minion, deal 1 damage to a random enemy.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "AfterMinionSummonedTrigger",
+			"targetPlayer": "SELF",
+			"hostTargetType": "IGNORE_AS_TARGET"
+		},
+		"spell": {
+			"class": "MissilesSpell",
+			"target": "ENEMY_CHARACTERS",
+			"value": 1,
+			"howMany": 1,
+			"randomTarget": true
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_coldlight_seer contains:
+{
+	"name": "Coldlight Seer",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "MURLOC",
+	"description": "Battlecry: Give your other Murlocs +2 Health.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "OTHER_FRIENDLY_MINIONS",
+			"hpBonus": 2,
+			"filter": {
+				"class": "RaceFilter",
+				"race": "MURLOC"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_harrison_jones contains:
+{
+	"name": "Harrison Jones",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Destroy your opponent's weapon and draw cards equal to its Durability.",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "DrawCardSpell",
+					"value": {
+						"class": "AttributeValueProvider",
+						"target": "ENEMY_WEAPON",
+						"attribute": "HP"
+					}
+				},
+				{
+					"class": "DestroySpell",
+					"target": "ENEMY_WEAPON"
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_onyxia contains:
+{
+	"name": "Onyxia",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 8,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "DRAGON",
+	"description": "Battlecry: Summon 1/1 Whelps until your side of the battlefield is full.",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "SummonSpell",
+					"card": "token_whelp",
+					"boardPositionRelative": "RIGHT"
+				},
+				{
+					"class": "SummonSpell",
+					"card": "token_whelp",
+					"boardPositionRelative": "LEFT"
+				},
+				{
+					"class": "SummonSpell",
+					"card": "token_whelp",
+					"boardPositionRelative": "RIGHT"
+				},
+				{
+					"class": "SummonSpell",
+					"card": "token_whelp",
+					"boardPositionRelative": "LEFT"
+				},
+				{
+					"class": "SummonSpell",
+					"card": "token_whelp",
+					"boardPositionRelative": "RIGHT"
+				},
+				{
+					"class": "SummonSpell",
+					"card": "token_whelp",
+					"boardPositionRelative": "LEFT"
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_blood_knight contains:
+{
+	"name": "Blood Knight",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Battlecry: All minions lose Divine Shield. Gain +3/+3 for each Shield lost.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"target": "SELF",
+					"value": {
+						"class": "AttributeCounter",
+						"target": "ALL_MINIONS",
+						"attribute": "DIVINE_SHIELD",
+						"multiplier": 3
+					}
+				},
+				{
+					"class": "RemoveAttributeSpell",
+					"target": "ALL_MINIONS",
+					"attribute": "DIVINE_SHIELD"
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_murloc_warleader contains:
+{
+	"name": "Murloc Warleader",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"race": "MURLOC",
+	"description": "Your other Murlocs have +2/+1.",
+	"aura": {
+		"class": "BuffAura",
+		"target": "OTHER_FRIENDLY_MINIONS",
+		"attackBonus": 2,
+		"hpBonus": 1,
+		"filter": {
+			"class": "RaceFilter",
+			"race": "MURLOC"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_baron_geddon contains:
+{
+	"name": "Baron Geddon",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "At the end of your turn, deal 2 damage to ALL other characters.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "DamageSpell",
+			"target": "ALL_OTHER_CHARACTERS",
+			"value": 2
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_secretkeeper contains:
+{
+	"name": "Secretkeeper",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Whenever a Secret is played, gain +1/+1.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "SecretPlayedTrigger"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 1,
+			"hpBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/token_squirrel contains:
+{
+	"name": "Squirrel",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_captain_greenskin contains:
+{
+	"name": "Captain Greenskin",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "PIRATE",
+	"description": "Battlecry: Give your weapon +1/+1.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffWeaponSpell",
+			"target": "FRIENDLY_WEAPON",
+			"attackBonus": 1,
+			"hpBonus": 1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_bloodsail_corsair contains:
+{
+	"name": "Bloodsail Corsair",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "PIRATE",
+	"description": "Battlecry: Remove 1 Durability from your opponent's weapon.",
+	"battlecry": {
+		"spell": {
+			"class": "ModifyDurabilitySpell",
+			"targetPlayer": "OPPONENT",
+			"value": -1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_millhouse_manastorm contains:
+{
+	"name": "Millhouse Manastorm",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Enemy spells cost (0) next turn.",
+	"battlecry": {
+		"spell": {
+			"class": "CardCostModifierSpell",
+			"target": "FRIENDLY_PLAYER",
+			"cardCostModifier": {
+				"class": "CardCostModifier",
+				"cardType": "SPELL",
+				"targetPlayer": "OPPONENT",
+				"operation": "SET",
+				"value": 0,
+				"expirationTrigger": {
+					"class": "TurnEndTrigger",
+					"targetPlayer": "OPPONENT"
+				}
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_priestess_of_elune contains:
+{
+	"name": "Priestess of Elune",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Restore 4 Health to your hero.",
+	"battlecry": {
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_HERO",
+			"value": 4
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_abomination contains:
+{
+	"name": "Abomination",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Taunt. Deathrattle: Deal 2 damage to ALL characters.",
+	"deathrattle": {
+		"class": "DamageSpell",
+		"target": "ALL_CHARACTERS",
+		"value": 2
+	},
+	"attributes": {
+		"DEATHRATTLES": true,
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/spell_bananas contains:
+{
+	"name": "Bananas",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Give a minion +1/+1.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "BuffSpell",
+		"attackBonus": 1,
+		"hpBonus": 1
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_gadgetzan_auctioneer contains:
+{
+	"name": "Gadgetzan Auctioneer",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Whenever you cast a spell, draw a card.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "SpellCastedTrigger",
+			"sourcePlayer": "SELF"
+		},
+		"spell": {
+			"class": "DrawCardSpell",
+			"value": 1
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_shieldbearer contains:
+{
+	"name": "Shieldbearer",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/spell_dream contains:
+{
+	"name": "Dream",
+	"baseManaCost": 0,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Return a minion to its owner's hand.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "ReturnMinionToHandSpell"
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_cult_master contains:
+{
+	"name": "Cult Master",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Whenever one of your other minions dies, draw a card.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "MinionDeathTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "DrawCardSpell",
+			"value": 1
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_the_beast contains:
+{
+	"name": "The Beast",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 9,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "BEAST",
+	"description": "Deathrattle: Summon a 3/3 Finkle Einhorn for your opponent.",
+	"deathrattle": {
+		"class": "SummonSpell",
+		"targetPlayer": "OPPONENT",
+		"card": "token_finkle_einhorn"
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/token_whelp contains:
+{
+	"name": "Whelp",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "DRAGON",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_alexstrasza contains:
+{
+	"name": "Alexstrasza",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 8,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "DRAGON",
+	"description": "Battlecry: Set a hero's remaining Health to 15.",
+	"battlecry": {
+		"targetSelection": "HEROES",
+		"spell": {
+			"class": "SetHeroHpSpell",
+			"value": 15
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_spiteful_smith contains:
+{
+	"name": "Spiteful Smith",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Enrage: Your weapon has +2 Attack.",
+	"aura": {
+		"class": "EnrageAura",
+		"target": "FRIENDLY_WEAPON",
+		"applyEffect": {
+			"class": "BuffWeaponSpell",
+			"attackBonus": 2
+		},
+		"removeEffect": {
+			"class": "BuffWeaponSpell",
+			"attackBonus": -2
+		}
+	},
+	"attributes": {
+		"ENRAGABLE": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_tinkmaster_overspark contains:
+{
+	"name": "Tinkmaster Overspark",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Battlecry: Transform another random minion into a 5/5 Devilsaur or a 1/1 Squirrel.",
+	"battlecry": {
+		"spell": {
+			"class": "EitherOrSpell",
+			"spell1": {
+				"class": "TransformMinionSpell",
+				"target": "ALL_OTHER_MINIONS",
+				"card": "token_devilsaur",
+				"randomTarget": true
+			},
+			"spell2": {
+				"class": "TransformMinionSpell",
+				"target": "ALL_OTHER_MINIONS",
+				"card": "token_squirrel",
+				"randomTarget": true
+			},
+			"condition": {
+				"class": "RandomCondition"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_ancient_brewmaster contains:
+{
+	"name": "Ancient Brewmaster",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Return a friendly minion from the battlefield to your hand.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "ReturnMinionToHandSpell"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_bloodmage_thalnos contains:
+{
+	"name": "Bloodmage Thalnos",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Spell Damage +1. Deathrattle: Draw a card.",
+	"deathrattle": {
+		"class": "DrawCardSpell",
+		"value": 1
+	},
+	"attributes": {
+		"DEATHRATTLES": true,
+		"SPELL_DAMAGE": 1
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_questing_adventurer contains:
+{
+	"name": "Questing Adventurer",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Whenever you play a card, gain +1/+1.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "CardPlayedTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 1,
+			"hpBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_angry_chicken contains:
+{
+	"name": "Angry Chicken",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "BEAST",
+	"description": "Enrage: +5 Attack",
+	"trigger": {
+		"eventTrigger": {
+			"class": "EnrageChangedTrigger"
+		},
+		"spell": {
+			"class": "EnrageSpell",
+			"target": "SELF",
+			"attackBonus": 5
+		}
+	},
+	"attributes": {
+		"ENRAGABLE": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_demolisher contains:
+{
+	"name": "Demolisher",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "MECH",
+	"description": "At the start of your turn, deal 2 damage to a random enemy.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "MissilesSpell",
+			"target": "ENEMY_CHARACTERS",
+			"value": 2,
+			"howMany": 1
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_bloodsail_raider contains:
+{
+	"name": "Bloodsail Raider",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "PIRATE",
+	"description": "Battlecry: Gain Attack equal to the Attack of your weapon.",
+	"battlecry": {
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": {
+				"class": "AttributeValueProvider",
+				"target": "FRIENDLY_WEAPON",
+				"attribute": "ATTACK"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_wisp contains:
+{
+	"name": "Wisp",
+	"baseManaCost": 0,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "",
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_thrallmar_farseer contains:
+{
+	"name": "Thrallmar Farseer",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Windfury",
+	"attributes": {
+		"WINDFURY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_frost_elemental contains:
+{
+	"name": "Frost Elemental",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Freeze a character.",
+	"battlecry": {
+		"targetSelection": "ANY",
+		"spell": {
+			"class": "AddAttributeSpell",
+			"attribute": "FROZEN"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_mad_bomber contains:
+{
+	"name": "Mad Bomber",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Deal 3 damage randomly split between all other characters.",
+	"battlecry": {
+		"spell": {
+			"class": "MissilesSpell",
+			"target": "ALL_OTHER_CHARACTERS",
+			"value": 1,
+			"howMany": 3,
+			"randomTarget": true
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_nozdormu contains:
+{
+	"name": "Nozdormu",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 8,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "DRAGON",
+	"description": "Players only have 15 seconds to take their turns.",
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_alarm-o-bot contains:
+{
+	"name": "Alarm-o-Bot",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 0,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "MECH",
+	"description": "At the start of your turn, swap this minion with a random one in your hand.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnStartTrigger",
+			"targetPlayer": "SELF",
+			"queueCondition": {
+				"class": "HoldsCardCondition",
+				"cardFilter": {
+					"class": "CardFilter",
+					"cardType": "MINION"
+				}
+			}
+		},
+		"spell": {
+			"class": "custom.AlarmOBotSpell",
+			"target": "SELF"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_ravenholdt_assassin contains:
+{
+	"name": "Ravenholdt Assassin",
+	"baseManaCost": 7,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Stealth",
+	"attributes": {
+		"STEALTH": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_worgen_infiltrator contains:
+{
+	"name": "Worgen Infiltrator",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Stealth",
+	"attributes": {
+		"STEALTH": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/spell_ysera_awakens contains:
+{
+	"name": "Ysera Awakens",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"description": "Deal 5 damage to all characters except Ysera.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "DamageSpell",
+		"target": "ALL_CHARACTERS",
+		"value": 5,
+		"filter": {
+			"class": "SpecificCardFilter",
+			"cardId": "minion_ysera",
+			"invert": true
+		}
+	},
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_flesheating_ghoul contains:
+{
+	"name": "Flesheating Ghoul",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Whenever a minion dies, gain +1 Attack.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "MinionDeathTrigger",
+			"targetPlayer": "BOTH"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "SELF",
+			"attackBonus": 1
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/token_emerald_drake contains:
+{
+	"name": "Emerald Drake",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "DRAGON",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_youthful_brewmaster contains:
+{
+	"name": "Youthful Brewmaster",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Return a friendly minion from the battlefield to your hand.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "ReturnMinionToHandSpell"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/token_chicken contains:
+{
+	"name": "Chicken",
+	"baseManaCost": 0,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "FREE",
+	"race": "BEAST",
+	"description": "Hey Chicken!",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_master_swordsmith contains:
+{
+	"name": "Master Swordsmith",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "At the end of your turn, give another random friendly minion +1 Attack.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "BuffSpell",
+			"target": "OTHER_FRIENDLY_MINIONS",
+			"attackBonus": 1,
+			"randomTarget": true
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_stranglethorn_tiger contains:
+{
+	"name": "Stranglethorn Tiger",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Stealth",
+	"attributes": {
+		"STEALTH": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_ysera contains:
+{
+	"name": "Ysera",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 12,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "DRAGON",
+	"description": "At the end of your turn, add a Dream Card to your hand.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "ReceiveRandomCardSpell",
+			"cards": [
+				"token_emerald_drake",
+				"token_laughing_sister",
+				"spell_nightmare",
+				"spell_ysera_awakens",
+				"spell_dream"
+			]
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_young_dragonhawk contains:
+{
+	"name": "Young Dragonhawk",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Windfury",
+	"attributes": {
+		"WINDFURY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_acolyte_of_pain contains:
+{
+	"name": "Acolyte of Pain",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Whenever this minion takes damage, draw a card.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageReceivedTrigger",
+			"hostTargetType": "IGNORE_OTHER_TARGETS"
+		},
+		"spell": {
+			"class": "DrawCardSpell",
+			"value": 1
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_dire_wolf_alpha contains:
+{
+	"name": "Dire Wolf Alpha",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Adjacent minions have +1 Attack.",
+	"aura": {
+		"class": "BuffAura",
+		"target": "ADJACENT_MINIONS",
+		"attackBonus": 1
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_coldlight_oracle contains:
+{
+	"name": "Coldlight Oracle",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "MURLOC",
+	"description": "Battlecry: Each player draws 2 cards.",
+	"battlecry": {
+		"spell": {
+			"class": "DrawCardSpell",
+			"targetPlayer": "BOTH",
+			"value": 2
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_windfury_harpy contains:
+{
+	"name": "Windfury Harpy",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Windfury",
+	"attributes": {
+		"WINDFURY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_crazed_alchemist contains:
+{
+	"name": "Crazed Alchemist",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Swap the Attack and Health of a minion.",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "SwapAttackAndHpSpell"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_malygos contains:
+{
+	"name": "Malygos",
+	"baseManaCost": 9,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 12,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "DRAGON",
+	"description": "Spell Damage +5",
+	"attributes": {
+		"SPELL_DAMAGE": 5
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_argent_commander contains:
+{
+	"name": "Argent Commander",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Charge, Divine Shield",
+	"attributes": {
+		"CHARGE": true,
+		"DIVINE_SHIELD": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_king_mukla contains:
+{
+	"name": "King Mukla",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "BEAST",
+	"description": "Battlecry: Give your opponent 2 Bananas.",
+	"battlecry": {
+		"spell": {
+			"class": "ReceiveCardSpell",
+			"targetPlayer": "OPPONENT",
+			"cards": [
+				"spell_bananas",
+				"spell_bananas"
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_ironbeak_owl contains:
+{
+	"name": "Ironbeak Owl",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "BEAST",
+	"description": "Battlecry: Silence a minion.",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "SilenceSpell"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_faceless_manipulator contains:
+{
+	"name": "Faceless Manipulator",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Battlecry: Choose a minion and become a copy of it.",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "custom.FacelessSpell"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_ancient_watcher contains:
+{
+	"name": "Ancient Watcher",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Can't Attack.",
+	"attributes": {
+		"CANNOT_ATTACK": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_mana_addict contains:
+{
+	"name": "Mana Addict",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Whenever you cast a spell, gain +2 Attack this turn.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "SpellCastedTrigger",
+			"sourcePlayer": "SELF"
+		},
+		"spell": {
+			"class": "TemporaryAttackSpell",
+			"target": "SELF",
+			"value": 2
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_fen_creeper contains:
+{
+	"name": "Fen Creeper",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 6,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Taunt",
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_faerie_dragon contains:
+{
+	"name": "Faerie Dragon",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "DRAGON",
+	"description": "Can't be targeted by Spells or Hero Powers.",
+	"attributes": {
+		"UNTARGETABLE_BY_SPELLS": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_ancient_mage contains:
+{
+	"name": "Ancient Mage",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Give adjacent minions Spell Damage +1.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "ModifyAttributeSpell",
+			"target": "ADJACENT_MINIONS",
+			"attribute": "SPELL_DAMAGE",
+			"value": 1
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_defender_of_argus contains:
+{
+	"name": "Defender of Argus",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Give adjacent minions +1/+1 and Taunt.",
+	"battlecry": {
+		"spell": {
+			"class": "MetaSpell",
+			"target": "ADJACENT_MINIONS",
+			"spells": [
+				{
+					"class": "BuffSpell",
+					"attackBonus": 1,
+					"hpBonus": 1
+				},
+				{
+					"class": "AddAttributeSpell",
+					"attribute": "TAUNT"
+				}
+			]
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_illidan_stormrage contains:
+{
+	"name": "Illidan Stormrage",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"race": "DEMON",
+	"description": "Whenever you play a card, summon a 2/1 Flame of Azzinoth.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "CardPlayedTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "SummonSpell",
+			"card": "token_flame_of_azzinoth",
+			"boardPositionRelative": "RIGHT"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_dread_corsair contains:
+{
+	"name": "Dread Corsair",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "PIRATE",
+	"description": "Taunt. Costs (1) less per Attack of your weapon.",
+	"manaCostModifier": {
+		"class": "AttributeValueProvider",
+		"target": "FRIENDLY_WEAPON",
+		"attribute": "ATTACK"
+	},
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_scarlet_crusader contains:
+{
+	"name": "Scarlet Crusader",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Divine Shield",
+	"attributes": {
+		"DIVINE_SHIELD": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_hungry_crab contains:
+{
+	"name": "Hungry Crab",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"race": "BEAST",
+	"description": "Battlecry: Destroy a Murloc and gain +2/+2.",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "DestroySpell"
+				},
+				{
+					"class": "BuffSpell",
+					"target": "SELF",
+					"attackBonus": 2,
+					"hpBonus": 2
+				}
+			],
+			"filter": {
+				"class": "RaceFilter",
+				"race": "MURLOC"
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_pint-sized_summoner contains:
+{
+	"name": "Pint-Sized Summoner",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 2,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "The first minion you play each turn costs (1) less.",
+	"cardCostModifier": {
+		"class": "ToggleCostModifier",
+		"cardType": "MINION",
+		"targetPlayer": "SELF",
+		"value": -1,
+		"toggleOnTrigger": {
+			"class": "TurnStartTrigger"
+		},
+		"toggleOffTrigger": {
+			"class": "CardPlayedTrigger",
+			"cardType": "MINION",
+			"targetPlayer": "SELF"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_argent_squire contains:
+{
+	"name": "Argent Squire",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Divine Shield",
+	"attributes": {
+		"DIVINE_SHIELD": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_imp_master contains:
+{
+	"name": "Imp Master",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 1,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "At the end of your turn, deal 1 damage to this minion and summon a 1/1 Imp.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "TurnEndTrigger",
+			"targetPlayer": "SELF"
+		},
+		"spell": {
+			"class": "MetaSpell",
+			"spells": [
+				{
+					"class": "DamageSpell",
+					"target": "SELF",
+					"value": 1
+				},
+				{
+					"class": "SummonSpell",
+					"card": "token_imp",
+					"boardPositionRelative": "RIGHT"
+				}
+			]
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_cairne_bloodhoof contains:
+{
+	"name": "Cairne Bloodhoof",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "Deathrattle: Summon a 4/5 Baine Bloodhoof.",
+	"deathrattle": {
+		"class": "SummonSpell",
+		"card": "token_baine_bloodhoof"
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_dark_iron_dwarf contains:
+{
+	"name": "Dark Iron Dwarf",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 4,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Battlecry: Give a minion +2 Attack this turn.",
+	"battlecry": {
+		"targetSelection": "MINIONS",
+		"spell": {
+			"class": "TemporaryAttackSpell",
+			"value": 2
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_raging_worgen contains:
+{
+	"name": "Raging Worgen",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"description": "Enrage: Windfury and +1 Attack",
+	"trigger": {
+		"eventTrigger": {
+			"class": "EnrageChangedTrigger"
+		},
+		"spell": {
+			"class": "EnrageSpell",
+			"target": "SELF",
+			"attribute": "WINDFURY",
+			"attackBonus": 1
+		}
+	},
+	"attributes": {
+		"ENRAGABLE": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/token_finkle_einhorn contains:
+{
+	"name": "Finkle Einhorn",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "LEGENDARY",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_injured_blademaster contains:
+{
+	"name": "Injured Blademaster",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 7,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"description": "Battlecry: Deal 4 damage to HIMSELF.",
+	"battlecry": {
+		"spell": {
+			"class": "DamageSpell",
+			"target": "SELF",
+			"value": 4
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/token_damaged_golem contains:
+{
+	"name": "Damaged Golem",
+	"baseManaCost": 1,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 1,
+	"heroClass": "ANY",
+	"rarity": "COMMON",
+	"race": "MECH",
+	"description": "",
+	"collectible": false,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_emperor_cobra contains:
+{
+	"name": "Emperor Cobra",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 2,
+	"baseHp": 3,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "BEAST",
+	"description": "Destroy any minion damaged by this minion.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageCausedTrigger",
+			"targetEntityType": "MINION",
+			"hostTargetType": "IGNORE_OTHER_SOURCES"
+		},
+		"spell": {
+			"class": "DestroySpell",
+			"target": "EVENT_TARGET"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_stampeding_kodo contains:
+{
+	"name": "Stampeding Kodo",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 5,
+	"heroClass": "ANY",
+	"rarity": "RARE",
+	"race": "BEAST",
+	"description": "Battlecry: Destroy a random enemy minion with 2 or less Attack.",
+	"battlecry": {
+		"targetSelection": "NONE",
+		"spell": {
+			"class": "DestroySpell",
+			"target": "ENEMY_MINIONS",
+			"randomTarget": true,
+			"filter": {
+				"class": "AttributeFilter",
+				"attribute": "ATTACK",
+				"operation": "LESS_OR_EQUAL",
+				"value": 2
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/out/production/resources/cards/classic/neutral/minion_molten_giant contains:
+{
+	"name": "Molten Giant",
+	"baseManaCost": 25,
+	"type": "MINION",
+	"baseAttack": 8,
+	"baseHp": 8,
+	"heroClass": "ANY",
+	"rarity": "EPIC",
+	"description": "Costs (1) less for each damage your hero has taken.",
+	"manaCostModifier": {
+		"class": "AlgebraicValueProvider",
+		"operation": "SUBTRACT",
+		"value1": {
+			"class": "AttributeValueProvider",
+			"target": "FRIENDLY_HERO",
+			"attribute": "MAX_HP"
+		},
+		"value2": {
+			"class": "AttributeValueProvider",
+			"target": "FRIENDLY_HERO",
+			"attribute": "HP"
+		}
+	},
+	"collectible": true,
+	"set": "CLASSIC",
+	"fileFormatVersion": 1
+}

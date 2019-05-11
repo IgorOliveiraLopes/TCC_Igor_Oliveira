@@ -1,0 +1,232 @@
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/shaman/minion_thing_from_below contains:
+{
+	"name": "Thing from Below",
+	"baseManaCost": 6,
+	"type": "MINION",
+	"baseAttack": 5,
+	"baseHp": 5,
+	"heroClass": "SHAMAN",
+	"rarity": "RARE",
+	"description": "Taunt. Costs (1) less for each Totem you've summoned this game.",
+	"manaCostModifier": {
+		"class": "MinionSummonValueProvider",
+		"filter": {
+			"class": "CardFilter",
+			"race": "TOTEM"
+		}
+	},
+	"attributes": {
+		"TAUNT": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/shaman/minion_hallazeal_the_ascended contains:
+{
+	"name": "Hallazeal the Ascended",
+	"baseManaCost": 5,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 6,
+	"heroClass": "SHAMAN",
+	"rarity": "LEGENDARY",
+	"description": "When your spells deal damage, restore that much Health to your hero.",
+	"trigger": {
+		"eventTrigger": {
+			"class": "DamageCausedTrigger",
+			"cardType": "SPELL",
+			"sourcePlayer": "SELF",
+			"targetPlayer": "BOTH"
+		},
+		"spell": {
+			"class": "HealSpell",
+			"target": "FRIENDLY_HERO",
+			"value": {
+				"class": "AttributeValueProvider",
+				"target": "EVENT_TARGET",
+				"attribute": "LAST_HIT"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/shaman/minion_eternal_sentinel contains:
+{
+	"name": "Eternal Sentinel",
+	"baseManaCost": 2,
+	"type": "MINION",
+	"baseAttack": 3,
+	"baseHp": 2,
+	"heroClass": "SHAMAN",
+	"rarity": "EPIC",
+	"description": "Battlecry: Unlock your Overloaded Mana Crystals.",
+	"battlecry": {
+		"spell": {
+			"class": "ClearOverloadSpell"
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/shaman/minion_flamewreathed_faceless contains:
+{
+	"name": "Flamewreathed Faceless",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 7,
+	"baseHp": 7,
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"description": "Overload: (2)",
+	"attributes": {
+		"OVERLOAD": 2
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/shaman/spell_evolve contains:
+{
+	"name": "Evolve",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "RARE",
+	"description": "Transform your minions into random minions that cost (1) more.",
+	"targetSelection": "NONE",
+	"spell": {
+		"class": "TransformToRandomMinionSpell",
+		"target": "FRIENDLY_MINIONS",
+		"cardFilter": {
+			"class": "CardFilter",
+			"manaCost": {
+				"class": "AttributeValueProvider",
+				"target": "SPELL_TARGET",
+				"attribute": "BASE_MANA_COST",
+				"offset": 1
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/shaman/spell_stormcrack contains:
+{
+	"name": "Stormcrack",
+	"baseManaCost": 2,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"description": "Deal 4 damage to a minion. Overload: (1)",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "DamageSpell",
+		"value": 4
+	},
+	"attributes": {
+		"OVERLOAD": 1
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/shaman/token_twilight_elemental contains:
+{
+	"name": "Twilight Elemental",
+	"baseManaCost": 3,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 2,
+	"heroClass": "SHAMAN",
+	"rarity": "EPIC",
+	"description": "",
+	"collectible": false,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/shaman/weapon_hammer_of_twilight contains:
+{
+	"name": "Hammer of Twilight",
+	"baseManaCost": 5,
+	"type": "WEAPON",
+	"damage": 4,
+	"durability": 2,
+	"heroClass": "SHAMAN",
+	"rarity": "EPIC",
+	"description": "Deathrattle: Summon a 4/2 Elemental.",
+	"deathrattle": {
+		"class": "SummonSpell",
+		"targetPlayer": "SELF",
+		"card": "token_twilight_elemental"
+	},
+	"attributes": {
+		"DEATHRATTLES": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/shaman/spell_primal_fusion contains:
+{
+	"name": "Primal Fusion",
+	"baseManaCost": 1,
+	"type": "SPELL",
+	"heroClass": "SHAMAN",
+	"rarity": "COMMON",
+	"description": "Give a minion +1/+1 for each of your Totems.",
+	"targetSelection": "MINIONS",
+	"spell": {
+		"class": "BuffSpell",
+		"value": {
+			"class": "EntityCounter",
+			"target": "FRIENDLY_MINIONS",
+			"filter": {
+				"class": "RaceFilter",
+				"race": "TOTEM"
+			}
+		}
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}
+The file /home/igor/IdeaProjects/TCC_Igor_Oliveira/cards/src/main/resources/cards/the_old_gods/shaman/minion_master_of_evolution contains:
+{
+	"name": "Master of Evolution",
+	"baseManaCost": 4,
+	"type": "MINION",
+	"baseAttack": 4,
+	"baseHp": 5,
+	"heroClass": "SHAMAN",
+	"rarity": "RARE",
+	"description": "Battlecry: Transform a friendly minion into a random one that costs (1) more.",
+	"battlecry": {
+		"targetSelection": "FRIENDLY_MINIONS",
+		"spell": {
+			"class": "TransformToRandomMinionSpell",
+			"cardFilter": {
+				"class": "CardFilter",
+				"manaCost": {
+					"class": "AttributeValueProvider",
+					"target": "TARGET",
+					"attribute": "BASE_MANA_COST",
+					"offset": 1
+				}
+			}
+		}
+	},
+	"attributes": {
+		"BATTLECRY": true
+	},
+	"collectible": true,
+	"set": "THE_OLD_GODS",
+	"fileFormatVersion": 1
+}

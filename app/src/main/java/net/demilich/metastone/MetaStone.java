@@ -65,6 +65,8 @@ public class MetaStone extends Application {
 		primaryStage.setOpacity(1.0);
 		
 		facade.sendNotification(GameNotification.CHECK_FOR_UPDATE);
+
+
 	}
 
 }

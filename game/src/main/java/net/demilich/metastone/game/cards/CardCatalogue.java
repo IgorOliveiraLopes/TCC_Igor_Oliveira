@@ -32,6 +32,7 @@ import net.demilich.metastone.utils.ResourceLoader;
 import net.demilich.metastone.utils.UserHomeMetastone;
 import org.w3c.dom.ranges.Range;
 
+import static java.lang.System.in;
 import static net.demilich.metastone.game.logic.GameLogic.DECK_SIZE;
 
 public class CardCatalogue {
@@ -47,41 +48,14 @@ public class CardCatalogue {
 
 
 
-//	public static void create_decks_from_file(String file){
-//
-//
-//		BufferedReader in = null;
-//		try {
-//			in = new BufferedReader(new FileReader(CARDS_FOLDER_PATH+File.separator+file));
-//			String read = null;
-//			String aux;
-//			int deck_one_length = 0,deck_two_length = 0;
-//			while ((read = in.readLine()) != null) {
-//				String[] splited = read.split("((?<=[;|#])|(?=[;|#]))");
-//
-//
-//				for(int i = 0; i < splited.length; i++){
-//					aux = splited[i];
-//					if (!aux.matches("[;|#]") && deck_one_length < 5) {
-//						System.out.println(aux);
-//						deck_one_length++;
-//					}else if(!aux.matches("[;|#]") && deck_one_length == 5 && deck_two_length < 5){
-//						System.out.println(aux);
-//						deck_two_length++;
-//
-//					}
-//				}
-//			}
-//		} catch (IOException e) {
-//			System.out.println("There was a problem: " + e);
-//			e.printStackTrace();
-//		} finally {
-//			try {
-//				in.close();
-//			} catch (Exception e) {
-//			}
-//		}
-//	}
+
+	public static void create_deck_from_string(String[] string_deck){
+
+		for(String card : string_deck){
+
+
+		}
+	}
 
 
 

@@ -47,16 +47,16 @@ public class DeckProxy extends Proxy<GameNotification> {
 	private static final String DECKS_COPIED_PROPERTY = "decks.copied";
 
 	private final List<Deck> decks = new ArrayList<Deck>();
-	private IDeckValidator activeDeckValidator = new DefaultDeckValidator();
-	private Deck activeDeck;
+	private static IDeckValidator activeDeckValidator = new DefaultDeckValidator();
+	private static Deck activeDeck;
 	CardCatalogue cardCatalogue = new CardCatalogue();
 
 
 
 
-	public static MetaStoneUtils create_decks_from_file(String file){
+	public Deck create_deck_from_string(String[] deck_string){
 
-		String[] deck_one = new String[DECK_LENGTH];
+		/*String[] deck_one = new String[DECK_LENGTH];
 		String[] deck_two = new String[DECK_LENGTH];
 
 
@@ -90,7 +90,10 @@ public class DeckProxy extends Proxy<GameNotification> {
 			} catch (Exception e) {
 			}
 		}
-		return new MetaStoneUtils(deck_one,deck_two);
+		return new MetaStoneUtils(deck_one,deck_two);*/
+		this.activeDeck = null;
+		this.setActiveDeck(new Deck(HeroClass.DRUID));
+		return  Create_deck(deck_string);
 	}
 
 
@@ -118,7 +121,7 @@ public class DeckProxy extends Proxy<GameNotification> {
 		}
 	}
 
-	public boolean addCardToDeck(Card card) {
+	public static boolean addCardToDeck(Card card) {
 		boolean result = activeDeckValidator.canAddCardToDeck(card, activeDeck);
 		if (result) {
 			activeDeck.getCards().add(card);

@@ -9,11 +9,13 @@ public class DefaultDeckValidator implements IDeckValidator {
 
 	@Override
 	public boolean canAddCardToDeck(Card card, Deck deck) {
-		if (deck.getCards().getCount() >= GameLogic.MAX_DECK_SIZE) {
+		/*if (deck.getCards().getCount() >= GameLogic.MAX_DECK_SIZE) {
 			return false;
-		}
-		int cardInDeckCount = deck.containsHowMany(card);
-		return card.getRarity() == Rarity.LEGENDARY ? cardInDeckCount < 1 : cardInDeckCount < 2;
+		}*/
+		//TODO
+		//int cardInDeckCount = deck.containsHowMany(card);
+		return true;
+		//return card.getRarity() == Rarity.LEGENDARY ? cardInDeckCount < 1 : cardInDeckCount < 2;
 	}
 
 }

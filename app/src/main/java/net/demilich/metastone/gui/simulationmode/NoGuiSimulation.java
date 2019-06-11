@@ -17,6 +17,7 @@ import net.demilich.metastone.game.entities.heroes.HeroClass;
 import net.demilich.metastone.game.gameconfig.GameConfig;
 import net.demilich.metastone.game.gameconfig.PlayerConfig;
 import net.demilich.metastone.game.logic.GameLogic;
+import net.demilich.metastone.game.statistics.Statistic;
 import net.demilich.metastone.gui.cards.CardProxy;
 import net.demilich.metastone.gui.deckbuilder.DeckProxy;
 import net.demilich.metastone.utils.Tuple;
@@ -28,7 +29,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.net.CacheRequest;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
@@ -146,13 +149,13 @@ public class NoGuiSimulation extends SimpleCommand<GameNotification> {
 
                 result.calculateMetaStatistics();
                 getFacade().sendNotification(GameNotification.NOGUI_RESULT, result);
-                logger.info("Simulation finished");
+                /*logger.info("Simulation finished");
 
 
                 logger.info("Resultados da simulacao para o jogador 1: \n" + result.getPlayer1Stats().toString());
                 logger.info("Resultados da simulacao para o jogador 2: \n" + result.getPlayer2Stats().toString());
 
-
+                */
 
             }
         });
@@ -160,6 +163,7 @@ public class NoGuiSimulation extends SimpleCommand<GameNotification> {
         t.start();
     }
 
+    String pathLog = "/home/igor/Documentos/logs";
     private void onGameComplete(GameConfig gameConfig, GameContext context) {
         long timeStamp = System.currentTimeMillis();
         gamesCompleted++;
@@ -177,7 +181,45 @@ public class NoGuiSimulation extends SimpleCommand<GameNotification> {
             result.getPlayer1Stats().merge(context.getPlayer1().getStatistics());
             result.getPlayer2Stats().merge(context.getPlayer2().getStatistics());
 
+            ArrayList<String> log = new ArrayList<>();
+            log.add("Tupla A1 = " + 1);
+
+            log.add("Winner " + Integer.toString(result.getPlayer1Stats().getLong(Statistic.GAMES_WON) > result.getPlayer2Stats().getLong(Statistic.GAMES_WON) ? 0 : 1 ));
+            log.add("Game Over");
+            //String stMatch = Integer.toString(IDMatch) + "" + Integer.toString(iMap);
+
+
+            try {
+                gravarLog(log, context.getPlayer1().getDeck().toString(), context.getPlayer2().toString(), pathLog);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
+
+
+    }
+
+
+    private void gravarLog(  ArrayList<String> log,String tupleAi1, String tupleAi2, String pathLog) throws IOException {
+        if (!pathLog.endsWith("/")) {
+            pathLog += "/";
+        }
+        String nameArquivo = pathLog + "Deck_Eval" + "_" + "_" + ".txt";
+        File arqLog = new File(nameArquivo);
+        if (!arqLog.exists()) {
+            arqLog.createNewFile();
+        }
+        //abre o arquivo e grava o log
+
+        FileWriter arq = new FileWriter(arqLog, false);
+        PrintWriter gravarArq = new PrintWriter(arq);
+        for (String l : log) {
+            gravarArq.println(l);
+
+        }
+        gravarArq.flush();
+        gravarArq.close();
+        arq.close();
     }
 }

@@ -89,11 +89,6 @@ public class MetaStoneUtils {
     public void setDeck_two(String[] deck_two) {
         this.string_deck_two = deck_two;
     }
-    public void load_decks_from_file(String file_path,String file_name){
-
-        this.string_deck_one = deckProxy.create_decks_from_file(file_path+file_name).string_deck_one;
-        this.string_deck_two = deckProxy.create_decks_from_file(file_path+file_name).string_deck_two;
-    }
 
 
 }

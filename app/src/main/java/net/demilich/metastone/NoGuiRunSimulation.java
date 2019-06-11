@@ -10,6 +10,7 @@ import net.demilich.metastone.game.entities.heroes.HeroClass;
 import net.demilich.metastone.game.gameconfig.GameConfig;
 import net.demilich.metastone.game.gameconfig.PlayerConfig;
 import net.demilich.metastone.gui.deckbuilder.DeckProxy;
+import net.demilich.metastone.gui.simulationmode.NoGuiSimulation;
 import net.demilich.metastone.utils.UserHomeMetastone;
 import net.demilich.nittygrittymvc.interfaces.INotification;
 
@@ -103,7 +104,7 @@ public class NoGuiRunSimulation {
 
 
        // NotificationProxy.sendNotification(GameNotification.COMMIT_SIMULATIONMODE_CONFIG,notification);
-        //NoGuiSimulation noGuiSimulation = new NoGuiSimulation();
+       // NoGuiSimulation noGuiSimulation = new NoGuiSimulation();
         facade.sendNotification(GameNotification.NOGUISIMULATE_GAMES, notification.getBody());
 
         //noGuiSimulation.execute(notification);
